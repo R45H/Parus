@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: $font-main;
+	color: $color-text;
+}
+
+input,
+textarea {
+	//-webkit-appearance: none;
+	//border-radius: 0;
+
+	&:hover,
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+textarea {
+	resize: none;
+}
+
+hr {
+	margin: 0;
+}
+
+::selection {
+
+}
