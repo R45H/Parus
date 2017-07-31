@@ -1,2 +1,19 @@
+include ../mixins/menu
+
 // HEADER
 header.header
+	.container
+		.row
+
+			.col-6.col-sm-2.col-xl-1
+				a.logo.header__logo(href="/")
+					img.logo__img(src="img/logo.svg")
+
+			.col-6.col-sm-10.col-xl-11
+				.header__toggle
+					.toggle
+						span.toggle__line
+						span.toggle__line
+						span.toggle__line
+
+				+menu(menu)(class="header__menu")

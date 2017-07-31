@@ -1,8 +1,19 @@
+// Служебные файлы
 @import url('global/variables.scss'); // SASS переменные
 @import url('global/fonts.scss'); // Шрифты
 @import url('global/global.scss'); // Глобальные стили
+// =====
 
+// Блоки
+@import url('blocks/logo.scss'); // Логотип
+@import url('blocks/toggle.scss'); // Чизбургер
+@import url('blocks/menu.scss'); // Главное меню
+
+// =====
+
+// Внешние контейнеры
 @import url('blocks/header.scss'); // Шапка
-@import url('blocks/wrapper.scss'); // Внешний контейнер
-@import url('blocks/main.scss'); // Контейнер контента
 @import url('blocks/footer.scss'); // Подвал
+@import url('blocks/main.scss'); // Контейнер контента
+@import url('blocks/wrapper.scss'); // Внешний контейнер
+// =====

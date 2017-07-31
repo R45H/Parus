@@ -1,3 +1,35 @@
 .header {
+	position: fixed;
+	width: 100%;
+	padding: 10px 0 10px;
+	box-shadow: 0 5px 5px -5px $color-text-2;
+	height: $height-header;
 
+	@include screen-sm() {
+		height: $height-header-sm;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	&__logo {
+		max-height: 50px;
+		max-width: 75px;
+	}
+
+	&__toggle {
+		text-align: right;
+		margin-right: -15px;
+
+		@include screen-sm() {
+			display: none;
+		}
+	}
+
+	&__menu {
+
+		@include screen-sm(max) {
+			display: none;
+		}
+	}
 }
