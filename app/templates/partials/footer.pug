@@ -1,2 +1,17 @@
+include ../mixins/soc
+
 // FOOTER
 footer.footer
+	.container.footer__wrap
+		.footer__soc-wrap
+			each val in soc
+				+soc(val)(class='footer__soc')
+
+		a.footer__company(href="#") О компании
+
+		.footer__copy-wrap
+			.footer__copy-text © 2017 ООО «Парус»
+			a.footer__copy-link(href="#") Политика конфиденциальности
+
+		.footer__webcenter= "Разработано в "
+			a.footer__webcenter-link(href="http://webcenter.pro" target="_blank") Webcenter.pro

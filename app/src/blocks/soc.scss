@@ -1,0 +1,15 @@
+.soc {
+	background-color: black;
+	color: white;
+	display: inline-block;
+	border-radius: 50%;
+	height: 2em;
+	width: 2em;
+	line-height: 2.1;
+	text-align: center;
+
+	&:hover,
+	&:focus {
+		color: white;
+	}
+}

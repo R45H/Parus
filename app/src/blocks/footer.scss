@@ -1,4 +1,83 @@
 .footer {
 	flex: 0 0 auto;
-	height: 50px;
+	letter-spacing: 0;
+
+	&__wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end;
+
+		@include screen-sm() {
+			justify-content: space-between;
+			align-items: center;
+			border-top: 1px solid $color-text-2;
+			padding: 10px 0;
+		}
+	}
+
+	&__soc-wrap {
+		text-align: center;
+		margin-bottom: 20px;
+		width: 100%;
+
+		@include screen-sm() {
+			width: auto;
+			margin: 0;
+		}
+	}
+
+	&__soc {
+		margin: 5px;
+	}
+
+	&__company {
+		width: 30%;
+		margin-bottom: 10px;
+		order: -1;
+
+		@include screen-sm() {
+			width: auto;
+			margin: 0;
+		}
+	}
+
+	&__copy-wrap {
+		width: 70%;
+		text-align: right;
+		margin-bottom: 10px;
+
+		@include screen-sm() {
+			width: auto;
+			order: 1;
+			margin: 0;
+		}
+	}
+
+	&__copy-text {
+
+	}
+
+	&__copy-link {
+
+	}
+
+	&__webcenter {
+		width: 100%;
+		width: calc(100% + 30px);
+		text-align: center;
+		padding: 10px 0;
+		border-top: 1px solid $color-text-2;
+		margin: 0 calc(-15px);
+
+		@include screen-sm() {
+			width: auto;
+			border: none;
+			margin: 0;
+			border-bottom: 1px dotted $color-text-2;
+		}
+	}
+
+	&__webcenter-link {
+
+	}
 }
