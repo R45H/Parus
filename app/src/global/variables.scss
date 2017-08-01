@@ -1,9 +1,16 @@
 $color-main: #b8893b;
 $color-text: #898989;
 $color-text-2: #bfbfbf;
+$color-dark-text: #4c4c4c;
 $color-grad-1: #e5c064;
 $color-grad-2: #a4742e;
 $color-webcenter: #e96259;
+
+$color-vk: #45668e;
+$color-fb: #3b5998;
+$color-insta: #bc2a8d;
+$color-yt: #bb0000;
+$color-tw: #00aced;
 
 $point-sm: 576px;
 $point-md: 768px;
@@ -18,6 +25,8 @@ $path: '../';
 
 $height-header: 70px;
 $height-header-sm: 80px;
+
+$letter-spacing: 0.06666666em;
 
 %clear {
 	content: '';

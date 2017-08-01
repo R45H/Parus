@@ -11,7 +11,8 @@
 			justify-content: space-between;
 			align-items: center;
 			border-top: 1px solid $color-text-2;
-			padding: 10px 0;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 	}
 
@@ -22,7 +23,15 @@
 
 		@include screen-sm() {
 			width: auto;
+			margin: 0 -5px 0 0;
+		}
+
+		@include screen-md() {
 			margin: 0;
+		}
+
+		@include screen-lg() {
+			width: 23.33333%;
 		}
 	}
 
@@ -30,54 +39,128 @@
 		margin: 5px;
 	}
 
-	&__company {
+	&__company-wrap {
 		width: 30%;
 		margin-bottom: 10px;
-		order: -1;
 
 		@include screen-sm() {
 			width: auto;
 			margin: 0;
+			order: -1;
+		}
+
+		@include screen-lg() {
+			width: 10%;
+		}
+	}
+
+	&__company {
+		color: $color-dark-text;
+		text-decoration: none;
+		letter-spacing: $letter-spacing;
+		display: inline-block;
+
+		&:hover {
+			color: $color-main;
+		}
+
+		@include screen-sm() {
+			line-height: 2;
+			color: $color-text;
 		}
 	}
 
 	&__copy-wrap {
 		width: 70%;
 		text-align: right;
-		margin-bottom: 10px;
+		margin: 0 0 10px;
 
 		@include screen-sm() {
-			width: auto;
 			order: 1;
 			margin: 0;
+			text-align: center;
+			width: 100%;
+		}
+
+		@include screen-md() {
+			width: auto;
+			text-align: right;
+		}
+
+		@include screen-lg() {
+			width: 33.33333%;
 		}
 	}
 
 	&__copy-text {
+		color: $color-dark-text;
 
+		@include screen-sm() {
+			color: $color-text;
+			display: inline-block;
+			margin-right: 10px;
+		}
+
+		@include screen-md() {
+			display: block;
+			margin-right: 0;
+		}
 	}
 
 	&__copy-link {
+		color: $color-dark-text;
+		display: inline-block;
 
+		&:hover {
+			color: $color-main;
+		}
+
+		@include screen-sm() {
+			color: $color-text;
+		}
 	}
 
-	&__webcenter {
+	&__webcenter-wrap {
+		text-align: center;
 		width: 100%;
 		width: calc(100% + 30px);
-		text-align: center;
-		padding: 10px 0;
 		border-top: 1px solid $color-text-2;
 		margin: 0 calc(-15px);
 
 		@include screen-sm() {
-			width: auto;
 			border: none;
+			width: 100%;
+			margin: 10px 0;
+		}
+
+		@include screen-md() {
+			width: auto;
 			margin: 0;
-			border-bottom: 1px dotted $color-text-2;
+		}
+
+		@include screen-lg() {
+			flex-grow: 1;
 		}
 	}
 
-	&__webcenter-link {
+	&__webcenter {
+		display: block;
+		text-decoration: none;
+		line-height: 2;
+		color: $color-dark-text;
 
+		&:hover {
+			color: $color-webcenter;
+		}
+
+		@include screen-sm() {
+			display: inline-block;
+			border-bottom: 1px dotted $color-text-2;
+			color: $color-text;
+
+			&:hover {
+				border-bottom-color: $color-webcenter;
+			}
+		}
 	}
 }

@@ -1,15 +1,50 @@
 .soc {
 	background-color: black;
 	color: white;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
 	border-radius: 50%;
 	height: 2em;
 	width: 2em;
-	line-height: 2.1;
-	text-align: center;
+	transition: $duration linear;
 
 	&:hover,
 	&:focus {
 		color: white;
+		transition: none;
+	}
+
+	&_vk {
+
+		&:hover,
+		&:focus {
+			background-color: $color-vk;
+		}
+	}
+
+	&_facebook {
+
+		&:hover,
+		&:focus {
+			background-color: $color-fb;
+		}
+	}
+
+	&_instagram {
+
+		&:hover,
+		&:focus {
+			background-color: $color-insta;
+		}
+	}
+
+	&_youtube {
+
+		&:hover,
+		&:focus {
+			background-color: $color-yt;
+		}
 	}
 }

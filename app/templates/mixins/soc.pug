@@ -1,6 +1,6 @@
 mixin soc(data)
 	a.soc(
-		class = attributes.class
+		class= "soc_" + data.name + " " + attributes.class
 		href= data.link
 	)
 		i.fa(class='fa-' + data.name)
