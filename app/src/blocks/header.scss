@@ -1,15 +1,14 @@
 .header {
-	position: fixed;
-	width: 100%;
-	padding: 10px 0 10px;
+	flex: 0 0 auto;
+	padding: 5px 0;
 	box-shadow: 0 5px 5px -5px $color-text-2;
-	height: $height-header;
 
-	@include screen-md() {
-		height: $height-header-sm;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
+	@include screen-sm() {
+		padding: 15px 0;
+	}
+
+	&__row {
+		align-items: center;
 	}
 
 	&__logo {
@@ -21,14 +20,14 @@
 		text-align: right;
 		margin-right: -15px;
 
-		@include screen-md() {
+		@include screen-sm() {
 			display: none;
 		}
 	}
 
 	&__menu {
 
-		@include screen-md(max) {
+		@include screen-sm(max) {
 			display: none;
 		}
 	}

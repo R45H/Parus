@@ -2,6 +2,10 @@
 	flex: 0 0 auto;
 	letter-spacing: 0;
 
+	@include screen-sm() {
+		border-top: 1px solid $color-text-2;
+	}
+
 	&__wrap {
 		display: flex;
 		flex-wrap: wrap;
@@ -10,7 +14,6 @@
 		@include screen-sm() {
 			justify-content: space-between;
 			align-items: center;
-			border-top: 1px solid $color-text-2;
 			padding-top: 10px;
 			padding-bottom: 10px;
 		}
