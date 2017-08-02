@@ -22,7 +22,8 @@ var
    pug          = require('gulp-pug'),                     // Шаблонизатор Pug (бывший Jade)
    merge        = require('gulp-merge-json'),              // Конкатенация JSON
    data         = require('gulp-data'),                    // Парс JSON
-   fs           = require('fs')                            // Чтение JSON
+   fs           = require('fs'),                           // Чтение JSON
+	prettify     = require('gulp-jsbeautifier')             // Форматирование JS и HTML
 ;
 /* ================================ */
 
@@ -82,9 +83,11 @@ gulp.task('pug', function () {
 		.pipe(data(function(file) { // Парсим JSON
 			return JSON.parse(fs.readFileSync('temp/data.json'))
 		}))
-		.pipe(prod ? pug({ // Сконвертим в HTML
-			pretty: '\t' // Форматируем с табами вместо пробелов
-		}) : pug())
+		.pipe(pug()) // Сконвертим в HTML
+		.pipe(prod ? prettify({ // Форматируем код
+			indent_char: '\t',
+			indent_size: 1
+		}) : gutil.noop())
 		.pipe(gulp.dest(dist)) // Выплюнем их
 		.pipe(reload({stream: true})); //Перезагрузим сервер
 });
@@ -123,6 +126,10 @@ gulp.task('js', function() {
 	return gulp.src(app + 'src/script.js') // Берём все необходимые скрипты
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
+		.pipe(prod ? prettify({ // Форматируем код
+			indent_char: '\t',
+			indent_size: 1
+		}) : gutil.noop())
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
 		.pipe(reload({stream: true})); // Перезагружаем сервер
 });
