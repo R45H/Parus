@@ -1,0 +1,14 @@
+.section {
+	margin-bottom: 3.3em;
+
+	&:first-child {
+
+		@include screen-sm() {
+			margin-top: 2em;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 2em;
+	}
+}

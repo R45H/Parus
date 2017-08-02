@@ -1,0 +1,75 @@
+.banner-sm {
+	padding-bottom: 56%;
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+	&::after {
+
+		@include screen-md() {
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 30px;
+			background: linear-gradient(to bottom right, $color-grad-1, $color-grad-2);
+			transform: rotate(45deg);
+			bottom: -15px;
+			left: -15px;
+		}
+	}
+
+	&:hover {
+
+		.banner-sm {
+			// =====
+
+			&__img {
+
+				@include screen-md() {
+					transform: scale(1.05);
+				}
+
+				&::before {
+
+					@include screen-md() {
+						opacity: .5;
+					}
+				}
+			}
+		}
+	}
+
+	&__img {
+		background: no-repeat 50% 50% / cover;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transition: $duration ease;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $color-fog;
+			transition: $duration ease;
+		}
+	}
+
+	&__text {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		text-align: center;
+		line-height: 1;
+		margin-top: -.5em;
+		color: white;
+		text-transform: uppercase;
+		font-size: 1.2rem;
+	}
+}

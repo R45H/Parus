@@ -1,11 +1,19 @@
 html {
 	height: 100%;
-	font-size: 10px;
+	font-size: 8px;
+
+	@include screen-md() {
+		font-size: 9px;
+	}
+
+	@include screen-lg() {
+		font-size: 10px;
+	}
 }
 
 body {
 	height: 100%;
-	font-size: 1.5rem;
+	font-size: 1.6rem;
 	font-family: $font-main;
 	color: $color-text;
 	letter-spacing: $letter-spacing;
@@ -34,6 +42,30 @@ hr {
 	margin: 0;
 }
 
+a {
+	color: $color-text;
+
+	&:hover {
+		color: $color-main;
+		text-decoration: none;
+	}
+}
+
+p {
+	margin: 1em 0;
+}
+
 ::selection {
 
+}
+
+.hidden-sm {
+
+	@include screen-md(max) {
+		display: none !important;
+	}
+}
+
+.text-center {
+	text-align: center;
 }

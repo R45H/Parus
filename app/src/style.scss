@@ -9,12 +9,15 @@
 @import url('blocks/toggle.scss'); // Чизбургер
 @import url('blocks/menu.scss'); // Главное меню
 @import url('blocks/soc.scss'); // Социальные иконки
-
+@import url('blocks/banner-lg.scss'); // Большая картинка
+@import url('blocks/banner-sm.scss'); // Маленькие картинки
+@import url('blocks/title.scss'); // Заголовок
+@import url('blocks/btn.scss'); // Кнопка
 // =====
 
 // Внешние контейнеры
 @import url('blocks/header.scss'); // Шапка
 @import url('blocks/footer.scss'); // Подвал
+@import url('blocks/section.scss'); // Секция контента
 @import url('blocks/main.scss'); // Контейнер контента
-@import url('blocks/wrapper.scss'); // Внешний контейнер
 // =====

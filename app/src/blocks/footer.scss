@@ -1,6 +1,6 @@
 .footer {
 	flex: 0 0 auto;
-	letter-spacing: 0;
+	font-size: 1.4rem;
 
 	@include screen-sm() {
 		border-top: 1px solid $color-text-2;
@@ -21,7 +21,7 @@
 
 	&__soc-wrap {
 		text-align: center;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		width: 100%;
 
 		@include screen-sm() {
@@ -39,7 +39,12 @@
 	}
 
 	&__soc {
-		margin: 5px;
+		margin: 0 5px 10px;
+		font-size: 14px;
+
+		@include screen-sm() {
+			margin: 5px;
+		}
 	}
 
 	&__company-wrap {
@@ -58,9 +63,8 @@
 	}
 
 	&__company {
-		color: $color-dark-text;
+		color: $color-text;
 		text-decoration: none;
-		letter-spacing: $letter-spacing;
 		display: inline-block;
 
 		&:hover {
@@ -69,7 +73,6 @@
 
 		@include screen-sm() {
 			line-height: 2;
-			color: $color-text;
 		}
 	}
 
@@ -85,50 +88,41 @@
 			width: 100%;
 		}
 
-		@include screen-md() {
-			width: auto;
-			text-align: right;
-		}
-
 		@include screen-lg() {
 			width: 33.33333%;
+			text-align: right;
 		}
 	}
 
 	&__copy-text {
-		color: $color-dark-text;
+		color: $color-text;
 
 		@include screen-sm() {
-			color: $color-text;
 			display: inline-block;
 			margin-right: 10px;
 		}
 
-		@include screen-md() {
+		@include screen-lg() {
 			display: block;
 			margin-right: 0;
 		}
 	}
 
 	&__copy-link {
-		color: $color-dark-text;
 		display: inline-block;
+		text-decoration: none;
+		border-bottom: 1px solid $color-text;
 
 		&:hover {
-			color: $color-main;
-		}
-
-		@include screen-sm() {
-			color: $color-text;
+			border-bottom-color: $color-main;
 		}
 	}
 
 	&__webcenter-wrap {
 		text-align: center;
-		width: 100%;
 		width: calc(100% + 30px);
 		border-top: 1px solid $color-text-2;
-		margin: 0 calc(-15px);
+		margin: 0 -15px;
 
 		@include screen-sm() {
 			border: none;
@@ -136,21 +130,18 @@
 			margin: 10px 0;
 		}
 
-		@include screen-md() {
-			width: auto;
-			margin: 0;
-		}
-
 		@include screen-lg() {
 			flex-grow: 1;
+			width: auto;
+			margin: 0;
 		}
 	}
 
 	&__webcenter {
 		display: block;
 		text-decoration: none;
-		line-height: 2;
-		color: $color-dark-text;
+		line-height: 2.5;
+		color: $color-text;
 
 		&:hover {
 			color: $color-webcenter;
@@ -159,7 +150,6 @@
 		@include screen-sm() {
 			display: inline-block;
 			border-bottom: 1px dotted $color-text-2;
-			color: $color-text;
 
 			&:hover {
 				border-bottom-color: $color-webcenter;

@@ -1,0 +1,60 @@
+.banner-lg {
+	padding-bottom: 80%;
+	background: no-repeat 50% 50% / cover;
+	display: block;
+	margin: 0 -15px;
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $color-fog-light;
+
+		@include screen-md() {
+			background: none;
+		}
+	}
+
+	@include screen-sm() {
+		margin: 0;
+	}
+
+	&__welcome {
+		font-size: 2rem;
+		text-decoration: none;
+		color: white;
+		margin: 0;
+		position: absolute;
+		top: 20%;
+		left: 0;
+		width: 100%;
+		text-align: center;
+
+		@include screen-md() {
+			color: $color-text-2;
+			width: auto;
+			transform: rotate(-90deg) translateY(-180px);
+			top: 50%;
+		}
+
+		@include screen-lg() {
+			transform: rotate(-90deg) translateY(-170px);
+		}
+	}
+
+	&__btn {
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		transform: translateX(-50%);
+		white-space: nowrap;
+
+		@include screen-md() {
+			display: none;
+		}
+	}
+}
