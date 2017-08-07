@@ -1,5 +1,3 @@
-include ../mixins/menu
-
 // HEADER
 header.header
 	.container
@@ -10,7 +8,12 @@ header.header
 					img.logo__img(src="img/logo.svg")
 
 			.col
-				+menu(menu)(class="header__menu")
+				//- TODO Вывести подменю в десктопном меню
+				ul.header__menu
+					each val in menu
+						li.header__menu-item
+							a.header__menu-link(href= val.link)= val.text
+						li.header__menu-separator
 
 	.toggle.header__toggle
 		.toggle__wrap

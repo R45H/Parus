@@ -3,26 +3,20 @@
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
+	z-index: 40;
+	box-sizing: content-box;
 
 	&:hover {
 
-		.toggle {
-			// =====
-
-			&__line {
-				background-color: lighten($color-main, 5%);
-			}
+		.toggle__line {
+			background-color: lighten($color-main, 7%);
 		}
 	}
 
 	&:active {
 
-		.toggle {
-			// =====
-
-			&__line {
-				background-color: darken($color-main, 5%);
-			}
+		.toggle__line {
+			background-color: darken($color-main, 7%);
 		}
 	}
 
@@ -30,6 +24,7 @@
 		width: 55px;
 		height: 48px;
 		padding: 15px;
+		box-sizing: border-box;
 	}
 
 	&__line {
@@ -42,49 +37,41 @@
 
 	&_closed {
 
-		.toggle {
-			// =====
+		.toggle__line {
 
-			&__line {
+			&:nth-child(1) {
+				animation: toggleTopLineRevert $duration ease-out;
+				animation-fill-mode: forwards;
+			}
 
-				&:nth-child(1) {
-					animation: toggleTopLineRevert $duration ease-out;
-					animation-fill-mode: forwards;
-				}
+			&:nth-child(2) {
+				opacity: 1;
+			}
 
-				&:nth-child(2) {
-					opacity: 1;
-				}
-
-				&:nth-child(3) {
-					animation: toggleBottomLineRevert $duration ease-out;
-					animation-fill-mode: forwards;
-					margin-bottom: 0;
-				}
+			&:nth-child(3) {
+				animation: toggleBottomLineRevert $duration ease-out;
+				animation-fill-mode: forwards;
+				margin-bottom: 0;
 			}
 		}
 	}
 
 	&_opened {
 
-		.toggle {
-			// =====
+		.toggle__line {
 
-			&__line {
+			&:nth-child(1) {
+				animation: toggleTopLine $duration ease-out;
+				animation-fill-mode: forwards;
+			}
 
-				&:nth-child(1) {
-					animation: toggleTopLine $duration ease-out;
-					animation-fill-mode: forwards;
-				}
+			&:nth-child(2) {
+				opacity: 0;
+			}
 
-				&:nth-child(2) {
-					opacity: 0;
-				}
-
-				&:nth-child(3) {
-					animation: toggleBottomLine $duration ease-out;
-					animation-fill-mode: forwards;
-				}
+			&:nth-child(3) {
+				animation: toggleBottomLine $duration ease-out;
+				animation-fill-mode: forwards;
 			}
 		}
 	}

@@ -1,11 +1,13 @@
 .header {
 	flex: 0 0 auto;
 	padding: 10px 0;
-	box-shadow: 0 5px 5px -5px $color-text-2;
+	box-shadow: 0 5px 6px -6px $color-text-2;
 	position: relative;
+	height: 70px;
 
 	@include screen-sm() {
 		padding: 20px 0;
+		height: auto;
 	}
 
 	&__row {
@@ -22,7 +24,7 @@
 		top: 0;
 		right: 0;
 		height: 100%;
-		width: 69px;
+		width: 70px;
 
 		@include screen-sm() {
 			display: none;
@@ -30,8 +32,43 @@
 	}
 
 	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		list-style-type: none;
+
+		@include screen-xl() {
+			justify-content: space-between;
+		}
 
 		@include screen-sm(max) {
+			display: none;
+		}
+	}
+
+	&__menu-link {
+		color: $color-text;
+		font-size: 1.4rem;
+		text-decoration: none;
+		display: block;
+		line-height: 2;
+
+		&:hover {
+			color: $color-main;
+		}
+	}
+
+	&__menu-separator {
+		width: 1px;
+		height: 5px;
+		background: $color-grad-1;
+		margin: 0 10px;
+
+		&:last-child {
 			display: none;
 		}
 	}
