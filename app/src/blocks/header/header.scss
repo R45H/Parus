@@ -1,0 +1,160 @@
+.header {
+	flex: 0 0 auto;
+	padding: 10px 0;
+	box-shadow: 0 5px 6px -6px $color-text-2;
+	position: relative;
+	height: 70px;
+
+	@include screen-sm() {
+		padding: 20px 0;
+		height: auto;
+	}
+
+	&__row {
+		align-items: center;
+	}
+
+	&__logo {
+		max-height: 50px;
+		max-width: 75px;
+	}
+
+	&__toggle {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 70px;
+
+		@include screen-sm() {
+			display: none;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0;
+		margin: 0;
+		height: 100%;
+		list-style-type: none;
+
+		@include screen-xl() {
+			justify-content: space-between;
+		}
+
+		@include screen-sm(max) {
+			display: none;
+		}
+	}
+
+	&__menu-item {
+		font-size: 1.4rem;
+		position: relative;
+
+		&:hover {
+
+			.header {
+				// =====
+
+				&__menu-link {
+					color: $color-main;
+				}
+
+				&__sub-wrap {
+					//display: block;
+				}
+			}
+		}
+	}
+
+	&__menu-link {
+		line-height: 2;
+		color: $color-text;
+		text-decoration: none;
+		display: block;
+
+		&:hover {
+			color: $color-main;
+		}
+	}
+
+	&__sub-wrap {
+		display: none;
+		padding-top: 8px;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+	&__sub {
+		list-style-type: none;
+		white-space: nowrap;
+		background: white;
+		padding: 0;
+		box-shadow: 0 0 4px 0 $color-text-2;
+		position: relative;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+		}
+
+		&::before {
+			border-bottom: 8px solid white;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			margin-left: -7px;
+			filter: drop-shadow(0 -1px 1px $color-text-2);
+		}
+
+		&::after {
+			border-bottom: 6px solid white;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			margin-left: -5px;
+		}
+	}
+
+	&__sub-item {
+
+		&:first-child {
+
+			.header__sub-link {
+				padding-top: 8px;
+			}
+		}
+
+		&:last-child {
+
+			.header__sub-link {
+				padding-bottom: 8px;
+			}
+		}
+	}
+
+	&__sub-link {
+		text-decoration: none;
+		line-height: 2;
+		padding: 0 24px;
+		display: block;
+	}
+
+	&__menu-separator {
+		width: 1px;
+		height: 5px;
+		background: $color-grad-1;
+		margin: 0 10px;
+
+		&:last-child {
+			display: none;
+		}
+	}
+}

@@ -11,5 +11,12 @@ $(function() {
 		/* ===== */
 	}());
 
+	(function() {
+
+		/* Шапка */
+		@@include('blocks/header/header.js')
+		/* ===== */
+	}());
+
 	@@include('global/functions.js')
 });

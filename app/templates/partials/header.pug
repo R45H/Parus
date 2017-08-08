@@ -8,11 +8,19 @@ header.header
 					img.logo__img(src="img/logo.svg")
 
 			.col
-				//- TODO Вывести подменю в десктопном меню
 				ul.header__menu
 					each val in menu
 						li.header__menu-item
 							a.header__menu-link(href= val.link)= val.text
+
+							if val.sub
+								.header__sub-wrap
+									ul.header__sub
+
+										each sub in val.sub
+											li.header__sub-item
+												a.header__sub-link(href= sub.link)= sub.text
+
 						li.header__menu-separator
 
 	.toggle.header__toggle
