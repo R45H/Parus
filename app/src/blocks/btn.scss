@@ -1,7 +1,7 @@
 .btn {
 	font-size: 1.4rem;
 	color: white;
-	background: linear-gradient(to right, $color-grad-1, $color-grad-2);
+	background: $color-btn;
 	display: inline-block;
 	text-decoration: none;
 	outline: none;
@@ -11,10 +11,10 @@
 
 	&:hover {
 		color: white;
-		background: linear-gradient(to right, lighten($color-grad-1, 5%), lighten($color-grad-2, 5%));
+		background: lighten($color-btn, 5%);
 	}
 
 	&:active {
-		background: linear-gradient(to right, darken($color-grad-1, 5%), darken($color-grad-2, 5%));
+		background: darken($color-btn, 5%);
 	}
 }
