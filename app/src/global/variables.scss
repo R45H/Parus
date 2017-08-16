@@ -32,13 +32,21 @@ $height-header-sm: 80px;
 
 $letter-spacing: 0.06666666em;
 
-%clear {
-	content: '';
-	display: table;
-	width: 100%;
-	clear: both;
-}
 
+/* ---------------------------- */
+/* МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА */
+/* ---------------------------- */
+
+// Write mixins here
+
+/* ---------------------------- */
+
+
+/* ------------- */
+/* ОБЩИЕ МИКСИНЫ */
+/* ------------- */
+
+// Брейкпоинты
 @mixin screen-sm($direct: 'min') {
 	@media (if($direct == 'max', 'max-width: #{$point-sm} - 1', 'min-width: #{$point-sm}')) {
 		@content;
@@ -62,6 +70,7 @@ $letter-spacing: 0.06666666em;
 		@content;
 	}
 }
+// ===========
 
 // Ретина
 @mixin retina() {
@@ -121,3 +130,5 @@ $letter-spacing: 0.06666666em;
 		}
 	}
 }
+
+/* ------------- */

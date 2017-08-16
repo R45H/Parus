@@ -18,5 +18,7 @@ $(function() {
 		/* ===== */
 	}());
 
-	@@include('global/functions.js')
+	@@include('global/global.js')
 });
+
+@@include('global/functions.js')

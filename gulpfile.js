@@ -23,7 +23,7 @@ var
    merge        = require('gulp-merge-json'),              // Конкатенация JSON
    data         = require('gulp-data'),                    // Парс JSON
    fs           = require('fs'),                           // Чтение JSON
-	prettify     = require('gulp-jsbeautifier')             // Форматирование JS и HTML
+   prettify     = require('gulp-jsbeautifier')             // Форматирование JS и HTML
 ;
 /* ================================ */
 
