@@ -19,12 +19,12 @@ function getScrollbarWidth() {
 /* ========== */
 
 /* Сделать боди фиксированным */
-function toggleBodyScroll(scroll) {
+function toggleBodyScroll(noscroll) {
 	var
 		$body = $('body'),
 		noScrollClass = 'noscroll';
 
-	if (scroll) {
+	if (noscroll === false) {
 		$body
 			.css('padding-right', '')
 			.removeClass(noScrollClass);

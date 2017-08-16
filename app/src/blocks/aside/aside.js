@@ -74,7 +74,11 @@ function toggleAside(action) {
 		$body.append('<div class="' + fogClass + '"></div>');
 		$('.' + fogClass).fadeIn(delay);
 		$(document).on('keydown', closeAsideOnEsc);
-		$body.addClass(noscrollClass);
+		$toggle.css({
+			'padding-right': getScrollbarWidth(),
+			'right': -(getScrollbarWidth())
+		});
+		toggleBodyScroll();
 	}
 
 	if (action == 'close') {
@@ -83,10 +87,14 @@ function toggleAside(action) {
 		$item.removeClass(itemOpenedClass);
 		$aside.removeClass(asideOpenedClass);
 		$('.' + fogClass).fadeOut(delay);
+		$toggle.css({
+			'padding-right': '',
+			'right': ''
+		});
 
 		setTimeout(function() {
 			$('.' + fogClass).remove();
-			$body.removeClass(noscrollClass);
+			toggleBodyScroll(false);
 		}, delay / 2);
 	}
 }

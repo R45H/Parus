@@ -6,14 +6,16 @@
 	width: 250px;
 	max-width: 67%;
 	background: white;
-	overflow: auto;
+	padding: 70px 0 0;
 	transition: $duration / 2 ease;
 	z-index: 30;
 
 	&__list {
 		list-style-type: none;
-		padding: 70px 0 15px;
+		padding: 0 0 15px;
 		margin: 0;
+		overflow: auto;
+		height: 100%;
 	}
 
 	&__item {
