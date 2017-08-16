@@ -44,7 +44,7 @@ var err = {
 };
 
 // Переключатель сборки для работы или в продакшн (false для работы)
-var prod = gutil.env.production;
+var prod = gutil.env.p || gutil.env.production;
 
 // Пути
 var app = 'app/'; // Папка исходников
