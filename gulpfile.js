@@ -17,13 +17,13 @@ var
    gutil        = require('gulp-util'),                    // Различные вспомогательные утилиты
    cssImport    = require('gulp-cssimport'),               // Работа @import
    strip        = require('gulp-strip-css-comments'),      // Убирает комментарии
-   path         = require('path'),                         // Для работы с путями
    runSequence  = require('run-sequence'),                 // Для синхронного выполнения задач
    pug          = require('gulp-pug'),                     // Шаблонизатор Pug (бывший Jade)
    merge        = require('gulp-merge-json'),              // Конкатенация JSON
    data         = require('gulp-data'),                    // Парс JSON
-   fs           = require('fs'),                           // Чтение JSON
-   prettify     = require('gulp-jsbeautifier')             // Форматирование JS и HTML
+   fs           = require('fs'),                           // Чтение и запись файлов
+   prettify     = require('gulp-jsbeautifier'),            // Форматирование JS и HTML
+   replace      = require('gulp-replace')                  // Замена текста в файлах
 ;
 /* ================================ */
 
@@ -72,7 +72,7 @@ gulp.task('json', function() {
 		.pipe(merge({ // Сольём в один
 			fileName: 'data.json'
 		}))
-		.pipe(gulp.dest('temp/')); // Выплюнем
+		.pipe(gulp.dest(temp)); // Выплюнем
 });
 /* ================================ */
 
@@ -94,7 +94,7 @@ gulp.task('pug', function () {
 /* ================================ */
 
 /* ========= ТАСК "SASS" ========== */
-gulp.task('sass', function() {
+gulp.task('scss', function() {
 	return gulp.src(app + 'src/style.scss') // Берём источник
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(cssImport()) // Запускаем @import
@@ -171,7 +171,7 @@ gulp.task('fonts', function() {
 
 /* ========= ТАСК "CLEAN" ========= */
 gulp.task('clean', function() {
-	return del.sync([dist, temp]); // Удаляем папку "dist" перед сборкой
+	return del.sync([dist, temp]); // Удаляем папки "dist" и "temp" перед сборкой
 });
 /* ================================ */
 
@@ -182,7 +182,7 @@ gulp.task('build', function(callback) {
 		'json',
 		[
 			'pug',
-			'sass',
+			'scss',
 			'css-libs',
 			'js',
 			'js-libs',
@@ -197,7 +197,7 @@ gulp.task('build', function(callback) {
 /* ========= ТАСК "WATCH" ========= */
 gulp.task('watch', function() {
 	gulp.watch(app + '**/*.pug', ['pug']); // Наблюдение за PUG файлами
-	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['sass']); // Наблюдение за своими SCSS файлами
+	gulp.watch([app + 'src/**/*.scss', '!' + app + 'src/libs.scss'], ['scss']); // Наблюдение за своими SCSS файлами
 	gulp.watch(app + 'src/libs.scss', ['css-libs']); // Наблюдение за скачанными CSS файлами
 	gulp.watch([app + 'src/**/*.js', '!' + app + 'src/libs.js'], ['js']); // Наблюдение за своими JS файлами
 	gulp.watch(app + 'src/libs.js', ['js-libs']); // Наблюдение за скачанными JS файлами
@@ -245,5 +245,200 @@ gulp.task('sprite', function() {
 
 	spriteData.img.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем картинку
 	spriteData.css.pipe(gulp.dest(app + 'sprites/')); // путь, куда сохраняем стили
+});
+/* ================================ */
+
+/* ====== СОЗДАНИЕ СТРАНИЦЫ ======= */
+/**
+	n - Имя файла
+	t - Заголовок страницы
+**/
+gulp.task('page', function() {
+	var
+		name = gutil.env.n + '.pug',
+		string =
+			'extends layouts/default\n' +
+			'\n' +
+			'block vars\n' +
+			'\t-\n' +
+			'\t\tpage = {\n' +
+			'\t\t\ttitle: \'' + gutil.env.t + '\'\n' +
+			'\t\t}\n' +
+			'\n' +
+			'block content\n' +
+			'\tinclude pages/' + gutil.env.n;
+
+	fs.writeFileSync(app + 'templates/' + name, string);
+	fs.writeFileSync(app + 'templates/pages/' + name, '');
+});
+/* ================================ */
+
+/* ======= СОЗДАНИЕ БЛОКА ========= */
+/**
+	name (n) - Имя блока
+	scss (s) - Генерация SCSS
+	js   (j) - Генерация JS
+	pug  (p) - Генерация PUG миксина
+	json (o) - Генерация данных JSON
+**/
+gulp.task('block', function() {
+	var
+		name = gutil.env.name || gutil.env.n, // Имя блока
+
+		dirBlocks = app + 'src/blocks/', // Полный путь до папки с блоками
+		dirTemp = app + 'templates/', // Полный путь до папки с вёрсткой
+
+		dirThis = dirBlocks + name + '/', // Полный путь до папки с текущим блоком
+		dirThisRel = 'blocks/' + name + '/', // Относительный путь до папки с текущим блоком
+
+		keyScss = gutil.env.scss || gutil.env.s, // Ключ генерации SCSS файла
+		keyJs = gutil.env.js || gutil.env.j, // Ключ генерации JS файла
+		keyPugMixin = gutil.env.pug || gutil.env.p, // Ключ генерации PUG миксина
+		keyDataJson = gutil.env.json || gutil.env.o; // Ключ генерации JSON
+
+	// Генерация SCSS при запуске без ключей
+	if (!keyScss && !keyJs && !keyPugMixin && !keyDataJson) {
+
+		fs.access(dirBlocks + name + '.js', function(err) {
+
+			if (err) {
+				addScss(dirBlocks, 'blocks/');
+			} else {
+				moveJsToFolder();
+				addScss(dirThis, dirThisRel);
+			}
+		});
+	}
+	// =====
+
+	// Генерация SCSS и JS файлов
+	if (keyScss) {
+
+		if (keyJs) {
+			fs.mkdirSync(dirThis);
+			addScss(dirThis, dirThisRel);
+			addJs(dirThis, dirThisRel);
+		} else {
+
+			fs.access(dirBlocks + name + '.js', function(err) {
+
+				if (err) {
+					addScss(dirBlocks, 'blocks/');
+				} else {
+					moveJsToFolder();
+					addScss(dirThis, dirThisRel);
+				}
+			});
+		}
+	} else {
+
+		if (keyJs) {
+
+			fs.access(dirBlocks + name + '.scss', function(err) {
+
+				if (err) {
+					addJs(dirBlocks, 'blocks/');
+				} else {
+					moveScssToFolder();
+					addJs(dirThis, dirThisRel);
+				}
+			});
+		}
+	}
+	// =====
+
+	// Генерация PUG файла
+	if (keyPugMixin) {
+		addPugMixin(dirTemp);
+	}
+	// =====
+
+	// Генерация JSON файла
+	if (keyDataJson) {
+		addDataJson(dirTemp);
+	}
+	// =====
+
+	function addScss(path, relPath) {
+		var
+			str =
+				'.' + name + ' {\n' +
+				'\t\n' +
+				'}',
+			pathToMain = app + 'src/style.scss',
+			inc = '\n@import url(\'' + relPath + name + '.scss\');';
+
+		fs.writeFileSync(path + name + '.scss', str);
+		fs.appendFileSync(pathToMain, inc);
+	}
+	function addJs(path, relPath) {
+
+		fs.writeFileSync(
+			path + name + '.js',
+			''
+		);
+
+		fs.appendFileSync(
+			app + 'src/script.js',
+			'\n(function() { @@include(\'' + relPath + name + '.js\') }());'
+		);
+	}
+	function addPugMixin(path) {
+
+		fs.writeFileSync(
+			path + 'mixins/' + name + '.pug',
+			'mixin ' + name + '(data)\n\t'
+		);
+	}
+	function addDataJson(path) {
+		name = name.replace(new RegExp('-', 'g'), '_');
+
+		var str =
+			'{\n' +
+			'\t"' + name + '": [\n' +
+			'\t\t{\n' +
+			'\t\t\t\n' +
+			'\t\t}\n' +
+			'\t]\n' +
+			'}';
+
+		fs.writeFileSync(path + 'data/' + name + '.json', str);
+	}
+	function moveJsToFolder() {
+
+		fs.mkdirSync(dirThis);
+
+		gulp.src(dirBlocks + name + '.js')
+			.pipe(gulp.dest(dirThis));
+
+		gulp.src(app + 'src/script.js')
+			.pipe(replace(
+				'@@include(\'blocks/' + name + '.js\')',
+				'@@include(\'' + dirThisRel + name + '.js\')'
+			))
+			.pipe(gulp.dest(function(file) {
+				return file.base;
+			}));
+
+		return del('./' + dirBlocks + name + '.js');
+	}
+	function moveScssToFolder() {
+
+		fs.mkdirSync(dirThis);
+
+		gulp.src(dirBlocks + name + '.scss')
+			.pipe(gulp.dest(dirThis));
+
+		gulp.src(app + 'src/style.scss')
+			.pipe(replace(
+				'@import url(\'blocks/' + name + '.scss\');',
+				'@import url(\'' + dirThisRel + name + '.scss\');'
+			))
+			.pipe(gulp.dest(function(file) {
+				return file.base;
+			}));
+
+		return del('./' + dirBlocks + name + '.scss');
+	}
 });
 /* ================================ */
