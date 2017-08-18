@@ -1,7 +1,26 @@
 include ../components/head-block
+include ../mixins/banner
+include ../mixins/comment
 
 .section
 	+head-block(
 		smData= banner_sm_salons
 		lgData= banner_lg_salons
 	)
+
+.section
+	.container
+		.main__space_bot
+			each val in banner
+				+banner(val)
+		.text-center
+			a.btn(href="#") Записаться
+
+.section
+	.container
+		h2.title Отзывы
+		.row
+
+			each val in comment
+				.col-sm-6.col-lg-3
+					+comment(val)
