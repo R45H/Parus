@@ -1,0 +1,30 @@
+mixin head-block()
+	.head-block(class= attributes.hasTitle ? 'head-block_has-title' : '')
+		.container
+			.row
+				.head-block__banner-lg-wrap(class= attributes.hasTitle ? 'col-md-7 push-md-2 col-lg-8 push-lg-1' : 'col-md-8')
+					.head-block__banner-lg-i
+						.banner-lg.head-block__banner-lg
+
+							each val in attributes.lgData
+								.banner-lg__i(style="background-image: url(" + val.img + ");")
+
+									if (attributes.hasTitle)
+										p.banner-lg__welcome Добро пожаловать на борт
+
+									a.btn.banner-lg__btn(href="#") Заказать визит
+
+				.col-12.main__md-last
+					.text-center
+						h2.title Почему парус?
+						.head-block__desc
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elitsed do eiusmod o eiusmod tempor incididunt uxxbt rem ipsum dolor sit amet, consecteUt enim ad Lorem ipsum dolor sit amet, consectetur adipis
+							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elitsed do eiusmod o eiusmod tempor incididunt uxxbt rem ipsum dolor sit amet, consecteUt enim ad Lorem ipsum dolor sit amet, consectetur adipis
+						a.btn.hidden-sm(href="#") Заказать визит
+
+				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-4')
+					each val in attributes.smData
+						.head-block__banner-sm-i
+							a.banner-sm.head-block__banner-sm(href= val.link)
+								.banner-sm__img(style= "background-image: url(" + val.img + ");")
+								.banner-sm__text= val.text

@@ -6,6 +6,7 @@ $(function() {
 	}());
 
 	(function() { @@include('blocks/header/header.js') }());
+	(function() { @@include('blocks/banner-lg/banner-lg.js') }());
 
 	@@include('global/global.js')
 });
