@@ -1,4 +1,6 @@
-.title {
+$name: title;
+
+.#{$name} {
 	font-size: 2rem;
 	font-weight: normal;
 	margin: $space / 2 0;

@@ -1,4 +1,6 @@
-.banner {
+$name: banner;
+
+.#{$name} {
 	display: block;
 	position: relative;
 
@@ -27,12 +29,12 @@
 	}
 }
 
-a.banner {
+a.#{$name} {
 	border-bottom: none;
 
 	&:hover {
 
-		.banner {
+		.#{$name} {
 			// =====
 
 			&__img {
@@ -43,5 +45,4 @@ a.banner {
 			}
 		}
 	}
-
 }

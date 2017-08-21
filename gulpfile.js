@@ -362,7 +362,9 @@ gulp.task('block', function() {
 	function addScss(path, relPath) {
 		var
 			str =
-				'.' + name + ' {\n' +
+				'$name: ' + name + ';\n' +
+				'\n' +
+				'.#{$name} {\n' +
 				'\t\n' +
 				'}',
 			pathToMain = app + 'src/style.scss',

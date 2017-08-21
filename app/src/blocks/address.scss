@@ -1,4 +1,6 @@
-.address {
+$name: address;
+
+.#{$name} {
 
 	&__title {
 		font-weight: bold;

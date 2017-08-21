@@ -1,4 +1,6 @@
-.header {
+$name: header;
+
+.#{$name} {
 	flex: 0 0 auto;
 	padding: 10px 0;
 	box-shadow: 0 5px 6px -6px $color-text-2;
@@ -56,7 +58,7 @@
 
 		&:hover {
 
-			.header {
+			.#{$name} {
 				// =====
 
 				&__menu-link {
@@ -92,7 +94,7 @@
 
 		&_visible {
 
-			.header__sub {
+			.#{$name}__sub {
 
 				&::before,
 				&::after {
@@ -147,14 +149,14 @@
 
 		&:first-child {
 
-			.header__sub-link {
+			.#{$name}__sub-link {
 				padding-top: 8px;
 			}
 		}
 
 		&:last-child {
 
-			.header__sub-link {
+			.#{$name}__sub-link {
 				padding-bottom: 8px;
 			}
 		}

@@ -1,4 +1,6 @@
-.soc {
+$name: soc;
+
+.#{$name} {
 	background-color: black;
 	color: white;
 	display: inline-flex;

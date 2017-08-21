@@ -1,4 +1,6 @@
-.section {
+$name: section;
+
+.#{$name} {
 	margin-bottom: $space;
 
 	&:first-child {

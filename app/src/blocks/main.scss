@@ -1,4 +1,6 @@
-.main {
+$name: main;
+
+.#{$name} {
 	flex: 1 0 auto;
 
 	&__space_bot {

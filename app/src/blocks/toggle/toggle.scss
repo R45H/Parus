@@ -1,4 +1,6 @@
-.toggle {
+$name: toggle;
+
+.#{$name} {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -8,14 +10,14 @@
 
 	&:hover {
 
-		.toggle__line {
+		.#{$name}__line {
 			background-color: lighten($color-main, 7%);
 		}
 	}
 
 	&:active {
 
-		.toggle__line {
+		.#{$name}__line {
 			background-color: darken($color-main, 7%);
 		}
 	}
@@ -37,7 +39,7 @@
 
 	&_closed {
 
-		.toggle__line {
+		.#{$name}__line {
 
 			&:nth-child(1) {
 				animation: toggleTopLineRevert $duration ease-out;
@@ -58,7 +60,7 @@
 
 	&_opened {
 
-		.toggle__line {
+		.#{$name}__line {
 
 			&:nth-child(1) {
 				animation: toggleTopLine $duration ease-out;

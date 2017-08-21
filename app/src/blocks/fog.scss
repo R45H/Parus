@@ -1,4 +1,6 @@
-.fog {
+$name: fog;
+
+.#{$name} {
 	display: none;
 	position: absolute;
 	top: 0;

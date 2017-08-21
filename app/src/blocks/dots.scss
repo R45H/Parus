@@ -1,4 +1,6 @@
-.dots {
+$name: dots;
+
+.#{$name} {
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -16,7 +18,7 @@
 
 		&:hover {
 
-			.dots {
+			.#{$name} {
 				// =====
 
 				&__item {
@@ -32,7 +34,7 @@
 
 		&.slick-active {
 
-			.dots {
+			.#{$name} {
 				// =====
 
 				&__item {

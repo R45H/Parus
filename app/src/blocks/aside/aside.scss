@@ -1,4 +1,6 @@
-.aside {
+$name: aside;
+
+.#{$name} {
 	position: fixed;
 	top: 0;
 	right: -250px;
@@ -22,7 +24,7 @@
 
 		&:hover {
 
-			.aside {
+			.#{$name} {
 				// =====
 
 				&__link {
@@ -33,7 +35,7 @@
 
 		&_sub {
 
-			.aside {
+			.#{$name} {
 				// =====
 
 				&__link {
@@ -52,7 +54,7 @@
 
 		&_opened {
 
-			.aside {
+			.#{$name} {
 				// =====
 
 				&__link {

@@ -1,4 +1,6 @@
-.comment {
+$name: comment;
+
+.#{$name} {
 
 	&__date {
 		margin: 0 0 1.2rem;

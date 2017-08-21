@@ -1,4 +1,6 @@
-.banner-sm {
+$name: banner-sm;
+
+.#{$name} {
 	padding-bottom: 56%;
 	display: block;
 	position: relative;
@@ -46,12 +48,12 @@
 	}
 }
 
-a.banner-sm {
+a.#{$name} {
 	border-bottom: none;
 
 	&:hover {
 
-		.banner-sm {
+		.#{$name} {
 			// =====
 
 			&__img {

@@ -1,4 +1,6 @@
-.logo {
+$name: logo;
+
+.#{$name} {
 	display: block;
 
 	&__img {

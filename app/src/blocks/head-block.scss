@@ -1,4 +1,6 @@
-.head-block {
+$name: head-block;
+
+.#{$name} {
 
 	&__banner-lg-wrap {
 
@@ -73,7 +75,7 @@
 
 	&_has-title {
 
-		.head-block {
+		.#{$name} {
 			// =====
 
 			&__banner-sm-i {

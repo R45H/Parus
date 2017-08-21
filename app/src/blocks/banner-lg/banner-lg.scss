@@ -1,4 +1,6 @@
-.banner-lg {
+$name: banner-lg;
+
+.#{$name} {
 	padding-bottom: 80%;
 	display: block;
 	position: relative;
@@ -95,7 +97,7 @@
 
 	&.slick-slider {
 
-		.banner-lg {
+		.#{$name} {
 			// =====
 
 			&__i {
