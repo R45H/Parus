@@ -1,0 +1,21 @@
+include ../components/head-block
+include ../mixins/banner
+
+.section.section_space_half
+	h1.title Feel Fresh Bar
+
+	+head-block(
+		subTitle= "Текст о барах"
+		smData= banner_sm_fresh_bar
+		lgData= banner_lg_fresh_bar
+	)
+
+.section
+	.container
+		.main__space_bot-half
+			each val in banner_fresh_bar
+				+banner(val)
+		.text-center
+			a.btn(href="#") Позвонить
+
+include ../components/address

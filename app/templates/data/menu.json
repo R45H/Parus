@@ -1,27 +1,13 @@
 {
 	"menu": [
-		{
-			"link": "/clubs.html",
-			"text": "Клубы",
-			"sub": [
-				{"link": "#", "text": "О компании"},
-				{"link": "#", "text": "Уроки"},
-				{"link": "#", "text": "Для дома"},
-				{"link": "#", "text": "Питание"},
-				{"link": "#", "text": "Новости"},
-				{"link": "#", "text": "Детям"},
-				{"link": "#", "text": "Мамам"},
-				{"link": "#", "text": "Акции"},
-				{"link": "#", "text": "Контакты"}
-			]
-		},
-		{"link": "/membership.html", "text": "Преимущества членства"},
+		{"link": "clubs.html", "text": "Клубы"},
+		{"link": "membership.html", "text": "Преимущества членства"},
 		{"link": "#", "text": "AirFit"},
-		{"link": "/happy-age.html", "text": "Возраст счастья"},
-		{"link": "/children.html", "text": "Дети"},
-		{"link": "/salons.html", "text": "Салоны"},
-		{"link": "#", "text": "Кафе"},
-		{"link": "/cultural.html", "text": "Культурные программы"},
+		{"link": "happy-age.html", "text": "Возраст счастья"},
+		{"link": "children.html", "text": "Дети"},
+		{"link": "salons.html", "text": "Салоны"},
+		{"link": "fresh-bar.html", "text": "Кафе"},
+		{"link": "cultural.html", "text": "Культурные программы"},
 		{"link": "#", "text": "Контакты"}
 	]
 }
