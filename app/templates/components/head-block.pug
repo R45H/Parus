@@ -2,7 +2,7 @@ mixin head-block()
 	.head-block(class= attributes.hasTitle ? 'head-block_has-title' : '')
 		.container
 			.row
-				.head-block__banner-lg-wrap(class= attributes.hasTitle ? 'col-md-7 push-md-2 col-lg-8 push-lg-1' : 'col-md-8')
+				.head-block__banner-lg-wrap(class= attributes.hasTitle ? 'col-md-7 push-md-2 col-lg-8 push-lg-1' : 'col-md-9')
 					.head-block__banner-lg-i
 						.banner-lg.head-block__banner-lg
 
@@ -25,7 +25,7 @@ mixin head-block()
 						if (attributes.btn)
 							a.btn.head-block__btn(href="#")= attributes.btn
 
-				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-4')
+				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-3')
 					each val in attributes.smData
 						.head-block__banner-sm-i
 							a.banner-sm.head-block__banner-sm(href= val.link)

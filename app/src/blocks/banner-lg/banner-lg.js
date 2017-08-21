@@ -12,6 +12,9 @@ if ($items.length > 1) {
 		arrows: false,
 		dots: true,
 		dotsClass: classDots,
+		autoplay: true,
+		autoplaySpeed: 10000,
+		pauseOnDotsHover: true,
 		customPaging: function() {
 			return '<div class="' + classDot + '"></div>'
 		}

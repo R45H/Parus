@@ -21,9 +21,10 @@ $name: banner;
 		position: absolute;
 		top: 50%;
 		width: 100%;
+		padding: 0 15px;
 		text-align: center;
 		line-height: 1;
-		margin-top: -.5em;
+		transform: translateY(-50%);
 		color: white;
 		font-size: 3rem;
 	}

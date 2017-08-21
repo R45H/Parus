@@ -29,7 +29,7 @@ $name: head-block;
 		position: relative;
 
 		@include screen-md() {
-			padding-bottom: 69%;
+			padding-bottom: 64%;
 		}
 	}
 
@@ -43,7 +43,7 @@ $name: head-block;
 
 		@include screen-md() {
 			margin: 0;
-			padding-bottom: calc((69% / 3) * (8 / 4));
+			padding-bottom: calc((64% / 3) * (9 / 3));
 		}
 	}
 
@@ -83,6 +83,13 @@ $name: head-block;
 
 		.#{$name} {
 			// =====
+
+			&__banner-lg-i {
+
+				@include screen-md() {
+					padding-bottom: 69%;
+				}
+			}
 
 			&__banner-sm-i {
 
