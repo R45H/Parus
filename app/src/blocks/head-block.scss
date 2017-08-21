@@ -10,9 +10,11 @@ $name: head-block;
 	}
 
 	&__banner-sm-wrap {
+		margin-bottom: $space / 2;
 
 		@include screen-md() {
 			padding: 0;
+			margin-bottom: 0;
 		}
 	}
 
@@ -71,6 +73,10 @@ $name: head-block;
 
 	&__desc {
 		margin: $space / 2 0;
+	}
+
+	&__btn {
+		margin-bottom: $space / 2;
 	}
 
 	&_has-title {

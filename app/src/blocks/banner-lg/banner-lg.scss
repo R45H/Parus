@@ -84,19 +84,6 @@ $name: banner-lg;
 		}
 	}
 
-	&__btn {
-		position: absolute;
-		bottom: 20%;
-		left: 50%;
-		transform: translateX(-50%);
-		white-space: nowrap;
-		z-index: 1;
-
-		@include screen-md() {
-			display: none;
-		}
-	}
-
 	&.slick-slider {
 
 		.#{$name} {

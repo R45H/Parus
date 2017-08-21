@@ -12,18 +12,18 @@ mixin head-block()
 									if (attributes.hasTitle)
 										p.banner-lg__welcome Добро пожаловать на борт
 
-									if (attributes.hasBtn)
-										a.btn.banner-lg__btn(href="#") Заказать звонок
-
 				.col-12.head-block__last
 					.text-center
-						h2.title Почему парус?
+
+						if (attributes.subTitle)
+							h2.title= attributes.subTitle
+
 						.head-block__desc
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elitsed do eiusmod o eiusmod tempor incididunt uxxbt rem ipsum dolor sit amet, consecteUt enim ad Lorem ipsum dolor sit amet, consectetur adipis
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elitsed do eiusmod o eiusmod tempor incididunt uxxbt rem ipsum dolor sit amet, consecteUt enim ad Lorem ipsum dolor sit amet, consectetur adipis
 
-						if (attributes.hasBtn)
-							a.btn.hidden-sm(href="#") Заказать звонок
+						if (attributes.btn)
+							a.btn.head-block__btn(href="#")= attributes.btn
 
 				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-4')
 					each val in attributes.smData
