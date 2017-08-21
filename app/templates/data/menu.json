@@ -17,11 +17,11 @@
 		},
 		{"link": "/membership.html", "text": "Преимущества членства"},
 		{"link": "#", "text": "AirFit"},
-		{"link": "#", "text": "Возраст счастья"},
-		{"link": "#", "text": "Дети"},
+		{"link": "/happy-age.html", "text": "Возраст счастья"},
+		{"link": "/children.html", "text": "Дети"},
 		{"link": "/salons.html", "text": "Салоны"},
 		{"link": "#", "text": "Кафе"},
-		{"link": "#", "text": "Культурные программы"},
+		{"link": "/cultural-programs.html", "text": "Культурные программы"},
 		{"link": "#", "text": "Контакты"}
 	]
 }

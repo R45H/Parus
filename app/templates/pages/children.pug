@@ -1,0 +1,19 @@
+include ../components/head-block
+include ../mixins/banner
+
+.section.section_space_half
+	h1.title Дети
+
+	+head-block(
+		subTitle= "Имиджевый текст"
+		smData= banner_sm_children
+		lgData= banner_lg_salons
+	)
+
+.section
+	.container
+		.main__space_bot-half
+			each val in banner_cultural_programs
+				+banner(val)
+		.text-center
+			a.btn(href="#") Заказать визит
