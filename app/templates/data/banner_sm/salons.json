@@ -1,0 +1,7 @@
+{
+	"banner_sm_salons": [
+		{"link": "#", "img": "img/content/salons/02.jpg", "text": "Услуги"},
+		{"link": "#", "img": "img/content/salons/03.jpg", "text": "Прайс-лист"},
+		{"link": "#", "img": "img/content/salons/04.jpg", "text": "Команда"}
+	]
+}

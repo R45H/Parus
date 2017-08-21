@@ -7,13 +7,13 @@ include ../mixins/banner
 	+head-block(
 		subTitle= "Имиджевый текст"
 		smData= banner_sm_children
-		lgData= banner_lg_salons
+		lgData= banner_lg_children
 	)
 
 .section
 	.container
 		.main__space_bot-half
-			each val in banner_cultural_programs
+			each val in banner_children
 				+banner(val)
 		.text-center
 			a.btn(href="#") Заказать визит

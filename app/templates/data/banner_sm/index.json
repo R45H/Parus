@@ -1,0 +1,7 @@
+{
+	"banner_sm": [
+		{"link": "#", "img": "img/content/index/02.jpg", "text": "Акции"},
+		{"link": "#", "img": "img/content/index/03.jpg", "text": "Новости"},
+		{"link": "#", "img": "img/content/index/04.jpg", "text": "Расписание"}
+	]
+}

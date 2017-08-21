@@ -1,0 +1,7 @@
+{
+	"banner_sm_clubs": [
+		{"link": "#", "img": "img/content/clubs/01.jpg", "text": "Акции"},
+		{"link": "#", "img": "img/content/clubs/02.jpg", "text": "Новости"},
+		{"link": "#", "img": "img/content/clubs/03.jpg", "text": "Расписание"}
+	]
+}
