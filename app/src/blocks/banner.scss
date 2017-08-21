@@ -9,6 +9,10 @@
 		@include screen-sm() {
 			padding-bottom: 33.333333%;
 		}
+
+		&::after {
+			@extend %fog;
+		}
 	}
 
 	&__text {
@@ -21,4 +25,23 @@
 		color: white;
 		font-size: 3rem;
 	}
+}
+
+a.banner {
+	border-bottom: none;
+
+	&:hover {
+
+		.banner {
+			// =====
+
+			&__img {
+
+				&::after {
+					opacity: .5;
+				}
+			}
+		}
+	}
+
 }

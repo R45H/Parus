@@ -3,7 +3,9 @@ block vars
 doctype html
 html(lang="ru")
 	head
-		include ../partials/head
+		block head
+			include ../partials/head
+
 		title #{page.title} | Парус
 	body
 		include ../partials/header

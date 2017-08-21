@@ -1,14 +1,22 @@
 .section {
-	margin-bottom: 3.3em;
+	margin-bottom: $space;
 
 	&:first-child {
 
 		@include screen-sm() {
-			margin-top: 2em;
+			margin-top: $space / 2;
 		}
 	}
 
 	&:last-child {
-		margin-bottom: 2em;
+		margin-bottom: $space / 2;
+	}
+
+	&_space_half {
+		margin-bottom: $space / 2;
+	}
+
+	&_space_none {
+		margin-bottom: 0;
 	}
 }

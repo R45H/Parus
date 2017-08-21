@@ -48,10 +48,13 @@ hr {
 
 a {
 	color: $color-text;
+	text-decoration: none;
+	border-bottom: 1px solid lighten($color-text, 30%);
 
 	&:hover {
 		color: $color-main;
 		text-decoration: none;
+		border-bottom-color: lighten($color-main, 30%);
 	}
 }
 

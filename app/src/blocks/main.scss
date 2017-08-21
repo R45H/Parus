@@ -1,14 +1,18 @@
 .main {
 	flex: 1 0 auto;
 
-	&__md-last {
-
-		@include screen-md() {
-			order: 10;
-		}
+	&__space_bot {
+		margin-bottom: $space;
 	}
 
-	&__space_bot {
-		margin-bottom: 2em;
+	&__space_bot-half {
+		margin-bottom: $space / 2;
+	}
+
+	&__mobile_full {
+
+		@include screen-sm(max) {
+			padding: 0;
+		}
 	}
 }

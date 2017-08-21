@@ -66,10 +66,10 @@
 	}
 
 	&__link {
-		text-decoration: none;
 		padding: 8px 15px;
 		line-height: 1.1;
 		display: block;
+		border-bottom: none;
 	}
 
 	&__sub-list {
@@ -84,9 +84,9 @@
 	}
 
 	&__sub-link {
-		text-decoration: none;
 		padding: 8px 15px 8px 30px;
 		display: block;
+		border-bottom: none;
 	}
 
 	&_opened {

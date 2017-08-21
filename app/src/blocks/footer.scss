@@ -64,7 +64,7 @@
 
 	&__company {
 		color: $color-text;
-		text-decoration: none;
+		border-bottom: none;
 		display: inline-block;
 
 		&:hover {
@@ -110,12 +110,6 @@
 
 	&__copy-link {
 		display: inline-block;
-		text-decoration: none;
-		border-bottom: 1px solid $color-text;
-
-		&:hover {
-			border-bottom-color: $color-main;
-		}
 	}
 
 	&__webcenter-wrap {

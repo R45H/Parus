@@ -1,0 +1,15 @@
+.map {
+	height: 80vh;
+	width: 100%;
+
+	@include screen-sm() {
+		height: 400px;
+	}
+
+	&__info {
+		text-align: center;
+		color: $color-text;
+		font-size: 1.6rem;
+		font-family: $font-main;
+	}
+}

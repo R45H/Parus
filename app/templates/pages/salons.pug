@@ -2,7 +2,7 @@ include ../components/head-block
 include ../mixins/banner
 include ../mixins/comment
 
-.section
+.section.section_space_half
 	+head-block(
 		smData= banner_sm_salons
 		lgData= banner_lg_salons
@@ -10,17 +10,36 @@ include ../mixins/comment
 
 .section
 	.container
-		.main__space_bot
+		.main__space_bot-half
 			each val in banner
 				+banner(val)
 		.text-center
 			a.btn(href="#") Записаться
 
-.section
+.section.section_space_half
 	.container
 		h2.title Отзывы
 		.row
 
 			each val in comment
-				.col-sm-6.col-lg-3
+				.col-sm-6.col-lg-3.main__space_bot-half
 					+comment(val)
+
+.section.section_space_half
+	.container
+		h2.title Адреса
+		.row.text-center
+
+			each val in global[0].addresses
+				.col-sm-6.col-lg-4.push-lg-2.col-xl-3.push-xl-3.main__space_bot-half
+					.address
+						.address__title= val.address
+						.address__desc= val.descr
+						.address__time= val.time_1
+						.address__time= val.time_2
+						.address__tel
+							a(href= val.tel_link)= val.tel
+
+.section
+	.container.main__mobile_full
+		#map.map

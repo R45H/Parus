@@ -1,3 +1,5 @@
+@@include('blocks/map/map.js')
+
 $(function() {
 
 	(function() {

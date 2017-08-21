@@ -32,12 +32,23 @@ $height-header-sm: 80px;
 
 $letter-spacing: 0.06666666em;
 
+$space: 6rem;
+
 
 /* ---------------------------- */
 /* МИКСИНЫ ДЛЯ ТЕКУЩЕГО ПРОЕКТА */
 /* ---------------------------- */
 
-// Write mixins here
+%fog {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $color-fog;
+	transition: $duration ease;
+}
 
 /* ---------------------------- */
 
