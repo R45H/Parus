@@ -1,0 +1,18 @@
+//-TODO Придумать, как эту бороду грамотно назвать
+.section
+	.container
+		h2.title Адреса
+		.row.text-center.main__space_bot-half
+
+			each val in global[0].addresses
+				.col-sm-6.col-lg-4.push-lg-2.col-xl-3.push-xl-3.main__space_bot-half
+					.address
+						.address__title= val.address
+						.address__desc= val.descr
+						.address__time= val.time_1
+						.address__time= val.time_2
+						.address__tel
+							a(href= val.tel_link)= val.tel
+
+	.container.main__mobile_full
+		#map.map

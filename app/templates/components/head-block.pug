@@ -12,8 +12,8 @@ mixin head-block()
 									if (attributes.hasTitle)
 										p.banner-lg__welcome Добро пожаловать на борт
 
-									if (val.btn)
-										a.btn.banner-lg__btn(href= val.btn.link)= val.btn.text
+									if (attributes.hasBtn)
+										a.btn.banner-lg__btn(href="#") Заказать звонок
 
 				.col-12.head-block__last
 					.text-center
@@ -22,9 +22,8 @@ mixin head-block()
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elitsed do eiusmod o eiusmod tempor incididunt uxxbt rem ipsum dolor sit amet, consecteUt enim ad Lorem ipsum dolor sit amet, consectetur adipis
 							p Lorem ipsum dolor sit amet, consectetur adipiscing elit, consectetur adipiscing elitsed do eiusmod o eiusmod tempor incididunt uxxbt rem ipsum dolor sit amet, consecteUt enim ad Lorem ipsum dolor sit amet, consectetur adipis
 
-						- var val = attributes.lgData;
-						if (val.btn)
-							a.btn.hidden-sm(href= val.btn.link)= val.btn.text
+						if (attributes.hasBtn)
+							a.btn.hidden-sm(href="#") Заказать звонок
 
 				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-4')
 					each val in attributes.smData

@@ -2,6 +2,7 @@ $name: logo;
 
 .#{$name} {
 	display: block;
+	border-bottom: none;
 
 	&__img {
 		display: block;

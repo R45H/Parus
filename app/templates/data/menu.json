@@ -1,7 +1,7 @@
 {
 	"menu": [
 		{
-			"link": "#",
+			"link": "/clubs.html",
 			"text": "Клубы",
 			"sub": [
 				{"link": "#", "text": "О компании"},
