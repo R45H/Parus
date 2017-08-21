@@ -262,7 +262,8 @@ gulp.task('page', function() {
 			'block vars\n' +
 			'\t-\n' +
 			'\t\tpage = {\n' +
-			'\t\t\ttitle: \'' + gutil.env.t + '\'\n' +
+			'\t\t\ttitle: \'' + gutil.env.t + '\',\n' +
+			'\t\t\tlink: \'' + gutil.env.n + '.html\'\n' +
 			'\t\t}\n' +
 			'\n' +
 			'block content\n' +
@@ -275,11 +276,13 @@ gulp.task('page', function() {
 
 /* ======= СОЗДАНИЕ БЛОКА ========= */
 /**
-	name (n) - Имя блока
-	scss (s) - Генерация SCSS
-	js   (j) - Генерация JS
-	pug  (p) - Генерация PUG миксина
-	json (o) - Генерация данных JSON
+   name                        (n) - Имя блока
+   scss                        (s) - Генерация SCSS
+   js                          (j) - Генерация JS
+   mixins, mixin, mix          (m) - Генерация PUG миксина
+   components, component, comp (c) - Генерация PUG компонента
+   partials, partial, part     (p) - Генерация PUG части страницы
+   json                        (o) - Генерация данных JSON
 **/
 gulp.task('block', function() {
 	var
@@ -293,11 +296,13 @@ gulp.task('block', function() {
 
 		keyScss = gutil.env.scss || gutil.env.s, // Ключ генерации SCSS файла
 		keyJs = gutil.env.js || gutil.env.j, // Ключ генерации JS файла
-		keyPugMixin = gutil.env.pug || gutil.env.p, // Ключ генерации PUG миксина
+		keyPugMixin = gutil.env.mixins || gutil.env.mixin || gutil.env.mix || gutil.env.m, // Ключ генерации PUG миксина
+		keyPugComp = gutil.env.components || gutil.env.component || gutil.env.comp || gutil.env.c, // Ключ генерации PUG компонента
+		keyPugPart = gutil.env.partials || gutil.env.partial || gutil.env.part || gutil.env.p, // Ключ генерации PUG части страницы
 		keyDataJson = gutil.env.json || gutil.env.o; // Ключ генерации JSON
 
 	// Генерация SCSS при запуске без ключей
-	if (!keyScss && !keyJs && !keyPugMixin && !keyDataJson) {
+	if (!keyScss && !keyJs && !keyPugMixin && !keyPugComp && !keyPugPart && !keyDataJson) {
 
 		fs.access(dirBlocks + name + '.js', function(err) {
 
@@ -347,9 +352,21 @@ gulp.task('block', function() {
 	}
 	// =====
 
-	// Генерация PUG файла
+	// Генерация PUG миксина
 	if (keyPugMixin) {
 		addPugMixin(dirTemp);
+	}
+	// =====
+
+	// Генерация PUG компонента
+	if (keyPugComp) {
+		addPugComp(dirTemp);
+	}
+	// =====
+
+	// Генерация PUG части страницы
+	if (keyPugPart) {
+		addPugPart(dirTemp);
 	}
 	// =====
 
@@ -390,6 +407,20 @@ gulp.task('block', function() {
 		fs.writeFileSync(
 			path + 'mixins/' + name + '.pug',
 			'mixin ' + name + '(data)\n\t'
+		);
+	}
+	function addPugComp(path) {
+
+		fs.writeFileSync(
+			path + 'components/' + name + '.pug',
+			''
+		);
+	}
+	function addPugPart(path) {
+
+		fs.writeFileSync(
+			path + 'partials/' + name + '.pug',
+			''
 		);
 	}
 	function addDataJson(path) {

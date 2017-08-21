@@ -10,7 +10,7 @@ header.header
 			.col
 				ul.header__menu
 					each val in menu
-						li.header__menu-item
+						li.header__menu-item(class= val.link == page.link ? 'active' : '')
 							a.header__menu-link(href= val.link)= val.text
 
 							if val.sub
@@ -18,7 +18,7 @@ header.header
 									ul.header__sub
 
 										each sub in val.sub
-											li.header__sub-item
+											li.header__sub-item(class= val.link == page.link ? 'active' : '')
 												a.header__sub-link(href= sub.link)= sub.text
 
 						li.header__menu-separator

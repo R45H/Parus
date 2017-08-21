@@ -72,6 +72,15 @@ $name: aside;
 		line-height: 1.1;
 		display: block;
 		border-bottom: none;
+
+		&[href="#"] {
+			color: lighten($color-text, 25%);
+			cursor: default;
+
+			&:hover {
+				color: lighten($color-text, 25%);
+			}
+		}
 	}
 
 	&__sub-list {

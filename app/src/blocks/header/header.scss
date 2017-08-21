@@ -64,9 +64,16 @@ $name: header;
 				&__menu-link {
 					color: $color-main;
 				}
+			}
+		}
 
-				&__sub-wrap {
-					//display: block;
+		&.active {
+
+			.#{$name} {
+				// =====
+
+				&__menu-link {
+					color: $color-main;
 				}
 			}
 		}
@@ -80,6 +87,15 @@ $name: header;
 
 		&:hover {
 			color: $color-main;
+		}
+
+		&[href="#"] {
+			color: lighten($color-text, 25%);
+			cursor: default;
+
+			&:hover {
+				color: lighten($color-text, 25%);
+			}
 		}
 	}
 
@@ -160,6 +176,17 @@ $name: header;
 				padding-bottom: 8px;
 			}
 		}
+
+		&.active {
+
+			.#{$name} {
+				// =====
+
+				&__sub-link {
+					color: $color-main;
+				}
+			}
+		}
 	}
 
 	&__sub-link {
@@ -167,6 +194,15 @@ $name: header;
 		line-height: 2;
 		padding: 0 24px;
 		display: block;
+
+		&[href="#"] {
+			color: lighten($color-text, 25%);
+			cursor: default;
+
+			&:hover {
+				color: lighten($color-text, 25%);
+			}
+		}
 	}
 
 	&__menu-separator {
