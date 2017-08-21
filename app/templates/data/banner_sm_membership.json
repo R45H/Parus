@@ -1,0 +1,7 @@
+{
+	"banner_sm_membership": [
+		{"link": "#", "img": "img/img-2.jpg", "text": "Бонусы"},
+		{"link": "#", "img": "img/img-3.jpg", "text": "Скидки"},
+		{"link": "#", "img": "img/img-4.jpg", "text": "Сервис"}
+	]
+}

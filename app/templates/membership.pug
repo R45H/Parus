@@ -1,0 +1,13 @@
+extends layouts/default
+
+block vars
+	-
+		page = {
+			title: 'Преимущества членства'
+		}
+
+append head
+	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap" async defer)
+
+block content
+	include pages/membership
