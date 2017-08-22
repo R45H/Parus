@@ -37,6 +37,18 @@ $name: banner-lg;
 		}
 	}
 
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__prev,
+			&__next {
+				opacity: 1;
+			}
+		}
+	}
+
 	@include screen-sm() {
 		margin: 0;
 	}
@@ -81,6 +93,60 @@ $name: banner-lg;
 
 		@include screen-lg() {
 			transform: rotate(-90deg) translateY(-170px);
+		}
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		z-index: 1;
+		width: 15%;
+		cursor: pointer;
+		font-size: 5rem;
+		color: white;
+		transition: $duration ease opacity;
+		top: 50%;
+		transform: translateY(-50%);
+		padding-bottom: 15%;
+
+		&::after {
+			font-family: $font-fa;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			color: $color-text-2;
+		}
+
+		@include screen-md() {
+			width: 10%;
+			top: 0;
+			transform: none;
+			padding-bottom: 0;
+			height: 100%;
+			opacity: 0;
+		}
+	}
+
+	&__prev {
+		left: 0;
+		background: linear-gradient(to right, $color-fog-light 0%, $color-fog-light 50%, transparent 100%);
+
+		&::after {
+			content: '\f104';
+		}
+	}
+
+	&__next {
+		right: 0;
+		background: linear-gradient(to left, $color-fog-light 0%, $color-fog-light 50%, transparent 100%);
+
+		&::after {
+			content: '\f105';
 		}
 	}
 

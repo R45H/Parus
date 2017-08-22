@@ -1,6 +1,6 @@
 var
 	classSlider = 'banner-lg',
-	classItem = 'banner-lg__i',
+	classItem = classSlider + '__i',
 	classDots = 'dots',
 	classDot = 'dots__item',
 	$slider = $('.' + classSlider),
@@ -9,7 +9,6 @@ var
 if ($items.length > 1) {
 
 	$slider.slick({
-		arrows: false,
 		dots: true,
 		dotsClass: classDots,
 		autoplay: true,
@@ -17,6 +16,8 @@ if ($items.length > 1) {
 		pauseOnDotsHover: true,
 		customPaging: function() {
 			return '<div class="' + classDot + '"></div>'
-		}
+		},
+		prevArrow: '<div class="' + classSlider + '__prev"></div>',
+		nextArrow: '<div class="' + classSlider + '__next"></div>'
 	});
 }
