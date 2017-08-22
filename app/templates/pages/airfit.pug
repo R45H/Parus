@@ -1,0 +1,21 @@
+include ../components/head-block
+include ../mixins/banner
+
+.section.section_space_half
+	h1.title Airfit
+
+	+head-block(
+		smData= banner_sm_airfit
+		lgData= banner_lg_airfit
+		textData= head_block__last_airfit
+	)
+
+.section
+	.container
+		.main__space_bot-half
+			each val in banner
+				+banner(val)
+		.text-center
+			a.btn(href="#") Записаться
+
+include ../components/address
