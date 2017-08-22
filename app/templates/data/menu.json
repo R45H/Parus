@@ -8,6 +8,6 @@
 		{"link": "salons.html", "text": "Салоны"},
 		{"link": "fresh-bar.html", "text": "Кафе"},
 		{"link": "cultural.html", "text": "Культурные программы"},
-		{"link": "#", "text": "Контакты"}
+		{"link": "contacts.html", "text": "Контакты"}
 	]
 }

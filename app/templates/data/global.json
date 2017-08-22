@@ -3,19 +3,27 @@
 		{
 			"addresses": [
 				{
+					"index": "191015",
+					"country": "Россия",
+					"city": "Санкт-Петербург",
 					"address": "ул. Парадная, д.3, к.2",
 					"time_1": "с 9 до 22",
-					"time_2": "и с 9 до 21",
+					"time_2": "с 9 до 21",
 					"tel": "(812) 611-01-01",
 					"tel_link": "tel:+78126110101",
+					"mail": "market.parus@yandex.ru",
 					"id": "address-1"
 				},
 				{
+					"index": "191015",
+					"country": "Россия",
+					"city": "Санкт-Петербург",
 					"address": "Воскресенская наб., д.4",
 					"time_1": "с 9 до 22",
-					"time_2": "и с 9 до 21",
+					"time_2": "с 9 до 21",
 					"tel": "(812) 368-55-55",
 					"tel_link": "tel:+78123685555",
+					"mail": "market.parus@yandex.ru",
 					"id": "address-2"
 				}
 			]

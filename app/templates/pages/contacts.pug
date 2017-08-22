@@ -1,0 +1,45 @@
+.section
+	h1.title Контактная информация
+
+.section
+	.container
+		.row.tab
+			.col-sm-8
+				.row.tab__head
+					.col-6
+						a.tab__title.tab__title_active(href="#panel-1" id="address-1") Фитнес-клуб Парус Парадный
+					.col-6
+						a.tab__title(href="#panel-2" id="address-2") Фитнес-клуб Парус Воскресенский
+
+			.col-sm-4
+
+			.col-sm-8
+				#map.map
+
+			.col-sm-4.tab__body
+				each val, i in global[0].addresses
+					.tab__panel(
+						class= i == 0 ? 'tab__panel_active' : ''
+						id= 'panel-' + (i + 1)
+					)
+						p
+							b Адрес
+							br
+							= val.index + ', ' + val.country + ', ' + val.city + ', ' + val.address
+
+						p
+							b Режим работы:
+							br
+							= val.time_1 + ' по будням'
+							br
+							= val.time_2 + ' по выходным и праздникам'
+
+						p
+							b Телефоны:
+							br
+							a(href= val.tel_link)= "+7 " + val.tel
+
+						p
+							b Электронная почта:
+							br
+							a(href= "mailto:" + val.mail)= val.mail

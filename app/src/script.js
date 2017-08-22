@@ -9,6 +9,7 @@ $(function() {
 
 	(function() { @@include('blocks/header/header.js') }());
 	(function() { @@include('blocks/banner-lg/banner-lg.js') }());
+	(function() { @@include('blocks/tab/tab.js') }());
 
 	@@include('global/global.js')
 });

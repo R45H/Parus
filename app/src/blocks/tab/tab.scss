@@ -1,0 +1,28 @@
+$name: tab;
+
+.#{$name} {
+
+	&__head {
+		padding: 0 0 30px;
+	}
+
+	&__title {
+
+		&_active {
+			color: $color-main;
+			border-bottom: 1px solid lighten($color-main, 30%);
+		}
+	}
+
+	&__body {
+
+	}
+
+	&__panel {
+		display: none;
+
+		&_active {
+			display: block;
+		}
+	}
+}
