@@ -25,12 +25,13 @@ function initMap() {
 		});
 
 		/* Образец карточки */
-		var contentString = '<div class="map__info">г. Санкт-Петербург, ул. Парадная, д.3, к.2</div>';
+		var contentString1 = '<div class="map__info">г. Санкт-Петербург, ул. Парадная, д.3, к.2</div>';
+		var contentString2 = '<div class="map__info">г. Санкт-Петербург, Воскресенская наб., д.4</div>';
 		/* ================ */
 
 		/* Рамка */
 		var infoWindow = new google.maps.InfoWindow({
-			content: contentString
+			content: contentString1
 		});
 		/* ===== */
 
@@ -46,10 +47,12 @@ function initMap() {
 		});
 
 		marker1.addListener('click', function() {
+			infoWindow.setContent(contentString1);
 			infoWindow.open(map1, marker1);
 		});
 
 		marker2.addListener('click', function() {
+			infoWindow.setContent(contentString2);
 			infoWindow.open(map1, marker2);
 		});
 		/* ======= */
@@ -58,6 +61,20 @@ function initMap() {
 		google.maps.event.addDomListener(window, "resize", function() {
 			google.maps.event.trigger(map1, "resize");
 			map1.panTo(dot1);
+		});
+		/* ===== */
+
+		/* Действие при клике по адресам */
+		document.querySelector('#address-1').addEventListener('click', function() {
+			map1.panTo(dot1);
+			map1.setZoom(15);
+			google.maps.event.trigger(marker1, 'click');
+		});
+
+		document.querySelector('#address-2').addEventListener('click', function() {
+			map1.panTo(dot2);
+			map1.setZoom(15);
+			google.maps.event.trigger(marker2, 'click');
 		});
 		/* ===== */
 	}

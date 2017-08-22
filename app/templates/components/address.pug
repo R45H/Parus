@@ -7,10 +7,10 @@
 			each val in global[0].addresses
 				.col-sm-6.col-lg-4.push-lg-2.col-xl-3.push-xl-3.main__space_bot-half
 					.address
-						.address__title
+						.address__title(id= val.id)
 							a(href="#")= val.address
-						.address__time= val.time_1
-						.address__time= val.time_2
+						.address__time= val.time_1 + " в будни"
+						.address__time= val.time_2 + " в выходные"
 						.address__tel
 							a(href= val.tel_link)= val.tel
 
