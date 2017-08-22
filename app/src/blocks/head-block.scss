@@ -19,9 +19,11 @@ $name: head-block;
 	}
 
 	&__last {
+		margin: $space / 2 0;
 
 		@include screen-md() {
 			order: 1;
+			margin: calc(#{$space} / 2 - 10px) 0 0;
 		}
 	}
 

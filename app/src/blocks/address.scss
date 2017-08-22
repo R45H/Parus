@@ -5,11 +5,7 @@ $name: address;
 	&__title {
 		font-weight: bold;
 		margin-bottom: 1rem;
-	}
-
-	&__desc {
-		font-size: 1.4rem;
-		margin-bottom: 1rem;
+		display: block;
 	}
 
 	&__time {
