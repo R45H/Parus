@@ -4,19 +4,16 @@
 .section
 	.container
 		.row.tab
-			.col-sm-8
+			.col-lg-8
 				.row.tab__head
-					.col-6
+					.col-lg-6
 						a.tab__title.tab__title_active(href="#panel-1" id="address-1") Фитнес-клуб Парус Парадный
-					.col-6
+					.col-lg-6
 						a.tab__title(href="#panel-2" id="address-2") Фитнес-клуб Парус Воскресенский
 
-			.col-sm-4
+			.col-lg-4
 
-			.col-sm-8
-				#map.map
-
-			.col-sm-4.tab__body
+			.col-sm-5.push-sm-7.col-lg-4.push-lg-8.tab__body.main__space_bot
 				each val, i in global[0].addresses
 					.tab__panel(
 						class= i == 0 ? 'tab__panel_active' : ''
@@ -43,3 +40,9 @@
 							b Электронная почта:
 							br
 							a(href= "mailto:" + val.mail)= val.mail
+
+						.tab__btn-wrap
+							a.btn(href="#") Заказать визит
+
+			.col-sm-7.pull-sm-5.col-lg-8.pull-lg-4.main__mobile_full
+				#map.map

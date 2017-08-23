@@ -17,7 +17,7 @@ body {
 	font-family: $font-main;
 	color: $color-text;
 	letter-spacing: $letter-spacing;
-	line-height: 1.2;
+	line-height: 1.4;
 	display: flex;
 	flex-direction: column;
 
@@ -63,7 +63,8 @@ p {
 }
 
 ::selection {
-
+	background: lighten($color-main, 20%);
+	color: white;
 }
 
 .hidden-sm {
