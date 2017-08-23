@@ -123,28 +123,10 @@ gulp.task('css-libs', function() {
 
 /* ======== ТАСК "JS" ======== */
 gulp.task('js', function() {
-
-	// Сборка карты
-	var
-		pathToMap = app + 'src/blocks/map/map.js',
-		task1 = true;
-
-	fs.access(pathToMap, function(err) {
-
-		if (!err) {
-			task1 = gulp.src(pathToMap) // Берём файл скрипта карты
-				.pipe(plumber(err)) // Отслеживаем ошибки
-				.pipe(prod ? prettify({ // Форматируем код
-						indent_char: '\t',
-						indent_size: 1
-					}) : gutil.noop())
-				.pipe(gulp.dest(dist + 'js')); // Выгружаем
-		}
-	});
-	// =====
-
-	// Сборка остальных скриптов
-	var task2 = gulp.src(app + 'src/script.js') // Берём главный файл скрипта
+	return gulp.src([ // Берём файлы
+		app + 'src/script.js',
+		app + 'src/blocks/map/map.js'
+	])
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
 		.pipe(prod ? prettify({ // Форматируем код
@@ -153,9 +135,6 @@ gulp.task('js', function() {
 		}) : gutil.noop())
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
 		.pipe(reload({stream: true})); // Перезагружаем сервер
-	// =====
-
-	return task1 && task2;
 });
 /* ================================ */
 
