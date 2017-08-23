@@ -1,4 +1,4 @@
-extends layouts/default
+extends layouts/map
 
 block vars
 	-
@@ -6,9 +6,6 @@ block vars
 			title: 'Airfit',
 			link: 'airfit.html'
 		}
-
-append head
-	script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4gYQ3c1LGzyWyLN65QSTM7mtIHu_dNcA&signed_in=true&callback=initMap" async defer)
 
 block content
 	include pages/airfit

@@ -1,14 +1,13 @@
 var
 	classTab = 'tab',
 	$tab = $('.' + classTab),
-	$tabHead = $tab.find('.' + classTab + '__head'),
-	$tabBody = $tab.find('.' + classTab + '__body'),
 	$tabTitles = $tab.find('.' + classTab + '__title'),
 	$tabPanels = $tab.find('.' + classTab + '__panel'),
-	classTitleActive = 'tab__title_active',
-	classPanelActive = 'tab__panel_active';
+	classTitleActive = classTab + '__title_active',
+	classPanelActive = classTab + '__panel_active';
 
 $tabTitles.on('click', function(event) {
+	event.preventDefault();
 
 	var
 		$this = $(this),
@@ -20,6 +19,4 @@ $tabTitles.on('click', function(event) {
 
 	$tabPanels.removeClass(classPanelActive);
 	$panel.addClass(classPanelActive);
-
-	return false;
 });

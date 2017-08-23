@@ -123,7 +123,28 @@ gulp.task('css-libs', function() {
 
 /* ======== ТАСК "JS" ======== */
 gulp.task('js', function() {
-	return gulp.src(app + 'src/script.js') // Берём все необходимые скрипты
+
+	// Сборка карты
+	var
+		pathToMap = app + 'src/blocks/map/map.js',
+		task1 = true;
+
+	fs.access(pathToMap, function(err) {
+
+		if (!err) {
+			task1 = gulp.src(pathToMap) // Берём файл скрипта карты
+				.pipe(plumber(err)) // Отслеживаем ошибки
+				.pipe(prod ? prettify({ // Форматируем код
+						indent_char: '\t',
+						indent_size: 1
+					}) : gutil.noop())
+				.pipe(gulp.dest(dist + 'js')); // Выгружаем
+		}
+	});
+	// =====
+
+	// Сборка остальных скриптов
+	var task2 = gulp.src(app + 'src/script.js') // Берём главный файл скрипта
 		.pipe(plumber(err)) // Отслеживаем ошибки
 		.pipe(include()) // Собираем их в один файл
 		.pipe(prod ? prettify({ // Форматируем код
@@ -132,6 +153,9 @@ gulp.task('js', function() {
 		}) : gutil.noop())
 		.pipe(gulp.dest(dist + 'js')) // Выгружаем
 		.pipe(reload({stream: true})); // Перезагружаем сервер
+	// =====
+
+	return task1 && task2;
 });
 /* ================================ */
 
@@ -250,40 +274,43 @@ gulp.task('sprite', function() {
 
 /* ====== СОЗДАНИЕ СТРАНИЦЫ ======= */
 /**
-	n - Имя файла
-	t - Заголовок страницы
-**/
+ * name   (n) - Имя файла
+ * title  (t) - Заголовок страницы
+ * layout (l) - Шаблон страницы
+ */
 gulp.task('page', function() {
 	var
-		name = gutil.env.n + '.pug',
+		name = gutil.env.name || gutil.env.n || 'blank',
+		title = gutil.env.title || gutil.env.t || 'Пустая страница',
+		layout = gutil.env.layout || gutil.env.l || 'default',
 		string =
-			'extends layouts/default\n' +
+			'extends layouts/' + layout + '\n' +
 			'\n' +
 			'block vars\n' +
 			'\t-\n' +
 			'\t\tpage = {\n' +
-			'\t\t\ttitle: \'' + gutil.env.t + '\',\n' +
-			'\t\t\tlink: \'' + gutil.env.n + '.html\'\n' +
+			'\t\t\ttitle: \'' + title + '\',\n' +
+			'\t\t\tlink: \'' + name + '.html\'\n' +
 			'\t\t}\n' +
 			'\n' +
 			'block content\n' +
-			'\tinclude pages/' + gutil.env.n;
+			'\tinclude pages/' + name;
 
-	fs.writeFileSync(app + 'templates/' + name, string);
-	fs.writeFileSync(app + 'templates/pages/' + name, '');
+	fs.writeFileSync(app + 'templates/' + name + '.pug', string);
+	fs.writeFileSync(app + 'templates/pages/' + name + '.pug', '');
 });
 /* ================================ */
 
 /* ======= СОЗДАНИЕ БЛОКА ========= */
 /**
-   name                        (n) - Имя блока
-   scss                        (s) - Генерация SCSS
-   js                          (j) - Генерация JS
-   mixins, mixin, mix          (m) - Генерация PUG миксина
-   components, component, comp (c) - Генерация PUG компонента
-   partials, partial, part     (p) - Генерация PUG части страницы
-   json                        (o) - Генерация данных JSON
-**/
+ * name                        (n) - Имя блока
+ * scss                        (s) - Генерация SCSS
+ * js                          (j) - Генерация JS
+ * mixins, mixin, mix          (m) - Генерация PUG миксина
+ * components, component, comp (c) - Генерация PUG компонента
+ * partials, partial, part     (p) - Генерация PUG части страницы
+ * json                        (o) - Генерация данных JSON
+ */
 gulp.task('block', function() {
 	var
 		name = gutil.env.name || gutil.env.n, // Имя блока

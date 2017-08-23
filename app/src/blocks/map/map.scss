@@ -5,6 +5,10 @@ $name: map;
 	width: 100%;
 
 	@include screen-sm() {
+		height: 360px;
+	}
+
+	@include screen-lg() {
 		height: 400px;
 	}
 

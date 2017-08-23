@@ -13,33 +13,34 @@
 
 			.col-lg-4
 
-			.col-sm-5.push-sm-7.col-lg-4.push-lg-8.tab__body.main__space_bot
+			.col-sm-5.push-sm-7.col-lg-4.push-lg-8.tab__body
 				each val, i in global[0].addresses
 					.tab__panel(
 						class= i == 0 ? 'tab__panel_active' : ''
 						id= 'panel-' + (i + 1)
 					)
-						p
-							b Адрес
-							br
-							= val.index + ', ' + val.country + ', ' + val.city + ', ' + val.address
+						.tab__content
+							p
+								b Адрес
+								br
+								= val.index + ', ' + val.country + ', ' + val.city + ', ' + val.address
 
-						p
-							b Режим работы:
-							br
-							= val.time_1 + ' по будням'
-							br
-							= val.time_2 + ' по выходным и праздникам'
+							p
+								b Режим работы:
+								br
+								= val.time_1 + ' по будням'
+								br
+								= val.time_2 + ' по выходным и праздникам'
 
-						p
-							b Телефоны:
-							br
-							a(href= val.tel_link)= "+7 " + val.tel
+							p
+								b Телефоны:
+								br
+								a(href= val.tel_link)= "+7 " + val.tel
 
-						p
-							b Электронная почта:
-							br
-							a(href= "mailto:" + val.mail)= val.mail
+							p
+								b Электронная почта:
+								br
+								a(href= "mailto:" + val.mail)= val.mail
 
 						.tab__btn-wrap
 							a.btn(href="#") Заказать визит
