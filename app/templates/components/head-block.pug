@@ -4,13 +4,16 @@ mixin head-block()
 			.row
 				.head-block__banner-lg-wrap(class= attributes.hasTitle ? 'col-md-7 push-md-2 col-lg-8 push-lg-1' : 'col-md-9')
 					.head-block__banner-lg-i
-						.banner-lg.head-block__banner-lg
+						.banner-lg.head-block__banner-lg(class= attributes.lgData[1] ? 'slider' : '')
 
 							each val in attributes.lgData
-								.banner-lg__i(style="background-image: url(" + val.img + ");")
+								.banner-lg__i(
+									class= attributes.lgData[1] ? 'slider__i' : ''
+									style= "background-image: url(" + val.img + ");"
+								)
 
-									if (attributes.hasTitle)
-										p.banner-lg__welcome Добро пожаловать на борт
+							if (attributes.hasTitle)
+								p.banner-lg__welcome Добро пожаловать на борт
 
 				.col-12.head-block__last
 

@@ -1,10 +1,9 @@
 var
-	classSlider = 'banner-lg',
-	classItem = classSlider + '__i',
-	classDots = 'dots',
-	classDot = 'dots__item',
+	classSlider = 'slider',
+	classDots = classSlider + '__dots',
+	classDot = classSlider + '__dot',
 	$slider = $('.' + classSlider),
-	$items = $slider.find('.' + classItem);
+	$items = $slider.children();
 
 if ($items.length > 1) {
 
