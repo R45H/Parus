@@ -2,7 +2,8 @@
 	"banner_children": [
 		{
 			"img": "img/content/children/03.jpg",
-			"text": "Реклама текущего события"
+			"text": "Реклама текущего события",
+			"fog": true
 		}
 	]
 }

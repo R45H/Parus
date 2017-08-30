@@ -2,7 +2,8 @@
 	"banner_fresh_bar": [
 		{
 			"img": "img/content/fresh-bar/03.jpg",
-			"text": "Акция"
+			"text": "Акция",
+			"fog": true
 		}
 	]
 }

@@ -3,17 +3,34 @@ $name: banner;
 .#{$name} {
 	display: block;
 	position: relative;
+	padding-bottom: 56%;
+
+	.slick-list {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	@include screen-md() {
+		padding-bottom: 33.333333%;
+	}
 
 	&__img {
-		padding-bottom: 56%;
+		display: block;
 		background: no-repeat 50% 50% / cover;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
 
-		@include screen-sm() {
-			padding-bottom: 33.333333%;
-		}
+		&_fog {
 
-		&::after {
-			@extend %fog;
+			&::before {
+				@extend %fog;
+			}
 		}
 	}
 
@@ -35,12 +52,24 @@ a.#{$name} {
 
 	&:hover {
 
-		.#{$name} {
-			// =====
+		&__img {
 
-			&__img {
+			&_fog {
 
-				&::after {
+				&::before {
+					opacity: .5;
+				}
+			}
+		}
+	}
+
+	&__img {
+
+		&_fog {
+
+			&:hover {
+
+				&::before {
 					opacity: .5;
 				}
 			}

@@ -2,7 +2,8 @@
 	"banner_cultural": [
 		{
 			"img": "img/content/cultural/02.jpg",
-			"text": "Реклама текущего события"
+			"text": "Реклама текущего события",
+			"fog": true
 		}
 	]
 }

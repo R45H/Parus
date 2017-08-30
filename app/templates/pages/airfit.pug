@@ -12,10 +12,10 @@ include ../mixins/banner
 	)
 
 .section
+	.container.main__mobile_full.main__space_bot-half
+		+banner(banner)
+
 	.container
-		.main__space_bot-half
-			each val in banner
-				+banner(val)
 		.text-center
 			a.btn(href="#") Записаться
 

@@ -1,4 +1,20 @@
 mixin banner(data)
-	.banner
-		.banner__img(style= "background-image: url(" + data.img + ");")
-		.banner__text= data.text
+	.banner(class= data[1] ? 'slider' : '')
+
+		each val in data
+
+			if (val.link)
+				a.banner__img(
+					href= val.link
+					class= val.fog ? 'banner__img_fog' : ''
+					class= data[1] ? 'slider__i' : ''
+					style= "background-image: url(" + val.img + ");"
+				)
+					if (val.text)
+						.banner__text= val.text
+			else
+				.banner__img(
+					class= val.fog ? 'banner__img_fog' : ''
+					class= data[1] ? 'slider__i' : ''
+					style= "background-image: url(" + val.img + ");"
+				)

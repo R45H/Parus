@@ -13,8 +13,9 @@ include ../mixins/banner
 
 .section
 	.container
-		.main__space_bot-half
-			each val in banner_cultural
-				+banner(val)
+		.container.main__mobile_full.main__space_bot-half
+			+banner(banner_cultural)
+
+	.container
 		.text-center
 			a.btn(href="#") Получать новости

@@ -2,7 +2,9 @@
 	"banner": [
 		{
 			"img": "img/content/salons/03.jpg",
-			"text": "Акция"
+			"text": "Акция",
+			"link": "#",
+			"fog": true
 		}
 	]
 }
