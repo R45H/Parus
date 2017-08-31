@@ -7,10 +7,14 @@
 		.row.tab
 			.col-lg-8
 				.row.tab__head
-					.col-lg-6
-						a.tab__title.tab__title_active(href="#panel-1" id="address-1") Фитнес-клуб Парус Парадный
-					.col-lg-6
-						a.tab__title(href="#panel-2" id="address-2") Фитнес-клуб Парус Воскресенский
+
+					each val, i in global[0].addresses
+						.col-lg-6
+							a.tab__title(
+								class= !i ? 'tab__title_active' : ''
+								href= "#panel-" + (i + 1)
+								id= "address-" + (i + 1)
+							)= val.name
 
 			.col-lg-4
 

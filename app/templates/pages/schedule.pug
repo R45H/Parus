@@ -6,3 +6,56 @@ include ../mixins/banner
 
 	.container.main__mobile_full
 		+banner(banner_schedule)
+
+.section
+	.container
+
+		.schedule
+
+			.schedule__head
+
+				.main__space_bot-half
+					.row.text-center
+
+						each val, i in global[0].addresses
+							.col-sm-6.col-lg-4.push-lg-2
+								a.schedule__title(
+									class= !i ? 'schedule__title_active' : ''
+									href= "#salon-" + (i + 1)
+									id= "address-" + (i + 1)
+								)= val.name
+
+				.main__space_bot-half
+					.schedule__params
+
+						each val, i in schedule__params
+							.schedule__param
+								.schedule__param-i
+									.schedule__param-title(title= val.title)= val.title
+									.schedule__param-value(title= 'Все') Все
+
+									.schedule__param-sub
+										.schedule__param-sub-i
+
+											each sub, j in val.params
+												- var id = "param-" + (i + 1) + '-opt-' + (j + 1)
+
+												input.schedule__param-sub-item(
+													type="checkbox"
+													id= id
+													value= sub
+												)
+												label(for= id)= sub
+
+				.main__space_bot-half
+					.schedule__cats
+						ul.schedule__cats-i
+							li.schedule__cats-item.schedule__cats-item_all.schedule__cats-item_active
+								span.schedule__cats-item-i Все категории
+
+							each val in schedule__cats
+								li.schedule__cats-item
+									span.schedule__cats-item-i= val
+
+
+	.schedule__body
