@@ -1,0 +1,110 @@
+$name: params;
+
+.#{$name} {
+	display: block;
+	position: relative;
+	cursor: default;
+
+	&:hover {
+
+		.#{$name} {
+
+			&__title,
+			&__str {
+				color: $color-main;
+			}
+		}
+	}
+
+	&_opened {
+
+		.#{$name} {
+
+			&__title {
+
+				&::after {
+					transform: rotate(180deg);
+					transition-duration: $duration;
+				}
+			}
+		}
+	}
+
+	&__title {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-weight: bold;
+		position: relative;
+		padding-right: 1em;
+
+		&::after {
+			content: '\f107';
+			font-family: $font-fa;
+			font-weight: normal;
+			font-size: 1.3em;
+			line-height: 0;
+			position: absolute;
+			right: 0;
+			top: 50%;
+			transition: $duration / 2 ease transform;
+		}
+	}
+
+	&__str {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&__sub {
+		@extend .header__sub-wrap;
+		width: 100%;
+		cursor: auto;
+	}
+
+	&__sub-i {
+		background: white;
+		box-shadow: 0 0 4px 0 $color-text-2;
+	}
+
+	&__sub-item {
+		display: none;
+
+		+ label {
+			display: block;
+			padding: 5px 10px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			cursor: pointer;
+
+			&::before {
+				content: '\2714';
+				display: inline-block;
+				font-size: 0;
+				transition: $duration ease font-size, $duration ease margin;
+			}
+
+			&:nth-child(2) {
+				padding-top: 10px;
+			}
+
+			&:last-child {
+				padding-bottom: 10px;
+			}
+
+			&:hover {
+				color: $color-main;
+			}
+		}
+
+		&:checked + label {
+
+			&::before {
+				font-size: 1.6rem;
+				margin-right: 10px;
+			}
+		}
+	}
+}

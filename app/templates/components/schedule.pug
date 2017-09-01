@@ -1,0 +1,28 @@
+include ../mixins/params
+
+.schedule
+
+	.schedule__head
+
+		.main__space_bot-half
+			.row.text-center
+
+				each val, i in global[0].addresses
+					.col-sm-6.col-lg-4.push-lg-2
+						a.schedule__title(
+							class= !i ? 'schedule__title_active' : ''
+							href= "#salon-" + (i + 1)
+							id= "address-" + (i + 1)
+						)= val.name
+
+		.main__space_bot-half
+			.schedule__params
+
+				each val, i in params
+					.schedule__param
+						+params(val, i)
+
+		.main__space_bot-half.text-center
+			include cats
+
+	.schedule__body

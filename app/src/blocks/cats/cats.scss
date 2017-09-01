@@ -1,0 +1,61 @@
+$name: cats;
+
+.#{$name} {
+	display: inline-block;
+	border: 1px solid $color-text;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-align: left;
+
+	&__item {
+		display: inline-block;
+		padding: .5em .7em;
+		cursor: pointer;
+
+		.#{$name} {
+
+			&__item-i {
+				border-bottom: 1px solid transparent;
+			}
+		}
+
+		&:hover {
+
+			.#{$name} {
+
+				&__item-i {
+					color: $color-main;
+				}
+			}
+		}
+
+		&_all {}
+
+		&_active {
+			font-weight: bold;
+
+			.#{$name} {
+
+				&__item-i {
+					border-bottom-color: lighten($color-text, 30%);
+				}
+			}
+
+			&:hover {
+
+				.#{$name} {
+
+					&__item-i {
+						border-bottom-color: lighten($color-main, 30%);
+					}
+				}
+			}
+		}
+	}
+
+	&__item-i {
+		display: inline-block;
+		user-select: none;
+	}
+}
