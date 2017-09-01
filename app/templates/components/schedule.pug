@@ -51,11 +51,14 @@ include ../mixins/params
 
 							- for (var i = 0; i < 7; i++) {
 								td
-									.schedule__table-title= row.halls[0].days[i].program.title
-									.schedule__table-coach= row.halls[0].days[i].program.coach
+									if row.halls[0].days[i].program.title
+										.schedule__table-title= row.halls[0].days[i].program.title
 
 									if row.halls[0].days[i].program.notice
 										.schedule__table-notice= row.halls[0].days[i].program.notice
+
+									if row.halls[0].days[i].program.coach
+										.schedule__table-coach= row.halls[0].days[i].program.coach
 							- }
 								
 						each hall, j in row.halls
@@ -65,9 +68,12 @@ include ../mixins/params
 
 									- for (var i = 0; i < 7; i++) {
 										td
-											.schedule__table-title= hall.days[i].program.title
-											.schedule__table-coach= hall.days[i].program.coach
+											if hall.days[i].program.title
+												.schedule__table-title= hall.days[i].program.title
 
 											if hall.days[i].program.notice
 												.schedule__table-notice= hall.days[i].program.notice
+
+											if hall.days[i].program.coach
+												.schedule__table-coach= hall.days[i].program.coach
 									- }

@@ -171,12 +171,11 @@ $name: schedule;
 	}
 
 	&__table-coach {
-		font-style: italic;
+
 	}
 
 	&__table-notice {
-		font-style: italic;
 		color: $color-main;
-		font-weight: bold;
+		font-style: italic;
 	}
 }
