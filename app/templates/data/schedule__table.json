@@ -579,6 +579,654 @@
 					]
 				}
 			]
+		},
+		{
+			"salon": [
+				{
+					"time": "09:30",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "Yoga 90", "coach": "Галина"}},
+								{"day": "3", "program": {"title": "Yoga 90", "coach": "Галина"}},
+								{"day": "4", "program": {"title": "9.00 АВТ", "coach": "Алиса"}},
+								{"day": "5", "program": {"title": "Yoga 90", "coach": "Никита"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "10:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "МТ", "coach": "Кристина Р."}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "Круговая тр.", "coach": "Алиса"}},
+								{"day": "5", "program": {"title": "Step", "coach": "Анна З."}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "CycleEnd.", "coach": "Анна З."}},
+								{"day": "3", "program": {"title": "Upper Body", "coach": "Света К."}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "AquaCharge", "coach": "Татьяна"}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "AquaCharge", "coach": "Алсу"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "11:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "Latina", "coach": "Кристина"}},
+								{"day": "2", "program": {"title": "Pump", "coach": "Анна З."}},
+								{"day": "3", "program": {"title": "Body Ballet", "coach": "Анастасия"}},
+								{"day": "4", "program": {"title": "Pilates", "coach": "Татьяна"}},
+								{"day": "5", "program": {"title": "MT", "coach": "Анна З."}},
+								{"day": "6", "program": {"title": "MT", "coach": "Кристина"}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "Aqua Mix", "coach": "Алсу"}}
+							]
+						}
+					]
+				},
+				{
+					"time": "12:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "FT", "coach": "Кристина"}},
+								{"day": "2", "program": {"title": "Pilates", "coach": "Татьяна"}},
+								{"day": "3", "program": {"title": "Streetching", "coach": "Анастасия"}},
+								{"day": "4", "program": {"title": "Yoga 90", "coach": "Никита"}},
+								{"day": "5", "program": {"title": "ABS + Flex", "coach": "Анна З."}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "CycleEnd.", "coach": "Кристина"}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "AquaSculpt", "coach": "Анна"}},
+								{"day": "3", "program": {"title": "AquaMix", "coach": "Анна"}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "13:00",
+					"halls": [
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "Aqua Interval", "coach": "Анна"}},
+								{"day": "7", "program": {"title": "AquaSculpt", "coach": "Алсу"}}
+							]
+						}
+					]
+				},
+				{
+					"time": "14:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "Mama Mia", "coach": "Светлана Г."}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "Mama Mia", "coach": "Ринат Т."}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "15:00",
+					"halls": [
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "Aqua Interval", "coach": "Анна"}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "17:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "18:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "МТ", "coach": "Кристина Р."}},
+								{"day": "2", "program": {"title": "ЛФК", "coach": "Кристина"}},
+								{"day": "3", "program": {"title": "Latina", "coach": "Кристина Р."}},
+								{"day": "4", "program": {"title": "ЛФК", "coach": "Кристина"}},
+								{"day": "5", "program": {"title": "Body Ballet", "coach": "Анастасия"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "19:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "Pilates", "coach": "Татьяна Д."}},
+								{"day": "2", "program": {"title": "Pump", "coach": "Кристина Р."}},
+								{"day": "3", "program": {"title": "FT", "coach": "Кристина Р."}},
+								{"day": "4", "program": {"title": "LadyStyle", "coach": "Эмма"}},
+								{"day": "5", "program": {"title": "Yoga Flow", "coach": "Анастасия"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "Cycle End", "coach": "Кристина Р."}},
+								{"day": "5", "program": {"title": "ABS + Flex", "coach": "Кристина Р."}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "20:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "Upper Body", "coach": "Кристина Р."}},
+								{"day": "2", "program": {"title": "Yoga 90", "coach": "Анна"}},
+								{"day": "3", "program": {"title": "Pilates", "coach": "Татьяна"}},
+								{"day": "4", "program": {"title": "MT", "coach": "Кристина Р."}},
+								{"day": "5", "program": {"title": "Interval", "coach": "Кристина Р."}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "AquaWorks", "coach": "Алсу"}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "AquaInterval", "coach": "Анна"}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "21:00",
+					"halls": [
+						{
+							"hall": "",
+							"days": [
+								{"day": "1", "program": {"title": "SwimmingProf$$$", "coach": "Иван"}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "SwimmingProf$$$", "coach": "Иван"}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "SwimmingProf$$$", "coach": "Иван"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"salon": [
+				{
+					"time": "10:00",
+					"halls": [
+						{
+							"hall": "Детская / малый / большой зал",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "Развивайка", "coach": "Анна", "notice": "Центр раннего развития (2-5 лет)"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "11:00",
+					"halls": [
+						{
+							"hall": "Детская комната",
+							"days": [
+								{"day": "1", "program": {"title": "Весёлые нотки", "coach": "Ксения", "notice": "Центр раннего развития (1,5-3 года)"}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "Арт-зарядка", "coach": "Анна", "notice": "Центр раннего развития (2-5 лет)"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "12:00",
+					"halls": [
+						{
+							"hall": "Детская комната",
+							"days": [
+								{"day": "1", "program": {"title": "Весёлый пластилин", "coach": "Ксения", "notice": "Центр раннего развития (2-5 лет)"}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "13:00",
+					"halls": [
+						{
+							"hall": "Детская комната",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "Страна Вообразилия", "coach": "Ирма"}},
+								{"day": "7", "program": {"title": "Домисолька", "coach": "Ксения"}}
+							]
+						},
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "16:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "16:15",
+					"halls": [
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "17:00",
+					"halls": [
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "Zumba", "coach": "Светлана К.", "notice": "(с 9 лет)"}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "MT Teenager", "coach": "Кристина", "notice": "(9-11 лет)"}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "MTV Dance", "coach": "Эмма", "notice": "(с 6 лет)"}},
+								{"day": "5", "program": {"title": "Детская хореография", "coach": "Анастасия", "notice": "(с 5 лет)"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Бассейн",
+							"days": [
+								{"day": "1", "program": {"title": "Спортивное плавание", "coach": "Анна", "notice": "(8-10 лет)"}},
+								{"day": "2", "program": {"title": "Школа плавания", "coach": "Алсу", "notice": "(6-7 лет)"}},
+								{"day": "3", "program": {"title": "Синхронное плавание", "coach": "Ирина", "notice": "(60 мин., 5-10 лет)"}},
+								{"day": "4", "program": {"title": "Спортивное плавание", "coach": "Анна", "notice": "(8-10 лет)"}},
+								{"day": "5", "program": {"title": "Школа плавания", "coach": "Иван", "notice": "(6-7 лет)"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "Синхронное плавание", "coach": "Владислав", "notice": "(17:30, 90 мин.)"}}
+							]
+						},
+						{
+							"hall": "Детская комната",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				},
+				{
+					"time": "18:00",
+					"halls": [
+						{
+							"hall": "Большой",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "", "coach": ""}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Малый",
+							"days": [
+								{"day": "1", "program": {"title": "", "coach": ""}},
+								{"day": "2", "program": {"title": "", "coach": ""}},
+								{"day": "3", "program": {"title": "Олимпик", "coach": "Оксана", "notice": "(5-8 лет)"}},
+								{"day": "4", "program": {"title": "", "coach": ""}},
+								{"day": "5", "program": {"title": "", "coach": ""}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						},
+						{
+							"hall": "Детская комната",
+							"days": [
+								{"day": "1", "program": {"title": "Шалтай-Болтай", "coach": "Светлана"}},
+								{"day": "2", "program": {"title": "Путешествие по сказкам", "coach": "Валерия, Марина"}},
+								{"day": "3", "program": {"title": "Игрушки", "coach": "Мария"}},
+								{"day": "4", "program": {"title": "Рисуем музыку", "coach": "Ксения"}},
+								{"day": "5", "program": {"title": "Сказкин домик", "coach": "Валерия"}},
+								{"day": "6", "program": {"title": "", "coach": ""}},
+								{"day": "7", "program": {"title": "", "coach": ""}}
+							]
+						}
+					]
+				}
+			]
 		}
 	]
 }

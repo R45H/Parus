@@ -108,6 +108,15 @@ $name: schedule;
 		td {
 			border: 1px solid $color-text;
 			padding: .4em .8em;
+			vertical-align: top;
+
+			&.#{$name} {
+
+				&__table-time,
+				&__table-hall {
+					vertical-align: middle;
+				}
+			}
 		}
 
 		thead {
@@ -115,6 +124,10 @@ $name: schedule;
 			text-align: center;
 			color: $color-dark;
 			background: lighten($color-text-2, 17%);
+
+			td {
+				vertical-align: middle;
+			}
 		}
 
 		&_hidden {
@@ -132,9 +145,18 @@ $name: schedule;
 		font-weight: bold;
 	}
 
+	&__table-title,
+	&__table-coach,
+	&__table-notice {
+		margin-bottom: .3em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
 	&__table-title {
 		font-weight: bold;
-		margin-bottom: .3em;
 	}
 
 	&__table-coach {
