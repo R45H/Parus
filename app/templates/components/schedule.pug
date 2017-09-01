@@ -9,16 +9,13 @@ include ../mixins/params
 			each val, i in global[0].addresses
 
 				if (i == 1)
-					each str in ['Взрослый', 'Детский']
+					each str, j in ['Взрослый', 'Детский']
 						a.schedule__title(
-							href= "#salon-2"
-							id= "address-2"
+							href= "#scheduleTable-" + (j + 2)
 						)= val.name + ' (' + str + ')'
 				else
 					a.schedule__title(
-						class= !i ? 'schedule__title_active' : ''
-						href= "#salon-" + (i + 1)
-						id= "address-" + (i + 1)
+						href= "#scheduleTable-" + (i + 1)
 					)= val.name
 
 		//-.schedule__param-wrap
@@ -32,11 +29,8 @@ include ../mixins/params
 
 	.schedule__body
 
-		each salon, outerIndex in schedule__table
-			table.schedule__table(
-				class= outerIndex ? 'schedule__table_hidden' : ''
-				id= 'scheduleTable-' + (outerIndex + 1)
-			)
+		each salon, tableIndex in schedule__table
+			table.schedule__table.schedule__table_hidden(id= 'scheduleTable-' + (tableIndex + 1))
 				thead
 
 					tr
