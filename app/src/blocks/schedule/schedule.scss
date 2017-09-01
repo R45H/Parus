@@ -1,10 +1,13 @@
 //TODO Разобраться, куда пихать медиа запросы
+//TODO Разобраться с гребаным JSON-ом
 
 $name: schedule;
 
 .#{$name} {
 
-	&__head {}
+	&__head {
+
+	}
 
 	&__title-wrap {
 		margin-bottom: $space * (4 / 5);
@@ -92,5 +95,55 @@ $name: schedule;
 		}
 	}
 
-	&__body {}
+	&__body {
+		overflow-x: auto;
+	}
+
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+		line-height: 1.2;
+		font-size: 1.4rem;
+
+		td {
+			border: 1px solid $color-text;
+			padding: .4em .8em;
+		}
+
+		thead {
+			font-weight: bold;
+			text-align: center;
+			color: $color-dark;
+			background: lighten($color-text-2, 17%);
+		}
+
+		&_hidden {
+			display: none;
+		}
+	}
+
+	&__table-time {
+		color: $color-main;
+		font-size: 1.6rem;
+	}
+
+	&__table-hall {
+		color: $color-dark;
+		font-weight: bold;
+	}
+
+	&__table-title {
+		font-weight: bold;
+		margin-bottom: .3em;
+	}
+
+	&__table-coach {
+		font-style: italic;
+	}
+
+	&__table-notice {
+		font-style: italic;
+		color: $color-main;
+		font-weight: bold;
+	}
 }

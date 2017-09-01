@@ -7,6 +7,15 @@ include ../mixins/banner
 	.container.main__mobile_full
 		+banner(banner_schedule)
 
-.section
+.section.section_space_half
 	.container
 		include ../components/schedule
+
+.section
+	.container
+
+		.main__desc
+			p= global[1].fish
+
+		.text-center
+			a.btn(href="#") Заказать визит

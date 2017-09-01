@@ -21,13 +21,55 @@ include ../mixins/params
 						id= "address-" + (i + 1)
 					)= val.name
 
-		.schedule__param-wrap
-
-			each val, i in params
-				.schedule__param
-					+params(val, i)
-
-		.main__space_bot-half.text-center
-			include cats
+		//-.schedule__param-wrap
+		//-
+		//-	each val, i in params
+		//-		.schedule__param
+		//-			+params(val, i)
+		//-
+		//-.main__space_bot.text-center
+		//-	include cats
 
 	.schedule__body
+
+		each salon, outerIndex in schedule__table
+			table.schedule__table(
+				class= outerIndex ? 'schedule__table_hidden' : ''
+				id= 'scheduleTable-' + (outerIndex + 1)
+			)
+				thead
+
+					tr
+						td(colspan=2) День недели
+						each val in ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+							td(rowspan=2)= val
+					tr
+						td Время
+						td Зал
+
+				tbody
+
+					each row in salon.salon
+						- var rowCount = row.halls.length
+						tr
+							td.schedule__table-time(rowspan= rowCount)= row.time
+							td.schedule__table-hall= row.halls[0].hall
+
+							- for (var i = 0; i < 7; i++) {
+								td
+									.schedule__table-title= row.halls[0].days[i].program.title
+									.schedule__table-coach= row.halls[0].days[i].program.coach
+									.schedule__table-notice= row.halls[0].days[i].program.notice
+							- }
+								
+						each hall, j in row.halls
+							if j
+								tr
+									td.schedule__table-hall= hall.hall
+
+									- for (var i = 0; i < 7; i++) {
+										td
+											.schedule__table-title= hall.days[i].program.title
+											.schedule__table-coach= hall.days[i].program.coach
+											.schedule__table-notice= hall.days[i].program.notice
+									- }
