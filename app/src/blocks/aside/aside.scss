@@ -22,7 +22,8 @@ $name: aside;
 
 	&__item {
 
-		&:hover {
+		&:hover,
+		&.active {
 
 			.#{$name} {
 				// =====
@@ -92,6 +93,16 @@ $name: aside;
 
 	&__sub-item {
 
+		&.active {
+
+			.#{$name} {
+				// =====
+
+				&__sub-link {
+					color: $color-main;
+				}
+			}
+		}
 	}
 
 	&__sub-link {

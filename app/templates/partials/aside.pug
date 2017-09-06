@@ -4,12 +4,15 @@ aside.aside
 	ul.aside__list
 
 		each val in menu
-			li.aside__item(class= val.sub ? 'aside__item_sub' : '')
+			li.aside__item(
+				class= val.sub ? 'aside__item_sub' : ''
+				class= val.link == page.link ? 'active' : ''
+			)
 				a.aside__link(href= val.link)= val.text
 
 				if val.sub
 					ul.aside__sub-list
 
 						each sub in val.sub
-							li.aside__sub-item
+							li.aside__sub-item(class= val.link == page.link ? 'active' : '')
 								a.aside__sub-link(href= sub.link)= sub.text
