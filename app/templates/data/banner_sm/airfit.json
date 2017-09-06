@@ -1,6 +1,6 @@
 {
 	"banner_sm_airfit": [
-		{"link": "#", "img": "img/content/airfit/02.jpg", "text": "Расписание"},
+		{"link": "schedule.html", "img": "img/content/airfit/02.jpg", "text": "Расписание"},
 		{"link": "#", "img": "img/content/airfit/03.jpg", "text": "Акции"},
 		{"link": "#", "img": "img/content/airfit/04.jpg", "text": "Команда"}
 	]

@@ -1,6 +1,6 @@
 {
 	"banner_sm_children": [
-		{"link": "#", "img": "img/content/children/02.jpg", "text": "Расписание"},
+		{"link": "schedule.html", "img": "img/content/children/02.jpg", "text": "Расписание"},
 		{"link": "#", "img": "img/content/children/03.jpg", "text": "Мастер-классы"},
 		{"link": "#", "img": "img/content/children/04.jpg", "text": "Команда"}
 	]
