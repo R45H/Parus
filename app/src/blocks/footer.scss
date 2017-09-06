@@ -49,6 +49,16 @@ $name: footer;
 		}
 	}
 
+	&__item {
+
+		&.active {
+
+			a {
+				color: $color-main;
+			}
+		}
+	}
+
 	&__company-wrap {
 		width: 30%;
 		margin-bottom: 10px;

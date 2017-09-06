@@ -1,5 +1,8 @@
 include ../mixins/soc
 
+- var aboutLink = 'about.html';
+- var copyLink = '#';
+
 // FOOTER
 footer.footer
 	.container.footer__wrap
@@ -7,12 +10,12 @@ footer.footer
 			each val in soc
 				+soc(val)(class='footer__soc')
 
-		.footer__company-wrap
-			a.footer__company(href="#") О компании
+		.footer__item.footer__company-wrap(class= aboutLink == page.link ? 'active' : '')
+			a.footer__company(href= aboutLink) О компании
 
-		.footer__copy-wrap
+		.footer__item.footer__copy-wrap(class= copyLink == page.link ? 'active' : '')
 			.footer__copy-text © 2017 ООО «Парус»
-			a.footer__copy-link(href="#") Политика конфиденциальности
+			a.footer__copy-link(href= copyLink) Политика конфиденциальности
 
 		.footer__webcenter-wrap
 			a.footer__webcenter(href="http://webcenter.pro" target="_blank") Разработано в Webcenter.pro

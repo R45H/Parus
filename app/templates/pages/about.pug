@@ -1,0 +1,20 @@
+include ../mixins/banner
+
+.section
+	.container
+		h1.title О компании
+
+	.container.main__mobile_full
+		+banner(banner_about)
+
+.section
+	.container
+
+		- var val = head_block__last_clubs[0];
+
+		if (val.text)
+			.main__desc!= val.text
+
+		if (val.btn)
+			.text-center
+				a.btn(href="#")= val.btn
