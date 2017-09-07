@@ -1,8 +1,7 @@
 var
 	$toggle = $('.toggle'),
 	activeClass = 'toggle_opened',
-	inactiveClass = 'toggle_closed',
-	shiftClass = 'toggle_shift_right';
+	inactiveClass = 'toggle_closed';
 
 /* Анимация гамбургера при клике */
 $toggle.on('click', function() {

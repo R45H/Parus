@@ -5,11 +5,12 @@ $name: btn;
 	color: white;
 	background: $color-btn;
 	display: inline-block;
-	border-bottom: none;
 	outline: none;
 	padding: 1em 4em;
 	line-height: 1.2;
 	text-transform: uppercase;
+	border: none;
+	cursor: pointer;
 
 	&:hover {
 		color: white;

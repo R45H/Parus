@@ -1,0 +1,130 @@
+$name: modal;
+
+.#{$name} {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 50;
+	align-items: flex-start;
+	justify-content: center;
+	overflow-x: hidden;
+	padding: 0;
+	overflow-y: hidden;
+	display: none;
+
+	@include screen-sm() {
+		padding: 5% 0 30px;
+		overflow-y: auto;
+	}
+
+	&__wrap {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		background-color: white;
+		text-align: center;
+		position: relative;
+		transform: scale(.9);
+		opacity: 0;
+		transition: $duration ease transform, $duration linear opacity;
+
+		@include screen-sm() {
+			width: 400px;
+			max-width: 100%;
+			height: auto;
+		}
+
+		&_visible {
+			transition: $duration * 2 ease transform, $duration linear opacity;
+			transform: none;
+			opacity: 1;
+		}
+	}
+
+	&__head {
+		padding: $space / 2 55px;
+	}
+
+	&__title {
+		margin: 0;
+	}
+
+	&__close {
+		background: $color-main;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		z-index: 1;
+		width: 40px;
+		height: 40px;
+		user-select: none;
+
+		$width: 20px;
+		$height: 2px;
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			width: $width;
+			height: $height;
+			top: 50%;
+			left: 50%;
+			margin-top: -($height / 2);
+			margin-left: -($width / 2);
+			background: white;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		&:hover {
+			background: lighten($color-main, 5%);
+		}
+
+		&:active {
+			background: darken($color-main, 5%);
+		}
+	}
+
+	&__body {
+		position: relative;
+		padding: $space / 2;
+		padding-top: 0;
+
+		@include screen-sm(max) {
+			height: 100%;
+			overflow-y: auto;
+		}
+	}
+
+	&__input,
+	&__btn {
+		max-width: 300px;
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		margin: 0 auto 10px;
+	}
+
+	&__btn {
+		margin-top: calc(#{$space} / 2 - 10px);
+
+		@include screen-sm(max) {
+			width: 100%;
+		}
+	}
+
+	&_visible {
+		display: flex;
+	}
+}

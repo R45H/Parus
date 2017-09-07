@@ -11,6 +11,8 @@ $(function() {
 	(function() { @@include('blocks/schedule/schedule.js') }());
 	(function() { @@include('blocks/params/params.js') }());
 	(function() { @@include('blocks/cats/cats.js') }());
+	(function() { @@include('blocks/modal/modal.js') }());
+	(function() { @@include('blocks/input/input.js') }());
 
 	@@include('global/global.js')
 });

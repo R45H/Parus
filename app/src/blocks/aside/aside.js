@@ -1,6 +1,5 @@
 var
 	$body = $('body'),
-	noscrollClass = 'noscroll',
 	$aside = $('.aside'),
 	$item = $('.aside__item'),
 	asideOpenedClass = 'aside_opened',

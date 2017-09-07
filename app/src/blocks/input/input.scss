@@ -1,0 +1,36 @@
+$name: input;
+
+.#{$name} {
+	-webkit-appearance: none;
+	border-radius: 0;
+	border: 1px solid $color-text-2;
+	padding: .4em .6em;
+	color: $color-text;
+
+	@include input-autofill($color-text);
+
+	@include input-placeholder {
+		color: $color-text-2;
+		transition: $duration ease all;
+	}
+
+	&:focus {
+
+		@include input-placeholder {
+			text-indent: 10px;
+		}
+	}
+
+	&_invalid {
+		border-color: $color-main;
+		color: $color-main;
+
+		@include input-placeholder {
+			color: $color-main;
+		}
+	}
+}
+
+textarea.#{$name} {
+	height: 4.5em;
+}

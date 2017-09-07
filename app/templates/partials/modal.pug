@@ -1,0 +1,14 @@
+// MODAL
+#modal.modal
+	.modal__wrap
+		.modal__head
+			h4.title.modal__title Заказать визит
+			.modal__close
+		.modal__body
+			form
+				input.input.modal__input(type="text", placeholder='Имя')
+				input.input.modal__input(type="tel", placeholder='Телефон')
+				input.input.modal__input(type="email", placeholder='Электронная почта')
+				textarea.input.modal__input(placeholder='Комментарий')
+
+				button.btn.modal__btn(type="submit") Отправить
