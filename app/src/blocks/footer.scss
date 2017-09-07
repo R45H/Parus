@@ -55,6 +55,7 @@ $name: footer;
 
 			a {
 				color: $color-main;
+				border-bottom-color: lighten($color-main, 30%);
 			}
 		}
 	}
