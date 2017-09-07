@@ -1,0 +1,15 @@
+include ../mixins/banner
+include ../mixins/news
+
+.section
+	.container
+		h1.title Новости
+
+	.container.main__mobile_full
+		+banner(banner_about)
+
+.section
+	.container
+		each val in news
+			.main__space_bot
+				+news(val)(class='row')
