@@ -16,21 +16,64 @@ $name: schedule;
 
 	&__title {
 		display: inline-block;
-		margin: 0 1.5em $space * (1 / 5);
+		border-bottom: none;
+		padding: $space * (1 / 5) 1.5em;
+
+		span {
+			display: block;
+			border-bottom: 1px solid lighten($color-text, 30%);
+		}
+
+		&:hover {
+
+			span {
+				border-bottom-color: lighten($color-main, 30%);
+			}
+		}
 
 		&_active {
-			color: $color-main;
-			border-bottom: 1px solid lighten($color-main, 30%);
+			color: white;
+			background: lighten(desaturate($color-btn, 30%), 20%);
+			cursor: default;
+
+
+			span {
+				border-bottom-color: transparent;
+			}
+
+			&:hover {
+				color: white;
+
+				span {
+					border-bottom-color: transparent;
+				}
+			}
+
+			&.#{$name} {
+
+				&__title {
+
+					&_style_children {
+						background: adjust_hue(lighten(desaturate($color-btn, 30%), 32%), 130deg);
+					}
+				}
+			}
 		}
 
 		&_inactive {
 			color: lighten($color-text, 30%);
-			border-bottom-color: lighten($color-text, 30%);
 			cursor: default;
+
+			span {
+				border-bottom-color: lighten($color-text, 30%);
+			}
 
 			&:hover {
 				color: lighten($color-text, 30%);
-				border-bottom-color: lighten($color-text, 30%);
+
+				span {
+					border-bottom-color: lighten($color-text, 30%);
+				}
 			}
 		}
 	}
@@ -110,14 +153,15 @@ $name: schedule;
 		overflow-x: auto;
 	}
 
+	&__print-btn {
+		text-align: right;
+		margin-top: 1em;
+	}
+
 	&__table {
-		width: 100%;
-		border-collapse: collapse;
-		line-height: 1.2;
-		font-size: 1.4rem;
 
 		td {
-			border: 1px solid $color-text;
+			border: 1px solid $color-text-2;
 			padding: .4em .8em;
 			vertical-align: top;
 
@@ -133,27 +177,55 @@ $name: schedule;
 		thead {
 			font-weight: bold;
 			text-align: center;
-			color: $color-dark;
-			background: lighten($color-text-2, 17%);
+			color: white;
+			background: lighten(desaturate($color-btn, 30%), 20%);
 
 			td {
 				vertical-align: middle;
+				border-color: lighten(desaturate($color-btn, 30%), 5%);
 			}
 		}
 
 		&_hidden {
 			display: none;
 		}
+
+		&_style_children {
+
+			thead {
+				background: adjust_hue(lighten(desaturate($color-btn, 30%), 32%), 130deg);
+
+				td {
+					border-color: adjust_hue(lighten(desaturate($color-btn, 30%), 20%), 130deg);
+				}
+			}
+
+			.#{$name} {
+
+				&__table-cell-colored {
+					background: adjust_hue(lighten(desaturate($color-btn, 20%), 52%), 130deg);
+				}
+			}
+		}
+	}
+
+	&__table-i {
+		width: 100%;
+		border-collapse: collapse;
+		line-height: 1.2;
+		font-size: 1.4rem;
+		color: $color-dark;
 	}
 
 	&__table-time {
 		color: $color-main;
 		font-size: 1.6rem;
+		background: lighten($color-text-2, 20%);
 	}
 
 	&__table-hall {
-		color: $color-dark;
 		font-weight: bold;
+		background: lighten($color-text-2, 20%);
 	}
 
 	&__table-title,
@@ -177,5 +249,13 @@ $name: schedule;
 	&__table-notice {
 		color: $color-main;
 		font-style: italic;
+	}
+	
+	&__table-cell-colored {
+		background: adjust_hue(lighten(desaturate($color-btn, 20%), 50%), 270deg);
+	}
+
+	&__table-cell-colored-pool {
+		background: lighten(desaturate($color-btn, 20%), 50%);
 	}
 }
