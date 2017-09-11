@@ -150,12 +150,16 @@ $name: schedule;
 	}
 
 	&__body {
-		overflow-x: auto;
+
 	}
 
 	&__print-btn {
-		text-align: right;
 		margin-top: 1em;
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: right;
+		}
 	}
 
 	&__table {
@@ -207,6 +211,10 @@ $name: schedule;
 				}
 			}
 		}
+	}
+
+	&__table-wrap {
+		overflow: auto;
 	}
 
 	&__table-i {

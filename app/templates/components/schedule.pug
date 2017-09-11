@@ -39,61 +39,62 @@ include ../mixins/params
 				id= 'scheduleTable-' + (tableIndex + 1)
 			)
 
-				table.schedule__table-i
-					thead
+				.schedule__table-wrap
+					table.schedule__table-i
+						thead
 
-						tr
-							td(colspan=2) День недели
-							each val in ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
-								td(rowspan=2)= val
-						tr
-							td Время
-							td Зал
-
-					tbody
-						each row in salon.salon
-							- var rowCount = row.halls.length
-							- var isPool = false;
 							tr
-								td.schedule__table-time(rowspan= rowCount)= row.time
-								td.schedule__table-hall= row.halls[0].hall
+								td(colspan=2) День недели
+								each val in ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье']
+									td(rowspan=2)= val
+							tr
+								td Время
+								td Зал
 
-								- if (row.halls[0].hall == 'Бассейн') isPool = true;
+						tbody
+							each row in salon.salon
+								- var rowCount = row.halls.length
+								- var isPool = false;
+								tr
+									td.schedule__table-time(rowspan= rowCount)= row.time
+									td.schedule__table-hall= row.halls[0].hall
 
-								- for (var i = 0; i < 7; i++) {
-									- var program = row.halls[0].days[i].program;
-									td(class= program.title || program.notice || program.coach ? isPool ? 'schedule__table-cell-colored-pool' : 'schedule__table-cell-colored' : '')
-										if program.title
-											.schedule__table-title= program.title
+									- if (row.halls[0].hall == 'Бассейн') isPool = true;
 
-										if program.notice
-											.schedule__table-notice= program.notice
+									- for (var i = 0; i < 7; i++) {
+										- var program = row.halls[0].days[i].program;
+										td(class= program.title || program.notice || program.coach ? isPool ? 'schedule__table-cell-colored-pool' : 'schedule__table-cell-colored' : '')
+											if program.title
+												.schedule__table-title= program.title
 
-										if program.coach
-											.schedule__table-coach= program.coach
-								- }
+											if program.notice
+												.schedule__table-notice= program.notice
 
-							each hall, j in row.halls
-								if j
-									tr
-										td.schedule__table-hall= hall.hall
+											if program.coach
+												.schedule__table-coach= program.coach
+									- }
 
-										- if (hall.hall == 'Бассейн') isPool = true;
+								each hall, j in row.halls
+									if j
+										tr
+											td.schedule__table-hall= hall.hall
 
-										- for (var i = 0; i < 7; i++) {
-											- var program = hall.days[i].program;
-											td(class= program.title || program.notice || program.coach ? isPool ? 'schedule__table-cell-colored-pool' : 'schedule__table-cell-colored' : '')
-												if program.title
-													.schedule__table-title= program.title
+											- if (hall.hall == 'Бассейн') isPool = true;
 
-												if program.notice
-													.schedule__table-notice= program.notice
+											- for (var i = 0; i < 7; i++) {
+												- var program = hall.days[i].program;
+												td(class= program.title || program.notice || program.coach ? isPool ? 'schedule__table-cell-colored-pool' : 'schedule__table-cell-colored' : '')
+													if program.title
+														.schedule__table-title= program.title
 
-												if program.coach
-													.schedule__table-coach= program.coach
-										- }
+													if program.notice
+														.schedule__table-notice= program.notice
 
-							- count++;
+													if program.coach
+														.schedule__table-coach= program.coach
+											- }
+
+								- count++;
 
 				.schedule__print-btn
 					a.btn.js-print(href="#") Распечатать прайс-лист
