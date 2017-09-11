@@ -1,0 +1,59 @@
+@page {
+	margin: 1cm;
+}
+
+.header,
+.footer,
+.title,
+.banner,
+.main__desc,
+.btn,
+.schedule__title:not(.schedule__title_active) {
+	display: none;
+}
+
+.schedule__title,
+.schedule__title.schedule__title_style_children,
+.schedule__table-notice {
+	color: black;
+	background: transparent;
+}
+
+.schedule__table_style_children {
+
+	.schedule {
+
+		&__table-cell-colored,
+		&__table-cell-colored-pool {
+			color: black;
+			background: transparent;
+		}
+	}
+}
+
+.schedule__table {
+
+	td,
+	thead,
+	thead td {
+		color: black;
+		border-color: black;
+		background: transparent;
+	}
+}
+
+.schedule__table {
+	overflow: hidden;
+}
+
+.schedule__title {
+	font-size: .35cm;
+}
+
+.schedule__table-i {
+	font-size: .2cm;
+}
+
+.schedule__table-time {
+	font-size: .25cm;
+}

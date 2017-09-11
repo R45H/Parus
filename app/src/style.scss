@@ -35,3 +35,9 @@
 @import url('blocks/section.scss'); // Секция контента
 @import url('blocks/main.scss'); // Контейнер контента
 // =====
+
+// Стили для печати
+@media print {
+	@import url('global/print.scss');
+}
+// =====
