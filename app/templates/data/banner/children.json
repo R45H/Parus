@@ -3,7 +3,7 @@
 		{
 			"img": "img/content/children/03.jpg",
 			"text": "Реклама текущего события",
-			"fog": true
+			"link": "#"
 		}
 	]
 }

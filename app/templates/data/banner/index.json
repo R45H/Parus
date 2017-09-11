@@ -3,8 +3,7 @@
 		{
 			"img": "img/content/salons/03.jpg",
 			"text": "Акция",
-			"link": "#",
-			"fog": true
+			"link": "#"
 		}
 	]
 }

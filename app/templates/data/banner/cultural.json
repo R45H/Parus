@@ -3,7 +3,7 @@
 		{
 			"img": "img/content/cultural/02.jpg",
 			"text": "Реклама текущего события",
-			"fog": true
+			"link": "#"
 		}
 	]
 }
