@@ -1,0 +1,26 @@
+$name: contents;
+
+.#{$name} {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__title {
+		margin: 0;
+	}
+
+	&__value {
+		flex: auto;
+		text-align: right;
+		display: flex;
+		align-items: baseline;
+		margin: 0;
+
+		&::before {
+			content: '';
+			flex: auto;
+			height: 1px;
+			background: repeating-linear-gradient(to left, $color-text 0, $color-text 1px, transparent 1px, transparent 3px);
+			margin: 0 5px;
+		}
+	}
+}

@@ -1,0 +1,114 @@
+//TODO Разобраться, куда пихать медиа запросы
+//TODO Разобраться с гребаным JSON-ом
+
+$name: schedule;
+
+.#{$name} {
+
+	td {
+		border: 1px solid $color-text-2;
+		padding: .4em .8em;
+		vertical-align: top;
+
+		&.#{$name} {
+
+			&__table-time,
+			&__table-hall {
+				vertical-align: middle;
+			}
+		}
+	}
+
+	thead {
+		font-weight: bold;
+		text-align: center;
+		color: white;
+		background: lighten(desaturate($color-btn, 30%), 20%);
+
+		td {
+			vertical-align: middle;
+			border-color: lighten(desaturate($color-btn, 30%), 5%);
+		}
+	}
+
+	&__wrap {
+		overflow: auto;
+	}
+
+	&__table {
+		width: 100%;
+		border-collapse: collapse;
+		line-height: 1.2;
+		font-size: 1.4rem;
+		color: $color-dark;
+	}
+
+	&__table-time {
+		color: $color-main;
+		font-size: 1.6rem;
+		background: lighten($color-text-2, 20%);
+	}
+
+	&__table-hall {
+		font-weight: bold;
+		background: lighten($color-text-2, 20%);
+	}
+
+	&__table-title,
+	&__table-coach,
+	&__table-notice {
+		margin-bottom: .3em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__table-title {
+		font-weight: bold;
+	}
+
+	&__table-coach {
+
+	}
+
+	&__table-notice {
+		color: $color-main;
+		font-style: italic;
+	}
+	
+	&__table-cell-colored {
+		background: adjust_hue(lighten(desaturate($color-btn, 20%), 50%), 270deg);
+	}
+
+	&__table-cell-colored-pool {
+		background: lighten(desaturate($color-btn, 20%), 50%);
+	}
+
+	&__print-btn {
+		margin-top: 1em;
+		text-align: center;
+
+		@include screen-sm() {
+			text-align: right;
+		}
+	}
+
+	&_style_children {
+
+		thead {
+			background: adjust_hue(lighten(desaturate($color-btn, 30%), 32%), 130deg);
+
+			td {
+				border-color: adjust_hue(lighten(desaturate($color-btn, 30%), 20%), 130deg);
+			}
+		}
+
+		.#{$name} {
+
+			&__table-cell-colored {
+				background: adjust_hue(lighten(desaturate($color-btn, 20%), 52%), 130deg);
+			}
+		}
+	}
+}

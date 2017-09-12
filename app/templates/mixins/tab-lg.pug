@@ -1,0 +1,33 @@
+mixin tab-lg(data)
+	.tab-lg
+
+		.tab-lg__head.main__space_bot
+
+			each val, j in data
+				a.tab-lg__title(href= "#panel" + (j + 1))
+					span= val.name
+
+		.tab-lg__body
+
+			each val, j in data
+				.tab-lg__panel.tab-lg__panel_hidden(id= "panel" + (j + 1))
+					.row.main__space_bot-half
+
+						each cat in val.cat
+
+							.main__space_bot-half(class= val.lg ? 'col-lg-8' : 'col-sm-6')
+
+								if cat.cat_name
+									p.main__contents-title= cat.cat_name
+
+								each list in cat.list
+
+									.contents
+										p.contents__title= list.name + (list.notice ? ' *' : '')
+
+										if list.price
+											p.contents__value
+												span= list.price + ' р.'
+
+					if val.notice
+						.main__space_bot= val.notice

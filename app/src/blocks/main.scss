@@ -22,4 +22,9 @@ $name: main;
 		margin: $space / 2 0;
 		text-align: justify;
 	}
+
+	&__contents-title {
+		margin: 0 0 1rem;
+		font-weight: bold;
+	}
 }

@@ -8,19 +8,19 @@
 .banner,
 .main__desc,
 .btn,
-.schedule__title:not(.schedule__title_active),
+.tab-lg__title:not(.tab-lg__title_active),
 #panel {
 	display: none;
 }
 
-.schedule__title,
-.schedule__title.schedule__title_style_children,
+.tab-lg__title,
+.tab-lg__title.tab-lg__title_style_children,
 .schedule__table-notice {
 	color: black;
 	background: transparent;
 }
 
-.schedule__table_style_children {
+.schedule_style_children {
 
 	.schedule {
 
@@ -32,7 +32,7 @@
 	}
 }
 
-.schedule__table {
+.schedule {
 
 	td,
 	thead,
@@ -43,7 +43,7 @@
 	}
 }
 
-.schedule__table {
+.schedule {
 	overflow: hidden;
 }
 
@@ -51,7 +51,7 @@
 	font-size: .35cm;
 }
 
-.schedule__table-i {
+.schedule__table {
 	font-size: .2cm;
 }
 

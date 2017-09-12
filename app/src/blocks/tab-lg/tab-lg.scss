@@ -1,0 +1,83 @@
+$name: tab-lg;
+
+.#{$name} {
+
+	&__head {
+		text-align: center;
+	}
+
+	&__title {
+		display: inline-block;
+		border-bottom: none;
+		padding: $space * (1 / 5) 1.5em;
+
+		span {
+			display: block;
+			border-bottom: 1px solid lighten($color-text, 30%);
+		}
+
+		&:hover {
+
+			span {
+				border-bottom-color: lighten($color-main, 30%);
+			}
+		}
+
+		&_active {
+			color: white;
+			background: lighten(desaturate($color-btn, 30%), 20%);
+			cursor: default;
+
+
+			span {
+				border-bottom-color: transparent;
+			}
+
+			&:hover {
+				color: white;
+
+				span {
+					border-bottom-color: transparent;
+				}
+			}
+
+			&.#{$name} {
+
+				&__title {
+
+					&_style_children {
+						background: adjust_hue(lighten(desaturate($color-btn, 30%), 32%), 130deg);
+					}
+				}
+			}
+		}
+
+		&_inactive {
+			color: lighten($color-text, 30%);
+			cursor: default;
+
+			span {
+				border-bottom-color: lighten($color-text, 30%);
+			}
+
+			&:hover {
+				color: lighten($color-text, 30%);
+
+				span {
+					border-bottom-color: lighten($color-text, 30%);
+				}
+			}
+		}
+	}
+
+	&__body {
+
+	}
+
+	&__panel {
+
+		&_hidden {
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+include ../mixins/banner
+include ../mixins/tab-lg
+
+.section
+	.container
+		h1.title Меню
+
+	.container.main__mobile_full
+		+banner(banner_schedule)
+
+.section.section_space_none
+	.container
+		+tab-lg(tab_lg_menu)
+
+.section
+	.container
+
+		.text-center
+			a.btn(href="#") Заказать визит

@@ -1,7 +1,7 @@
 {
 	"banner_sm_fresh_bar": [
 		{"link": "#", "img": "img/content/fresh-bar/01.jpg", "text": "Завтраки, ланчи"},
-		{"link": "#", "img": "img/content/fresh-bar/02.jpg", "text": "Меню"},
-		{"link": "#", "img": "img/content/fresh-bar/03.jpg", "text": "Кейтринг"}
+		{"link": "menu.html", "img": "img/content/fresh-bar/02.jpg", "text": "Меню"},
+		{"link": "catering.html", "img": "img/content/fresh-bar/03.jpg", "text": "Кейтринг"}
 	]
 }
