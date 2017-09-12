@@ -32,6 +32,10 @@ $name: banner;
 				@extend %fog;
 			}
 		}
+
+		&_contain {
+			background-size: contain;
+		}
 	}
 
 	&__text {

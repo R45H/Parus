@@ -40,6 +40,11 @@ $name: news;
 				transform: scale(1.05);
 			}
 		}
+		
+		&_contain {
+			background-size: contain;
+			background-position: 50% 0;
+		}
 	}
 
 	&__text {
@@ -79,6 +84,10 @@ $name: news;
 		position: relative;
 		height: 100%;
 		text-align: justify;
+
+		p {
+			margin-top: 0;
+		}
 
 		&::after {
 			content: '';
