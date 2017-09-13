@@ -2,6 +2,9 @@
 	"banner_lg_fresh_bar": [
 		{"img": "img/content/fresh-bar/01.jpg"},
 		{"img": "img/content/fresh-bar/02.jpg"},
-		{"img": "img/content/fresh-bar/03.jpg"}
+		{"img": "img/content/fresh-bar/03.jpg"},
+		{"img": "img/content/fresh-bar/04.jpg"},
+		{"img": "img/content/fresh-bar/05.jpg"},
+		{"img": "img/content/fresh-bar/06.jpg"}
 	]
 }
