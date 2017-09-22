@@ -1,7 +1,7 @@
 mixin tab-lg(data)
-	.tab-lg
+	.tab-lg(class= attributes.class == 'tab-lg_left' ? 'tab-lg_left row' : '')
 
-		.tab-lg__head.main__space_bot
+		.tab-lg__head(class= attributes.class == 'tab-lg_left' ? '' : 'main__space_bot')
 
 			each val, j in data
 				a.tab-lg__title(href= "#panel" + (j + 1))
@@ -15,7 +15,7 @@ mixin tab-lg(data)
 
 						each cat in val.cat
 
-							.main__space_bot-half(class= val.lg ? 'col-lg-10 offset-lg-1' : 'col-sm-6')
+							.main__space_bot-half(class= attributes.class == 'tab-lg_left' ? 'col-12' : val.lg ? 'col-lg-10 offset-lg-1' : 'col-sm-6')
 
 								if cat.cat_name
 									p.main__contents-title= cat.cat_name

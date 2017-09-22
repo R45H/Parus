@@ -80,4 +80,44 @@ $name: tab-lg;
 			display: none;
 		}
 	}
+
+	&_left {
+		align-items: flex-start;
+
+		.#{$name} {
+
+			&__title {
+
+				span {
+					border-bottom: none;
+				}
+
+				@include screen-md() {
+					width: 100%;
+				}
+			}
+
+			&__head {
+				padding: 0 15px;
+				border-bottom: 4px solid lighten(desaturate($color-btn, 30%), 20%);
+				margin-bottom: $space / 2;
+
+				@include screen-md() {
+					margin-bottom: 0;
+					width: 33.333333%;
+					padding-right: 0;
+					border-bottom: none;
+					border-right: 4px solid lighten(desaturate($color-btn, 30%), 20%);
+				}
+			}
+
+			&__body {
+				padding: 0 15px;
+
+				@include screen-md() {
+					width: 66.666666%;
+				}
+			}
+		}
+	}
 }
