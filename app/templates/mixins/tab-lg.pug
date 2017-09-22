@@ -15,19 +15,29 @@ mixin tab-lg(data)
 
 						each cat in val.cat
 
-							.main__space_bot-half(class= val.lg ? 'col-lg-8' : 'col-sm-6')
+							.main__space_bot-half(class= val.lg ? 'col-lg-10 offset-lg-1' : 'col-sm-6')
 
 								if cat.cat_name
 									p.main__contents-title= cat.cat_name
 
+								if cat.cat_desc
+									.main__contents-desc!= cat.cat_desc
+
 								each list in cat.list
 
-									.contents
-										p.contents__title= list.name + (list.notice ? ' *' : '')
+									if list.name
+										.contents
+											p.contents__title(
+												class= !list.price ? 'contents__title_alone' : ''
+												class= list.name_first ? 'contents__title_mt_none' : ''
+											)= list.name + (list.notice ? ' *' : '')
 
-										if list.price
-											p.contents__value
-												span= list.price + ' р.'
+											if list.price
+												p.contents__value
+													span= list.price + ' р.'
+
+									if list.desc
+										.main__contents-desc(class= list.desc_last ? 'main__contents-desc_mb_none' : 'main__contents-desc_mb_2x')!= list.desc
 
 					if val.notice
 						.main__space_bot= val.notice

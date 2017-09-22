@@ -27,4 +27,24 @@ $name: main;
 		margin: 0 0 1rem;
 		font-weight: bold;
 	}
+
+	&__contents-desc {
+		margin: .5em 0;
+		overflow: hidden;
+		text-align: justify;
+		font-size: 1.4rem;
+
+		p,
+		ul {
+			margin: .5em 0;
+		}
+
+		&_mb_none {
+			margin-bottom: 0;
+		}
+
+		&_mb_2x {
+			margin-bottom: 1em;
+		}
+	}
 }

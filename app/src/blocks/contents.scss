@@ -6,6 +6,15 @@ $name: contents;
 
 	&__title {
 		margin: 0;
+
+		&_alone {
+			text-decoration: underline;
+			margin: .5rem 0;
+		}
+
+		&_mt_none {
+			margin-top: 0;
+		}
 	}
 
 	&__value {
