@@ -2,18 +2,31 @@ $name: header;
 
 .#{$name} {
 	flex: 0 0 auto;
-	padding: 10px 0;
+	padding: 10px 0 0;
 	box-shadow: 0 0 8px -1px $color-text-2;
 	position: relative;
-	height: 70px;
 
 	@include screen-sm() {
 		padding: 20px 0;
 		height: auto;
 	}
 
-	&__row {
+	&__top {
 		align-items: center;
+		margin-bottom: 10px;
+
+		@include screen-sm() {
+			margin-bottom: 0;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+
+		@include screen-sm() {
+			display: none;
+		}
 	}
 
 	&__logo {
@@ -25,7 +38,7 @@ $name: header;
 		position: absolute;
 		top: 0;
 		right: 0;
-		height: 100%;
+		height: 70px;
 		width: 70px;
 
 		@include screen-sm() {
@@ -146,7 +159,7 @@ $name: header;
 		}
 
 		&::before {
-			border-bottom: 0px solid white;
+			border-bottom: 0 solid white;
 			border-left: 7px solid transparent;
 			border-right: 7px solid transparent;
 			margin-left: -7px;
@@ -213,6 +226,98 @@ $name: header;
 
 		&:last-child {
 			display: none;
+		}
+	}
+
+	&__link {
+		line-height: 2.5;
+		color: $color-text;
+		border-bottom: none;
+		display: block;
+		padding: 0 15px;
+
+		&:hover {
+			color: $color-main;
+		}
+	}
+
+	&__salons {
+		position: relative;
+		cursor: pointer;
+	}
+
+	&__salons-text {
+		user-select: none;
+
+		&::after {
+			content: '\f107';
+			display: inline-block;
+			font-family: $font-fa;
+			margin-left: 5px;
+			transition: $duration / 2 ease transform;
+		}
+
+		&_opened {
+			color: $color-main;
+
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__salons-wrap {
+		cursor: default;
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: white;
+		z-index: 1;
+		white-space: nowrap;
+		border-top: 1px solid lighten($color-text-2, 15%);
+		box-shadow: 2px 2px 5px -2px $color-text-2;
+		display: none;
+	}
+
+	&__salons-item {
+
+		&:first-child {
+
+			.#{$name} {
+
+				&__salons-link {
+					padding-top: 12px;
+				}
+			}
+		}
+
+		&:last-child {
+
+			.#{$name} {
+
+				&__salons-link {
+					padding-bottom: 12px;
+				}
+			}
+		}
+	}
+
+	&__salons-link {
+		display: block;
+		border: none;
+		padding: 6px 15px;
+		line-height: 1.4;
+
+		&_active {
+			color: $color-text-2;
+			cursor: default;
+
+			&:hover {
+				color: $color-text-2;
+			}
 		}
 	}
 }

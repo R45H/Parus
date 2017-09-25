@@ -1,7 +1,7 @@
 // HEADER
 header.header
 	.container
-		.row.header__row
+		.row.header__top
 
 			.col-6.col-sm-3.col-md-2.col-lg-1
 				a.logo.header__logo(href="/")
@@ -9,6 +9,7 @@ header.header
 
 			.col
 				ul.header__menu
+
 					each val in menu
 						li.header__menu-item(class= val.link == page.link ? 'active' : '')
 							a.header__menu-link(href= val.link)= val.text
@@ -22,6 +23,17 @@ header.header
 												a.header__sub-link(href= sub.link)= sub.text
 
 						li.header__menu-separator
+
+		.row.header__bottom
+			.header__salons
+				.header__link.header__salons-text Клуб
+				ul.header__salons-wrap
+
+					each val in global[0].addresses
+						li.header__salons-item
+							a.header__salons-link(href="#")= val.name
+
+			a.header__link(href="schedule.html") Расписание
 
 	.toggle.header__toggle
 		.toggle__wrap
