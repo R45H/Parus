@@ -14,10 +14,12 @@ $name: aside;
 
 	&__list {
 		list-style-type: none;
-		padding: 0 0 15px;
+		padding: 0;
 		margin: 0;
 		overflow: auto;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__item {
@@ -66,6 +68,44 @@ $name: aside;
 				}
 			}
 		}
+
+		&_modal {
+			margin-bottom: 1rem;
+
+			.#{$name} {
+				// =====
+
+				&__link {
+					color: $color-btn;
+				}
+			}
+
+			&:hover {
+
+				.#{$name} {
+					// =====
+
+					&__link {
+						color: lighten($color-btn, 5%);
+					}
+				}
+			}
+
+			&:active {
+
+				.#{$name} {
+					// =====
+
+					&__link {
+						color: darken($color-btn, 5%);
+					}
+				}
+			}
+		}
+
+		&_bottom {
+			margin-top: auto;
+		}
 	}
 
 	&__link {
@@ -74,7 +114,7 @@ $name: aside;
 		display: block;
 		border-bottom: none;
 
-		&[href="#"] {
+		&[href="#"]:not([data-modal]) {
 			color: lighten($color-text, 25%);
 			cursor: default;
 

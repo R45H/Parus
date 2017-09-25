@@ -8,7 +8,7 @@ var
 	$itemSub = $('.' + itemSubClass),
 	subListClass = 'aside__sub-list',
 	$subList = $('.' + subListClass),
-	fogClass = 'fog',
+	classFog = 'fog',
 	delay = 300;
 
 /* Скрытие / раскрытие подменю */
@@ -44,24 +44,16 @@ $(window).on('resize', function() {
 /* ===== */
 
 /* Клик по затемнению */
-$(document).on('click', '.' + fogClass, function() {
+$(document).on('click', '.' + classFog, function() {
 	if (!$aside.hasClass(asideOpenedClass)) return;
-
 	toggleAside('close');
-	$toggle
-		.removeClass(activeClass)
-		.addClass(inactiveClass);
 });
 /* ===== */
 
 // Закрытие бокового меню при нажатии ESC
 var closeAsideOnEsc = function(event) {
 	if (event.keyCode != 27) return;
-
 	toggleAside('close');
-	$toggle
-		.removeClass(activeClass)
-		.addClass(inactiveClass);
 };
 // =====
 
@@ -70,8 +62,8 @@ function toggleAside(action) {
 
 	if (action == 'open') {
 		$aside.addClass(asideOpenedClass);
-		$body.append('<div class="' + fogClass + '"></div>');
-		$('.' + fogClass).fadeIn(delay);
+		$body.append('<div class="' + classFog + '"></div>');
+		$('.' + classFog).fadeIn(delay);
 		$(document).on('keydown', closeAsideOnEsc);
 		$toggle.css({
 			'padding-right': getScrollbarWidth(),
@@ -85,14 +77,17 @@ function toggleAside(action) {
 		$subList.slideUp(0);
 		$item.removeClass(itemOpenedClass);
 		$aside.removeClass(asideOpenedClass);
-		$('.' + fogClass).fadeOut(delay);
-		$toggle.css({
-			'padding-right': '',
-			'right': ''
-		});
+		$('.' + classFog).fadeOut(delay);
+		$toggle
+			.removeClass(activeClass)
+			.addClass(inactiveClass)
+			.css({
+				'padding-right': '',
+				'right': ''
+			});
 
 		setTimeout(function() {
-			$('.' + fogClass).remove();
+			$('.' + classFog).remove();
 			toggleBodyScroll(false);
 		}, delay / 2);
 	}

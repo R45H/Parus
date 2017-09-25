@@ -21,4 +21,8 @@ $name: btn;
 	&:active {
 		background: darken($color-btn, 5%);
 	}
+
+	&_wide {
+		width: 100%;
+	}
 }

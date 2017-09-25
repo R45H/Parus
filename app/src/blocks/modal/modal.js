@@ -1,14 +1,11 @@
 var
 	$links = $('[data-modal]'),
-	$body = $('body'),
-	classFog = 'fog',
 	classBlock = 'modal',
 	classClose = classBlock + '__close',
 	classVisible = classBlock + '_visible',
 	classWrap = classBlock + '__wrap',
 	classWrapVisible = classBlock + '__wrap_visible',
-	classInput = 'input',
-	delay = 300;
+	classInput = 'input';
 
 if (!$links.length) return;
 
@@ -19,7 +16,16 @@ $links.each(function() {
 
 	// Клик по кнопке, открывающей модалку
 	$(this).on('click', function() {
-		modal('open', id);
+
+		if ($aside.hasClass(asideOpenedClass)) {
+			toggleAside('close');
+			setTimeout(function() {
+				modal('open', id);
+			}, delay / 2);
+		} else {
+			modal('open', id);
+		}
+
 		return false;
 	});
 	// =====

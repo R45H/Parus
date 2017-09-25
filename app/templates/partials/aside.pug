@@ -16,3 +16,9 @@ aside.aside
 						each sub in val.sub
 							li.aside__sub-item(class= val.link == page.link ? 'active' : '')
 								a.aside__sub-link(href= sub.link)= sub.text
+
+		li.aside__item.aside__item_modal
+			a.aside__link(href="#" data-modal="#modal") Заказать визит
+
+		li.aside__item.aside__item_bottom
+			a.btn.btn_wide(href= global[0].addresses[0].tel_link) Позвонить
