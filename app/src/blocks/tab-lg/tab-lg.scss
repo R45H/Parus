@@ -7,9 +7,17 @@ $name: tab-lg;
 	}
 
 	&__title {
-		display: inline-block;
 		border-bottom: none;
 		padding: $space * (1 / 5) 1.5em;
+		display: block;
+		margin: 0 auto;
+		max-width: 300px;
+
+		@include screen-sm() {
+			display: inline-block;
+			margin: 0;
+			max-width: none;
+		}
 
 		span {
 			display: block;
@@ -101,6 +109,7 @@ $name: tab-lg;
 				padding: 0 15px;
 				border-bottom: 4px solid lighten(desaturate($color-btn, 30%), 20%);
 				margin-bottom: $space / 2;
+				width: 100%;
 
 				@include screen-md() {
 					margin-bottom: 0;

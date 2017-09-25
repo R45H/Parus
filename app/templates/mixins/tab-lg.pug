@@ -15,7 +15,7 @@ mixin tab-lg(data)
 
 						each cat in val.cat
 
-							.main__space_bot-half(class= attributes.class == 'tab-lg_left' ? 'col-12' : val.lg ? 'col-lg-10 offset-lg-1' : 'col-sm-6')
+							.main__space_bot-half(class= attributes.class == 'tab-lg_left' ? 'col-12' : 'col-lg-10 offset-lg-1')
 
 								if cat.cat_name
 									p.main__contents-title= cat.cat_name
@@ -28,7 +28,7 @@ mixin tab-lg(data)
 									if list.name
 										.contents
 											p.contents__title(
-												class= !list.price ? 'contents__title_alone' : ''
+												class= list.subtitle ? 'contents__title_alone' : ''
 												class= list.name_first ? 'contents__title_mt_none' : ''
 											)= list.name + (list.notice ? ' *' : '')
 

@@ -14,7 +14,7 @@ include ../mixins/tab-lg
 
 		each val, j in tab_lg_price
 			.tab-lg__panel.tab-lg__panel_hidden(id= "outerPanel-" + (j + 1))
-				.row.main__space_bot-half
+				.main__space_bot-half
 					+tab-lg(val.salon)(
 						class= 'tab-lg_left'
 						panelNum= j + 1
