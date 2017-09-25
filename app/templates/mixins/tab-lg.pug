@@ -4,13 +4,13 @@ mixin tab-lg(data)
 		.tab-lg__head(class= attributes.class == 'tab-lg_left' ? '' : 'main__space_bot')
 
 			each val, j in data
-				a.tab-lg__title(href= "#panel" + (j + 1))
+				a.tab-lg__title(href= attributes.panelNum ? "#panel-" + attributes.panelNum + '-' + (j + 1) : "#panel-" + (j + 1))
 					span= val.name
 
 		.tab-lg__body
 
 			each val, j in data
-				.tab-lg__panel.tab-lg__panel_hidden(id= "panel" + (j + 1))
+				.tab-lg__panel.tab-lg__panel_hidden(id= attributes.panelNum ? "panel-" + attributes.panelNum + '-' + (j + 1) : "panel-" + (j + 1))
 					.row.main__space_bot-half
 
 						each cat in val.cat

@@ -1,0 +1,21 @@
+include ../mixins/tab-lg
+
+.tab-lg
+
+	.tab-lg__head.main__space_bot
+
+		each val, i in global[0].addresses
+			a.tab-lg__title(
+				href= "#outerPanel-" + (i + 1)
+			)
+				span= val.name
+
+	.tab-lg__body
+
+		each val, j in tab_lg_price
+			.tab-lg__panel.tab-lg__panel_hidden(id= "outerPanel-" + (j + 1))
+				.row.main__space_bot-half
+					+tab-lg(val.salon)(
+						class= 'tab-lg_left'
+						panelNum= j + 1
+					)

@@ -1,44 +1,53 @@
 var
 	classBlock = 'tab-lg', // Класс блока
-	$tabTitles = $('.' + classBlock + '__title'), // Заголовки (салоны)
-	classTitleActive = classBlock + '__title_active', // Класс активного заголовка
-	classTitleInactive = classBlock + '__title_inactive', // Класс неактивного заголовка
-	$panel = $('.' + classBlock + '__panel'), // Таблицы с расписанием
-	classPanelHidden = classBlock + '__panel_hidden', // Класс скрытой таблицы
-	titleActiveIndex = 0;
+	classHead = classBlock + '__head', // Класс шапки табов
+	classBody = classBlock + '__body', // Класс тела табов
+	classPanel = classBlock + '__panel', // Класс панели табов
+	classTitle = classBlock + '__title', // Класс заголовка табов
+	classTitleActive = classTitle + '_active', // Класс активного заголовка
+	classTitleInactive = classTitle + '_inactive', // Класс неактивного заголовка
+	classPanelHidden = classPanel + '_hidden'; // Класс скрытой таблицы
 
-// Блокировка заголовков, которые ссылаются на несуществующие таблицы
-$tabTitles.each(function(i) {
+$('.' + classBlock).each(function() {
 	var
 		$this = $(this),
-		tableId = $this.attr('href'), // ID таблицы, на которую ссылается заголовок
-		$thisTable = $(tableId); // Таблица
+		$tabTitles = $this.find('.' + classHead + ':first > .' + classTitle), // Заголовки (салоны)
+		$panel = $this.find('.' + classBody + ':first > .' + classPanel), // Таблицы с расписанием
+		titleActiveIndex = 0;
 
-	if (!$thisTable.length) {
-		$this.addClass(classTitleInactive);
-		titleActiveIndex++;
-	} else {
-		if (titleActiveIndex == i) {
-			$thisTable.removeClass(classPanelHidden);
-			$this.addClass(classTitleActive);
+	// Блокировка заголовков, которые ссылаются на несуществующие таблицы
+	$tabTitles.each(function(i) {
+		var
+			$this = $(this),
+			tableId = $this.attr('href'), // ID таблицы, на которую ссылается заголовок
+			$thisTable = $(tableId); // Таблица
+
+		if (!$thisTable.length) {
+			$this.addClass(classTitleInactive);
+			titleActiveIndex++;
+		} else {
+			if (titleActiveIndex == i) {
+				$thisTable.removeClass(classPanelHidden);
+				$this.addClass(classTitleActive);
+			}
 		}
-	}
-});
-// =====
+	});
+	// =====
 
-$tabTitles.on('click', function(event) {
-	event.preventDefault();
+	$tabTitles.on('click', function(event) {
+		event.preventDefault();
 
-	var
-		$this = $(this),
-		tableId = $this.attr('href'), // ID таблицы, на которую ссылается заголовок
-		$thisTable = $(tableId); // Таблица
+		var
+			$this = $(this),
+			tableId = $this.attr('href'), // ID таблицы, на которую ссылается заголовок
+			$thisTable = $(tableId); // Таблица
 
-	if ($this.hasClass(classTitleActive) || $this.hasClass(classTitleInactive)) return;
+		if ($this.hasClass(classTitleActive) || $this.hasClass(classTitleInactive)) return;
 
-	$panel.addClass(classPanelHidden);
-	$thisTable.removeClass(classPanelHidden);
+		$panel.addClass(classPanelHidden);
+		$thisTable.removeClass(classPanelHidden);
 
-	$tabTitles.removeClass(classTitleActive);
-	$this.addClass(classTitleActive);
+		$tabTitles.removeClass(classTitleActive);
+		$this.addClass(classTitleActive);
+	});
 });

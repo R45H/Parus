@@ -1,17 +1,15 @@
 include ../mixins/banner
-include ../mixins/tab-lg
 
 .section
 	.container
-		h1.title Меню
+		h1.title Прайс-лист
 
 	.container.main__mobile_full
 		+banner(banner_schedule)
 
 .section.section_space_none
 	.container
-		+tab-lg(tab_lg_price)(class="tab-lg_left")
-
+		include ../components/price
 
 .section
 	.container
