@@ -2,20 +2,16 @@
 
 	.tab-lg__head.main__space_bot
 
-		each val, i in global[0].addresses
+		- var cnt = 1;
+		each val in global[0].addresses
 
-			if (i == 1)
-				each str, j in ['Взрослый', 'Детский']
-					a.tab-lg__title(
-						href= "#panel-" + (j + 2)
-						class= j == 1 ? 'tab-lg__title_style_children' : ''
-					)
-						span= val.name + ' (' + str + ')'
-			else
+			each str in ['Взрослый', 'Детский']
 				a.tab-lg__title(
-					href= "#panel-" + (i + 1)
+					href= "#panel-" + (cnt)
+					class= str == 'Детский' ? 'tab-lg__title_style_children' : ''
 				)
-					span= val.name
+					span= val.name + ' (' + str + ')'
+				- cnt++;
 
 	.tab-lg__body
 
