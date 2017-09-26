@@ -1,9 +1,32 @@
+include ../mixins/banner
+include ../mixins/news-sm
 include ../components/head-block
 
-.section.section_space_none
+.section.section_space_none.hidden-xs
 	+head-block(
 		hasTitle= true
 		smData= banner_sm
 		lgData= banner_lg
 		textData= head_block__last
 	)
+
+.section.visible-xs
+	.container.main__mobile_full
+		+banner(banner)
+
+.section.visible-xs
+	.container
+		h2.title Новости Парус
+
+		.main__space_bot-half
+			- for (var i = 0; i < 3; i++) {
+				each val in news
+					+news-sm(val)
+			- }
+
+		div
+			a.main__link(href="news.html") Все новости
+
+.section.visible-xs
+	.container.main__mobile_full
+		+banner(banner_2)

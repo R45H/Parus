@@ -1,0 +1,19 @@
+{
+	"banner_2": [
+		{
+			"img": "img/content/clubs/02.jpg",
+			"text": "Фитнес-клубы Парус",
+			"link": "clubs.html"
+		},
+		{
+			"img": "img/content/cultural/02.jpg",
+			"text": "Фитнес-клубы Парус",
+			"link": "clubs.html"
+		},
+		{
+			"img": "img/content/index/04.jpg",
+			"text": "Фитнес-клубы Парус",
+			"link": "clubs.html"
+		}
+	]
+}

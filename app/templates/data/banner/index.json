@@ -1,8 +1,18 @@
 {
 	"banner": [
 		{
+			"img": "img/content/salons/01.jpg",
+			"text": "Акции",
+			"link": "#"
+		},
+		{
+			"img": "img/content/salons/02.jpg",
+			"text": "Акции",
+			"link": "#"
+		},
+		{
 			"img": "img/content/salons/03.jpg",
-			"text": "Акция",
+			"text": "Акции",
 			"link": "#"
 		}
 	]
