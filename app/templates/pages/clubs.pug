@@ -1,13 +1,74 @@
 include ../components/head-block
+include ../mixins/banner
 
-.section.section_space_half
+.section.section_space_none
 	.container
 		h1.title Клубы
 
+.section.section_space_half.hidden-xs
 	+head-block(
 		smData= banner_sm_clubs
 		lgData= banner_lg_clubs
 		textData= head_block__last_clubs
 	)
 
-include ../components/address
+.section.visible-xs
+	.container.main__mobile_full
+		+banner(banner_clubs)
+
+.section.section_space_half.hidden-xs
+	.container
+		h2.title Адреса
+		.row.text-center.main__space_bot-half
+
+			each val, i in global[0].addresses
+				.col-sm-6.col-lg-4.push-lg-2.col-xl-3.push-xl-3.main__space_bot-half(data-salon= i + 1)
+					.address
+						.address__title(id= val.id)
+							a(href="#")= val.address
+						.address__time= val.time_1 + " в будни"
+						.address__time= "и " + val.time_2 + " в выходные"
+						.address__tel
+							a(href= val.tel_link)= val.tel
+
+.section.visible-xs
+	.container
+		h2.title Контакты
+		.row.text-center.main__space_bot-half
+
+			each val, i in global[0].addresses
+				.col-sm-6.col-lg-4.push-lg-2.col-xl-3.push-xl-3.main__space_bot-half(data-salon= i + 1)
+					.address
+						.address__title
+							div= val.address
+						.address__time= val.time_1 + " в будни"
+						.address__time= "и " + val.time_2 + " в выходные"
+						.address__tel
+							a(href= val.tel_link)= val.tel
+
+	.container
+		div(data-salon='1')
+			p
+				b Парус Парадный
+			p Парус Парадный – высокотехнологичный и просторный фитнес-клуб премиум класса, расположенный в Парадном квартале Санкт-Петербурга. К услугам клиентов бассейн с первоклассной системой очистки, сауны, тренажерные залы с новейшим оборудованием МФитнес, зал для групповых и индивидуальных занятий, зал Антигравити. В команде клуба собраны тренеры с уникальным опытом решения самых различных задач по поддержанию здоровья и развития спортивных навыков взрослых и детей.
+			p Будьте в отличной форме круглый год!
+			p Цены, размещенные на сайте, носят ознакомительный характер.
+		div(data-salon='2')
+			p
+				b Парус на Воскресенской
+			p Парус на Воскресенской - комфортный и уютный фитнес-клуб премиум класса, расположенный в самом сердце Санкт-Петербурга. К услугам клиентов бассейн с первоклассной системой очистки, тренажерные залы с новейшим оборудованием Techno Gym и залы для групповых занятий. В команде клуба собраны тренеры с уникальным опытом решения самых различных задач по поддержанию здоровья и развития спортивных навыков взрослых и детей.
+
+
+.section.section_space_none.visible-xs
+	.container.main__mobile_full
+		+banner(banner_clubs)
+
+.section.section_space_none.visible-xs
+	.container.blue-block.text-center
+		h2.title Программа лояльности
+		p Совершая покупки в клубах и салоных "Парус", вы копите бонусы, которые можете использовать в будущем. Для того, чтобы стать участником программы лояльности, нужно скачать мобильное приложение Парус клуб.
+		p Спасибо, что вы с нами!
+
+.section
+	.container.main__mobile_full
+		#map.map

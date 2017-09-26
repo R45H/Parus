@@ -6,8 +6,8 @@ include ../mixins/soc
 // FOOTER
 footer.footer
 	.container.footer__wrap
-		.footer__center
-			a.btn.main__space_bot-half.visible-xs(href= global[0].addresses[0].tel_link) Позвонить
+		.footer__center.visible-xs
+			a.btn.main__space_bot-half(href= global[0].addresses[0].tel_link) Позвонить
 
 		.footer__soc-wrap
 			each val in soc

@@ -44,13 +44,20 @@ $salonsLinks.on('click', function() {
 	$cookieItems.each(function() {
 		var $this = $(this);
 
-		if (!($this.attr('data-salon') == $.cookie('salon')) ||
-			$this.attr('data-salon') == '' ||
-			$this.attr('data-salon') === undefined) return;
+		if ($this.attr('data-salon') == '' ||
+			 $this.attr('data-salon') === undefined) return;
 
 		// Таблицы
-		if ($this.hasClass('tab-lg__title')) {
+		if ($this.hasClass('tab-lg__title') && $this.attr('data-salon') == $.cookie('salon')) {
 			$this.trigger('click');
+			return;
+		}
+		// =====
+
+		if ($this.attr('data-salon') == $.cookie('salon')) {
+			$this.show();
+		} else {
+			$this.hide();
 		}
 	});
 });
