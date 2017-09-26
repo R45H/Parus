@@ -1,14 +1,15 @@
 .tab-lg
 
-	.tab-lg__head.main__space_bot
+	.tab-lg__head.main__space_bot.hidden-xs
 
 		- var cnt = 1;
-		each val in global[0].addresses
+		each val, i in global[0].addresses
 
 			each str in ['Взрослый', 'Детский']
 				a.tab-lg__title(
 					href= "#panel-" + (cnt)
 					class= str == 'Детский' ? 'tab-lg__title_style_children' : ''
+					data-salon= str == 'Детский' ? '' : i + 1
 				)
 					span= val.name + ' (' + str + ')'
 				- cnt++;

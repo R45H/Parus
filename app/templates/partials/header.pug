@@ -25,15 +25,12 @@ header.header
 						li.header__menu-separator
 
 		.row.header__bottom
-			.header__salons
-				.header__link.header__salons-text Клуб
-				ul.header__salons-wrap
+			include ../components/salons
 
-					each val in global[0].addresses
-						li.header__salons-item
-							a.header__salons-link(href="#")= val.name
-
-			a.header__link(href="schedule.html") Расписание
+			a.header__link(
+				class= page.link == 'schedule.html' ? 'active' : ''
+				href="schedule.html"
+			) Расписание
 
 	.toggle.header__toggle
 		.toggle__wrap

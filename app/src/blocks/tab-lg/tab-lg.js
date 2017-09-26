@@ -1,14 +1,14 @@
 var
-	classBlock = 'tab-lg', // Класс блока
-	classHead = classBlock + '__head', // Класс шапки табов
-	classBody = classBlock + '__body', // Класс тела табов
-	classPanel = classBlock + '__panel', // Класс панели табов
-	classTitle = classBlock + '__title', // Класс заголовка табов
+	classTab = 'tab-lg', // Класс блока
+	classHead = classTab + '__head', // Класс шапки табов
+	classBody = classTab + '__body', // Класс тела табов
+	classPanel = classTab + '__panel', // Класс панели табов
+	classTitle = classTab + '__title', // Класс заголовка табов
 	classTitleActive = classTitle + '_active', // Класс активного заголовка
 	classTitleInactive = classTitle + '_inactive', // Класс неактивного заголовка
 	classPanelHidden = classPanel + '_hidden'; // Класс скрытой таблицы
 
-$('.' + classBlock).each(function() {
+$('.' + classTab).each(function() {
 	var
 		$this = $(this),
 		$tabTitles = $this.find('.' + classHead + ':first > .' + classTitle), // Заголовки (салоны)
@@ -27,8 +27,12 @@ $('.' + classBlock).each(function() {
 			titleActiveIndex++;
 		} else {
 			if (titleActiveIndex == i) {
-				$thisTable.removeClass(classPanelHidden);
-				$this.addClass(classTitleActive);
+				if (($this.attr('data-salon') == $.cookie('salon')) || $this.attr('data-salon') === undefined) {
+					$thisTable.removeClass(classPanelHidden);
+					$this.addClass(classTitleActive);
+				} else {
+					titleActiveIndex++;
+				}
 			}
 		}
 	});
@@ -49,5 +53,13 @@ $('.' + classBlock).each(function() {
 
 		$tabTitles.removeClass(classTitleActive);
 		$this.addClass(classTitleActive);
+
+		var
+			cookie = $this.attr('data-salon'),
+			$salonTitle = $('[data-salon-title=' + cookie + ']');
+
+		if (!cookie || !$salonTitle.length) return;
+
+		$salonTitle.click();
 	});
 });
