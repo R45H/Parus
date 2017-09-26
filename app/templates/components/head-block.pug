@@ -27,7 +27,7 @@ mixin head-block()
 
 					if (last.btn)
 						.text-center
-							a.btn.head-block__btn(href="#" data-modal="#modal")= last.btn
+							a.btn.head-block__btn.hidden-xs(href="#" data-modal="#modal")= last.btn
 
 				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-3')
 					each val in attributes.smData

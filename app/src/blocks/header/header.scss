@@ -23,6 +23,7 @@ $name: header;
 	&__bottom {
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 10px;
 
 		@include screen-sm() {
 			display: none;

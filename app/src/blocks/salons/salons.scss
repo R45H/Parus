@@ -13,6 +13,7 @@ $name: salons;
 			font-family: $font-fa;
 			margin-left: 5px;
 			transition: $duration / 2 ease transform;
+			line-height: 1;
 		}
 
 		&_opened {
@@ -35,8 +36,7 @@ $name: salons;
 		background: white;
 		z-index: 1;
 		white-space: nowrap;
-		border-top: 1px solid lighten($color-text-2, 15%);
-		box-shadow: 2px 2px 5px -2px $color-text-2;
+		box-shadow: 1px 1px 5px 0 $color-text-2;
 		display: none;
 	}
 

@@ -85,6 +85,13 @@ img {
 	}
 }
 
+.visible-xs {
+
+	@include screen-sm() {
+		display: none !important;
+	}
+}
+
 .text-center {
 	text-align: center;
 }
