@@ -3,7 +3,7 @@ $name: banner;
 .#{$name} {
 	display: block;
 	position: relative;
-	padding-bottom: 56%;
+	padding-bottom: 33.333333%;
 
 	.slick-list {
 		position: absolute;
@@ -11,10 +11,6 @@ $name: banner;
 		left: 0;
 		right: 0;
 		bottom: 0;
-	}
-
-	@include screen-md() {
-		padding-bottom: 33.333333%;
 	}
 
 	&__img {

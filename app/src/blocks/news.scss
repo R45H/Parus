@@ -79,7 +79,7 @@ $name: news;
 
 	&__desc {
 		margin: 0 0 2rem;
-		max-height: 5.4em;
+		max-height: 8em;
 		overflow: hidden;
 		position: relative;
 		height: 100%;
@@ -100,10 +100,6 @@ $name: news;
 			height: 1.5em;
 			background: linear-gradient(to top, white, transparent);
 			pointer-events: none;
-		}
-
-		@include screen-md() {
-			max-height: none;
 		}
 	}
 
