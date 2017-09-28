@@ -48,8 +48,10 @@ $salonsLinks.on('click', function() {
 			 $this.attr('data-salon') === undefined) return;
 
 		// Таблицы
-		if ($this.hasClass('tab-lg__title') && $this.attr('data-salon') == $.cookie('salon')) {
-			$this.trigger('click');
+		if ($this.hasClass('tab-lg__title')) {
+			if ($this.attr('data-salon') == $.cookie('salon')) {
+				$this.trigger('click');
+			}
 			return;
 		}
 		// =====
