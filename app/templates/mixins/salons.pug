@@ -1,0 +1,13 @@
+mixin salons(name, data, dataName)
+	.salons
+		.header__link.salons__text= name
+		ul.salons__wrap
+
+			each val, i in data
+				li.salons__item
+
+					if (dataName == 'club')
+						a.salons__link(href="#" data-club-title= i + 1)= val.name
+
+					if (dataName == 'salon')
+						a.salons__link(href="#" data-salon-title= i + 1)= val.name

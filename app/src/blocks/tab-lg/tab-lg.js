@@ -27,7 +27,7 @@ $('.' + classTab).each(function() {
 			titleActiveIndex++;
 		} else {
 			if (titleActiveIndex == i) {
-				if (($this.attr('data-salon') == $.cookie('salon')) || $this.attr('data-salon') === undefined) {
+				if (($this.attr('data-club') == $.cookie('club')) || $this.attr('data-club') === undefined) {
 					$thisTable.removeClass(classPanelHidden);
 					$this.addClass(classTitleActive);
 				} else {
@@ -55,8 +55,8 @@ $('.' + classTab).each(function() {
 		$this.addClass(classTitleActive);
 
 		var
-			cookie = $this.attr('data-salon'),
-			$salonTitle = $('.salons__link[data-salon-title=' + cookie + ']');
+			cookie = $this.attr('data-club'),
+			$salonTitle = $('.salons__link[data-club-title=' + cookie + ']');
 
 		if (!cookie || !$salonTitle.length) return;
 

@@ -22,5 +22,5 @@
 		.modal__body
 
 			each val, i in global[0].addresses
-				a.btn.modal__input(href="schedule.html" data-salon-title=(i+1))= val.name + ' (Взрослое)'
-				a.btn.modal__input(href="schedule.html" data-salon-title=(i+1))= val.name + ' (Детское)'
+				a.btn.modal__input(href="schedule.html" data-club-title=(i+1))= val.name + ' (Взрослое)'
+				a.btn.modal__input(href="schedule.html" data-club-title=(i+1))= val.name + ' (Детское)'

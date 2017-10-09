@@ -1,7 +1,4 @@
-.salons
-	.header__link.salons__text Клуб
-	ul.salons__wrap
+include ../mixins/salons
 
-		each val, i in global[0].addresses
-			li.salons__item
-				a.salons__link(href="#" data-salon-title= i + 1)= val.name
++salons('Клуб', global[0].addresses, 'club')
++salons('Салон', [{"name": "Салон Парус Парадный"}, {"name": "Салон Парус Воскресенская"}], 'salon')
