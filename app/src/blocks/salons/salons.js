@@ -35,7 +35,7 @@ $salonsLinks.on('click', function() {
 	$salonsLinks.removeClass(classSalonsLinksActive);
 	$this.addClass(classSalonsLinksActive);
 
-	$.cookie('salon', $this.attr('data-salon-title'));
+	$.cookie('salon', $this.attr('data-salon-title'), { path: '/' });
 	toggleSalonsWrap();
 
 	var $cookieItems = $('[data-salon]');

@@ -1,18 +1,28 @@
 {
 	"banner_2": [
 		{
-			"img": "img/content/clubs/02.jpg",
-			"text": "Фитнес-клубы Парус",
+			"img": "img/content/index/05.jpg",
+			"text": "Клубы №1",
 			"link": "clubs.html"
 		},
 		{
-			"img": "img/content/cultural/02.jpg",
-			"text": "Фитнес-клубы Парус",
+			"img": "img/content/clubs/02.jpg",
+			"text": "Новейшее оборудование лучших мировых брендов",
 			"link": "clubs.html"
 		},
 		{
 			"img": "img/content/index/04.jpg",
-			"text": "Фитнес-клубы Парус",
+			"text": "Разнообразные групповые программы",
+			"link": "clubs.html"
+		},
+		{
+			"img": "img/content/index/06.jpg",
+			"text": "Лучшие возможности для вашего роста",
+			"link": "clubs.html"
+		},
+		{
+			"img": "img/content/index/07.jpg",
+			"text": "Забота о каждом члене клуба",
 			"link": "clubs.html"
 		}
 	]

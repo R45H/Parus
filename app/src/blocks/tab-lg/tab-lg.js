@@ -56,7 +56,7 @@ $('.' + classTab).each(function() {
 
 		var
 			cookie = $this.attr('data-salon'),
-			$salonTitle = $('[data-salon-title=' + cookie + ']');
+			$salonTitle = $('.salons__link[data-salon-title=' + cookie + ']');
 
 		if (!cookie || !$salonTitle.length) return;
 

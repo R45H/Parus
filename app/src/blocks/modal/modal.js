@@ -10,12 +10,14 @@ var
 if (!$links.length) return;
 
 $links.each(function() {
-	var id = $(this).attr('data-modal');
+	var
+		$this = $(this),
+		id = $this.attr('data-modal');
 
 	if (!$(id).length) return;
 
 	// Клик по кнопке, открывающей модалку
-	$(this).on('click', function() {
+	$this.on('click', function() {
 
 		if ($aside.hasClass(asideOpenedClass)) {
 			toggleAside('close');

@@ -17,21 +17,26 @@ mixin head-block()
 
 				.col-12.head-block__last
 
-					- var last = attributes.textData[0];
+					if attributes.textData
+						- var last = attributes.textData[0];
 
-					if (last.title)
-						h2.title= last.title
+						if (last.title)
+							h2.title= last.title
 
-					if (last.text)
-						.main__desc!= last.text
+						if (last.text)
+							.main__desc!= last.text
 
-					if (last.btn)
-						.text-center
-							a.btn.head-block__btn.hidden-xs(href="#" data-modal="#modal")= last.btn
+						if (last.btn)
+							.text-center
+								a.btn.head-block__btn.hidden-xs(href="#" data-modal="#modal")= last.btn
 
 				.head-block__banner-sm-wrap(class= attributes.hasTitle ? 'col-md-3 push-md-2 push-lg-1' : 'col-md-3')
 					each val in attributes.smData
 						.head-block__banner-sm-i
-							a.banner-sm.head-block__banner-sm(href= val.link)
+							a.banner-sm.head-block__banner-sm(
+								class= val.modal ? 'banner-sm_modal' : ''
+								data-modal= val.modal ? val.modal : ''
+								href= val.link
+							)
 								.banner-sm__img(style= "background-image: url(" + val.img + ");")
 								.banner-sm__text= val.text

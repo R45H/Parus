@@ -8,7 +8,7 @@ $('.js-print').on('click', function() {
 });
 
 if (!$.cookie('salon')) {
-	$.cookie('salon', 1);
+	$.cookie('salon', 1, { path: '/' });
 }
 
 var $cookieItems = $('[data-salon]');

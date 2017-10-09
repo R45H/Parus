@@ -18,6 +18,7 @@ $(function() {
 	(function() { @@include('blocks/params/params.js') }());
 	(function() { @@include('blocks/cats/cats.js') }());
 	(function() { @@include('blocks/input/input.js') }());
+	(function() { @@include('blocks/btn/btn.js') }());
 });
 
 @@include('global/functions.js')
