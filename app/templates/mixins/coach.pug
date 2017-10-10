@@ -1,0 +1,15 @@
+mixin coach(data)
+	a.coach(href="coach-detail.html")
+		.coach__img-wrap
+			.coach__img(style="background-image: url(img/content/index/01.jpg);")
+
+		p.coach__title= data.name
+		.coach__wrap
+
+			each val in data.pics
+				img.coach__icon(src="img/icons/coach/" + val + ".svg" alt="")
+				img.coach__icon.coach__icon_hover(src="img/icons/coach/" + val + "-hover.svg" alt="")
+
+			if data.category
+				img.coach__icon.coach__icon_right(src="img/icons/num/" + data.category + ".svg" alt="")
+				img.coach__icon.coach__icon_right.coach__icon_hover(src="img/icons/num/" + data.category + "-hover.svg" alt="")

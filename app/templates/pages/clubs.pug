@@ -14,7 +14,8 @@ include ../mixins/banner
 
 .section.visible-xs
 	.container.main__mobile_full
-		+banner(banner_clubs)
+		+banner(banner_clubs)(dataClub="1")
+		+banner(banner_clubs_2)(dataClub="2")
 
 .section.section_space_half.hidden-xs
 	.container
@@ -56,12 +57,12 @@ include ../mixins/banner
 		div(data-club='2')
 			p
 				b Парус на Воскресенской
-			p Парус на Воскресенской - комфортный и уютный фитнес-клуб премиум класса, расположенный в самом сердце Санкт-Петербурга. К услугам клиентов бассейн с первоклассной системой очистки, тренажерные залы с новейшим оборудованием Techno Gym и залы для групповых занятий. В команде клуба собраны тренеры с уникальным опытом решения самых различных задач по поддержанию здоровья и развития спортивных навыков взрослых и детей.
+			p Парус на Воскресенской  - комфортный и уютный фитнес-клуб премиум класса, расположенный в самом сердце Санкт-Петербурга. К услугам клиентов бассейн с первоклассной системой очистки, тренажерные залы с новейшим оборудованием Techno Gym и залы для групповых занятий.
 
 
 .section.section_space_none.visible-xs
 	.container.main__mobile_full
-		+banner(banner_clubs)
+		+banner(banner_clubs_3)
 
 .section.section_space_none.visible-xs
 	.container.blue-block.text-center

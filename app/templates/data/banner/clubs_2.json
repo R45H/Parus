@@ -1,9 +1,10 @@
 {
-	"banner_clubs": [
-		{
-			"img": "img/content/salons/01.jpg",
-			"text": "Команда",
-			"link": "#"
-		}
+	"banner_clubs_2": [
+		{"img": "img/content/clubs/05.jpg"},
+		{"img": "img/content/clubs/06.jpg"},
+		{"img": "img/content/clubs/07.jpg"},
+		{"img": "img/content/clubs/08.jpg"},
+		{"img": "img/content/clubs/09.jpg"},
+		{"img": "img/content/clubs/10.jpg"}
 	]
 }

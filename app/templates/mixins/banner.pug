@@ -1,5 +1,8 @@
 mixin banner(data)
-	.banner(class= data[1] ? 'slider' : '')
+	.banner(
+		class= data[1] ? 'slider' : ''
+		data-club= attributes.dataClub
+	)
 
 		each val in data
 

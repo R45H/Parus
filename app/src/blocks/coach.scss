@@ -1,0 +1,78 @@
+$name: coach;
+
+.#{$name} {
+	overflow: hidden;
+
+	&:hover {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+
+				@include screen-sm() {
+					transform: scale(1.05);
+				}
+			}
+
+			&__icon {
+				display: none;
+
+				&_hover {
+					display: block;
+				}
+			}
+		}
+	}
+
+	&__img-wrap {
+		overflow: hidden;
+		max-width: 260px;
+		margin: 0 auto 10px;
+	}
+
+	&__img {
+		display: block;
+		background: no-repeat center / cover;
+		transition: $duration ease;
+		padding-bottom: 150%;
+	}
+
+	&__title {
+		margin: 0 0 10px;
+
+		@include screen-sm(max) {
+			text-align: center;
+		}
+	}
+
+	&__wrap {
+		display: flex;
+
+		@include screen-sm(max) {
+			justify-content: center;
+		}
+	}
+
+	&__icon {
+		width: 35px;
+		height: 35px;
+		margin: 0 5px;
+
+		@include screen-sm() {
+			margin: 0 10px 0 0;
+		}
+
+		&_right {
+
+			@include screen-sm() {
+				margin-right: 0;
+				margin-left: auto;
+			}
+		}
+
+		&_hover {
+			display: none;
+		}
+	}
+}

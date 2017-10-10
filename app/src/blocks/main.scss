@@ -11,6 +11,10 @@ $name: main;
 		margin-bottom: $space / 2;
 	}
 
+	&__space_bot-cols {
+		margin-bottom: 30px;
+	}
+
 	&__mobile_full {
 
 		@include screen-sm(max) {

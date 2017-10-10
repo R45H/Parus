@@ -90,6 +90,14 @@ $salons.each(function() {
 
 			if ($this.attr('data-' + cookieName) == $.cookie(cookieName)) {
 				$this.show();
+
+				if ($this.hasClass('slider')) {
+					$this.slick('slickGoTo', 0);
+				}
+
+				if ($this.find('.slider').length) {
+					$this.find('.slider').slick('slickGoTo', 0);
+				}
 			} else {
 				$this.hide();
 			}
