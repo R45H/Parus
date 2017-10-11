@@ -1,0 +1,46 @@
+$name: coach-detail;
+
+.#{$name} {
+
+	&__img-wrap {
+
+		@include screen-sm(max) {
+			max-width: 300px;
+			margin: 0 auto $space / 2;
+		}
+	}
+
+	&__img {
+		background: no-repeat center / cover;
+		padding-bottom: 150%;
+	}
+
+	&__name {
+		margin-top: 0;
+
+		@include screen-sm() {
+			text-align: left;
+		}
+	}
+
+	&__text {
+		margin-bottom: 10px;
+	}
+
+	&__icon-wrap {
+
+		@include screen-sm(max) {
+			text-align: center;
+		}
+	}
+
+	&__icon {
+		width: 40px;
+		height: 40px;
+		margin-right: 10px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}

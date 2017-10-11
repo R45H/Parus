@@ -35,20 +35,36 @@ $name: banner;
 		}
 	}
 
-	&__text {
+	&__text,
+	&__desc {
 		position: absolute;
-		top: 50%;
 		width: 100%;
 		padding: 0 15%;
 		text-align: center;
-		line-height: 1;
-		transform: translateY(-50%);
 		color: white;
-		font-size: 3rem;
+	}
 
-		@include screen-md() {
-			padding: 0 10%;
+	&__text {
+		top: 50%;
+		line-height: 1;
+		font-size: 3rem;
+		transform: translateY(-50%);
+	}
+
+	&__desc {
+		top: 0;
+		color: white;
+		font-size: 1.6rem;
+		line-height: 1.1;
+
+		@include screen-sm() {
+			top: 50%;
+			transform: translateY(-30%);
 		}
+	}
+
+	&_bigheight {
+		padding-bottom: 52%;
 	}
 }
 

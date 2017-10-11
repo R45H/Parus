@@ -1,0 +1,21 @@
+.container.coach-detail
+	.row
+		.col-sm-4
+			.coach-detail__img-wrap
+				.coach-detail__img(style="background-image: url('img/content/index/01.jpg');")
+
+		.col-sm-8
+			h2.title.coach-detail__name.hidden-xs= coach_2[2].name
+			.coach-detail__text= coach_2[2].post
+			.coach-detail__text!= "<b>Образование:</b> " + coach_2[2].education
+			.coach-detail__text!="<b>Специализация:</b> " + coach_2[2].spec
+			.coach-detail__text!= "<b>Достижения:</b> " + coach_2[2].achieve
+			.coach-detail__text!= "<b>Опыт работы:</b> " + coach_2[2].exp
+
+			.coach-detail__icon-wrap
+
+				each val in coach_2[2].pics
+					img.coach-detail__icon(src="img/icons/coach/" + val + ".svg" alt="")
+
+				if coach_2[2].category
+					img.coach-detail__icon(src="img/icons/num/" + coach_2[2].category + ".svg" alt="")

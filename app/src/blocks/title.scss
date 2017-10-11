@@ -5,4 +5,8 @@ $name: title;
 	font-weight: normal;
 	margin: $space / 2 0;
 	text-align: center;
+
+	&_space-bot_none {
+		margin-bottom: 0;
+	}
 }
