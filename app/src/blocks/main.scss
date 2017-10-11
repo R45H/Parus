@@ -55,4 +55,12 @@ $name: main;
 	&__link {
 		line-height: 2;
 	}
+
+	&__icon-wrap {
+		margin-bottom: 15px;
+
+		@include screen-sm() {
+			margin-bottom: $space / 2;
+		}
+	}
 }

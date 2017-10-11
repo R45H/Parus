@@ -1,0 +1,20 @@
+{
+	"icon_2": [
+		{
+			"text": "1 категория",
+			"img": "img/icons/num/1.svg"
+		},
+		{
+			"text": "2 категория",
+			"img": "img/icons/num/2.svg"
+		},
+		{
+			"text": "3 категория",
+			"img": "img/icons/num/3.svg"
+		},
+		{
+			"text": "4 категория",
+			"img": "img/icons/num/4.svg"
+		}
+	]
+}

@@ -1,5 +1,6 @@
 include ../mixins/banner
 include ../mixins/coach
+include ../mixins/icon
 
 .section.section_space_none
 	.container
@@ -12,6 +13,20 @@ include ../mixins/coach
 
 		.main__space_bot-half.text-center
 			a.btn(href="#" data-modal="#modal") Заказать тренировку
+
+.section.section_space_half
+	.container
+		.row
+
+			each val in icon
+				.col-sm-6.col-lg-3.main__icon-wrap
+					+icon(val)
+
+		.row
+
+			each val in icon_2
+				.col-sm-6.col-md-3.main__icon-wrap
+					+icon(val)
 
 .section
 	.container
