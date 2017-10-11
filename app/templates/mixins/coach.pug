@@ -6,9 +6,10 @@ mixin coach(data)
 		p.coach__title= data.name
 		.coach__wrap
 
-			each val in data.pics
-				img.coach__icon(src="img/icons/coach/" + val + ".svg" alt="")
-				img.coach__icon.coach__icon_hover(src="img/icons/coach/" + val + "-hover.svg" alt="")
+			if data.pics
+				each val in data.pics
+					img.coach__icon(src="img/icons/coach/" + val + ".svg" alt="")
+					img.coach__icon.coach__icon_hover(src="img/icons/coach/" + val + "-hover.svg" alt="")
 
 			if data.category
 				img.coach__icon.coach__icon_right(src="img/icons/num/" + data.category + ".svg" alt="")

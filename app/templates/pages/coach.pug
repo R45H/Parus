@@ -13,10 +13,32 @@ include ../mixins/coach
 		.main__space_bot-half.text-center
 			a.btn(href="#" data-modal="#modal") Заказать тренировку
 
-.section(data-club="2")
+.section
 	.container
-		.row
 
-			each val in coach_2
-				.col-sm-6.col-md-4.col-lg-3.main__space_bot-cols
-					+coach(val)
+		.tab-lg
+
+			.tab-lg__head.main__space_bot.hidden-xs
+
+				- var cnt = 1;
+				each val, i in global[0].addresses
+					a.tab-lg__title(
+						href= "#panel-" + (cnt)
+						data-club= i + 1
+					)
+						span= val.name
+					- cnt++;
+
+			.tab-lg__body
+
+					.row.tab-lg__panel.tab-lg__panel_hidden(id= 'panel-1')
+
+						each val in coach
+								.col-sm-6.col-md-4.col-lg-3.main__space_bot-cols
+									+coach(val)
+
+					.row.tab-lg__panel.tab-lg__panel_hidden(id= 'panel-2')
+
+						each val in coach_2
+								.col-sm-6.col-md-4.col-lg-3.main__space_bot-cols
+									+coach(val)
