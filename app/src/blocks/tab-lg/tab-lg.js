@@ -54,9 +54,19 @@ $('.' + classTab).each(function() {
 		$tabTitles.removeClass(classTitleActive);
 		$this.addClass(classTitleActive);
 
+		var dataName;
+
+		if ($this.attr('data-club') !== undefined && $this.attr('data-club') != '') {
+			dataName = 'data-club';
+		}
+
+		if ($this.attr('data-salon') !== undefined && $this.attr('data-salon') != '') {
+			dataName = 'data-salon';
+		}
+
 		var
-			cookie = $this.attr('data-club'),
-			$salonTitle = $('.salons__link[data-club-title=' + cookie + ']');
+			cookie = $this.attr(dataName),
+			$salonTitle = $('.salons__link[' + dataName + '-title=' + cookie + ']');
 
 		if (!cookie || !$salonTitle.length) return;
 
