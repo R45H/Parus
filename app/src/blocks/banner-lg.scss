@@ -44,6 +44,13 @@ $name: banner-lg;
 		right: 0;
 		bottom: 0;
 
+		&_fog {
+
+			&::before {
+				@extend %fog;
+			}
+		}
+
 		&_fog-sm {
 
 			&::before {
@@ -53,6 +60,22 @@ $name: banner-lg;
 					display: none;
 				}
 			}
+		}
+	}
+
+	&__title {
+		position: absolute;
+		width: 100%;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 0 15%;
+		text-align: center;
+		color: white;
+		line-height: 1;
+		font-size: 3rem;
+
+		@include screen-md() {
+			padding: 0 10%;
 		}
 	}
 
@@ -91,6 +114,24 @@ $name: banner-lg;
 
 		@include screen-lg() {
 			transform: rotate(-90deg) translateY(-170px);
+		}
+	}
+}
+
+a.#{$name} {
+
+	&__i {
+		border-bottom: none;
+
+		&_fog,
+		&_fog-sm {
+
+			&:hover {
+
+				&::before {
+					opacity: .5;
+				}
+			}
 		}
 	}
 }
