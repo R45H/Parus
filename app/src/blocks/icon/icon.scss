@@ -1,0 +1,66 @@
+$name: icon;
+
+.#{$name} {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	border-bottom: none;
+
+	&:hover,
+	&:active {
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				display: none;
+
+				&_hover {
+					display: block;
+				}
+			}
+
+			&__text-i {
+				border-bottom-color: lighten($color-main, 30%);
+			}
+		}
+	}
+
+	&__img {
+		width: 4rem;
+		height: 4rem;
+		margin-right: 1.5rem;
+
+		&_hover {
+			display: none;
+		}
+	}
+
+	&__text {}
+
+	&__text-i {
+		display: inline;
+		border-bottom: 1px solid lighten($color-text, 30%);
+	}
+
+	&_active {
+		cursor: default;
+
+		.#{$name} {
+			// =====
+
+			&__img {
+				display: none;
+
+				&_hover {
+					display: block;
+				}
+			}
+
+			&__text-i {
+				border-bottom-color: lighten($color-main, 30%);
+				color: $color-main;
+			}
+		}
+	}
+}

@@ -1,4 +1,6 @@
 mixin icon(data)
-	.icon
+	a.icon(href="#")
 		img.icon__img(src= data.img alt="")
-		.icon__text= data.text
+		img.icon__img.icon__img_hover(src= data.img_hover alt="")
+		.icon__text
+			.icon__text-i= data.text

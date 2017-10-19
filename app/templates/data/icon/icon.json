@@ -2,19 +2,23 @@
 	"icon": [
 		{
 			"text": "Тренер тренажёрного зала",
-			"img": "img/icons/coach/gym.svg"
+			"img": "img/icons/coach/gym.svg",
+			"img_hover": "img/icons/coach/gym-hover.svg"
 		},
 		{
 			"text": "Тренер водного комплекса",
-			"img": "img/icons/coach/swim.svg"
+			"img": "img/icons/coach/swim.svg",
+			"img_hover": "img/icons/coach/swim-hover.svg"
 		},
 		{
 			"text": "Тренер групповых программ",
-			"img": "img/icons/coach/group.svg"
+			"img": "img/icons/coach/group.svg",
+			"img_hover": "img/icons/coach/group-hover.svg"
 		},
 		{
 			"text": "Спортивный врач",
-			"img": "img/icons/coach/doctor.svg"
+			"img": "img/icons/coach/doctor.svg",
+			"img_hover": "img/icons/coach/doctor-hover.svg"
 		}
 	]
 }

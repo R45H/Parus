@@ -2,19 +2,23 @@
 	"icon_2": [
 		{
 			"text": "1 категория",
-			"img": "img/icons/num/1.svg"
+			"img": "img/icons/num/1.svg",
+			"img_hover": "img/icons/num/1-hover.svg"
 		},
 		{
 			"text": "2 категория",
-			"img": "img/icons/num/2.svg"
+			"img": "img/icons/num/2.svg",
+			"img_hover": "img/icons/num/2-hover.svg"
 		},
 		{
 			"text": "3 категория",
-			"img": "img/icons/num/3.svg"
+			"img": "img/icons/num/3.svg",
+			"img_hover": "img/icons/num/3-hover.svg"
 		},
 		{
 			"text": "4 категория",
-			"img": "img/icons/num/4.svg"
+			"img": "img/icons/num/4.svg",
+			"img_hover": "img/icons/num/4-hover.svg"
 		}
 	]
 }

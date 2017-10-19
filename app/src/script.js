@@ -19,6 +19,7 @@ $(function() {
 	(function() { @@include('blocks/cats/cats.js') }());
 	(function() { @@include('blocks/input/input.js') }());
 	(function() { @@include('blocks/btn/btn.js') }());
+	(function() { @@include('blocks/icon/icon.js') }());
 });
 
 @@include('global/functions.js')

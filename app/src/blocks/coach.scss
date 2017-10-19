@@ -2,6 +2,8 @@ $name: coach;
 
 .#{$name} {
 	overflow: hidden;
+	display: block;
+	border-bottom: none;
 
 	&:hover {
 
