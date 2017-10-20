@@ -6,8 +6,37 @@ $name: icon;
 	height: 100%;
 	border-bottom: none;
 
-	&:hover,
-	&:active {
+	&:hover {
+		color: $color-text;
+
+		.#{$name} {
+			// =====
+
+			&__img {
+
+				@include screen-md() {
+					display: none;
+				}
+
+				&_hover {
+
+					@include screen-md() {
+						display: block;
+					}
+				}
+			}
+
+			&__text-i {
+
+				@include screen-md() {
+					color: $color-main;
+					border-bottom-color: lighten($color-main, 30%);
+				}
+			}
+		}
+	}
+
+	&_active {
 
 		.#{$name} {
 			// =====
@@ -21,6 +50,7 @@ $name: icon;
 			}
 
 			&__text-i {
+				color: $color-main;
 				border-bottom-color: lighten($color-main, 30%);
 			}
 		}
@@ -45,22 +75,5 @@ $name: icon;
 
 	&_active {
 		cursor: default;
-
-		.#{$name} {
-			// =====
-
-			&__img {
-				display: none;
-
-				&_hover {
-					display: block;
-				}
-			}
-
-			&__text-i {
-				border-bottom-color: lighten($color-main, 30%);
-				color: $color-main;
-			}
-		}
 	}
 }

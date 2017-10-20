@@ -71,12 +71,7 @@ $name: salons;
 		line-height: 1.4;
 
 		&_active {
-			color: $color-text-2;
-			cursor: default;
-
-			&:hover {
-				color: $color-text-2;
-			}
+			color: $color-main;
 		}
 	}
 }
