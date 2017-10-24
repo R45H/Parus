@@ -106,7 +106,7 @@ $name: banner-lg;
 		text-align: center;
 
 		@include screen-md() {
-			color: $color-text-2;
+			color: $color-text;
 			width: auto;
 			transform: rotate(-90deg) translateY(-180px);
 			top: 50%;

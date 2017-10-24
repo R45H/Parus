@@ -51,7 +51,7 @@ $name: cats;
 			.#{$name} {
 
 				&__item-i {
-					border-bottom-color: lighten($color-text, 30%);
+					border-bottom-color: lighten($color-text, 50%);
 				}
 			}
 

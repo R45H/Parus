@@ -1,4 +1,5 @@
 include ../mixins/soc
+include ../mixins/svg/svg-logo-webc
 
 - var aboutLink = 'about.html';
 - var copyLink = '#';
@@ -21,5 +22,7 @@ footer.footer
 			.footer__copy-text © 2017 ООО «Парус»
 			a.footer__copy-link(href= copyLink) Политика конфиденциальности
 
-		.footer__webcenter-wrap
-			a.footer__webcenter(href="http://webcenter.pro" target="_blank") Разработано в Webcenter.pro
+		.footer__webc
+			span.footer__webc-text Разработано
+			a.footer__webc-link(href="http://webcenter.pro" target="_blank")
+				+svg-logo-webc(class='footer__webc-img')

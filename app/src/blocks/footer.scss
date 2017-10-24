@@ -130,7 +130,7 @@ $name: footer;
 		display: inline-block;
 	}
 
-	&__webcenter-wrap {
+	&__webc {
 		text-align: center;
 		width: calc(100% + 30px);
 		border-top: 1px solid $color-text-2;
@@ -149,23 +149,27 @@ $name: footer;
 		}
 	}
 
-	&__webcenter {
+	&__webc-text,
+	&__webc-link {
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	&__webc-text {
+		margin-right: 1rem;
+	}
+
+	&__webc-link {
+		border-bottom: none;
+	}
+
+	&__webc-img {
 		display: block;
-		text-decoration: none;
-		line-height: 2.5;
-		color: $color-text;
+		width: 5rem;
+		fill: $color-webcenter-2;
 
 		&:hover {
-			color: $color-webcenter;
-		}
-
-		@include screen-sm() {
-			display: inline-block;
-			border-bottom: 1px dotted $color-text-2;
-
-			&:hover {
-				border-bottom-color: $color-webcenter;
-			}
+			fill: $color-webcenter-1;
 		}
 	}
 }
