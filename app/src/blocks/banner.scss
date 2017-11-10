@@ -26,7 +26,7 @@ $name: banner;
 		&_fog {
 
 			&::before {
-				@extend %fog;
+				//@extend %fog;
 			}
 		}
 
@@ -38,13 +38,17 @@ $name: banner;
 	&__text,
 	&__desc {
 		position: absolute;
-		width: 100%;
-		padding: 0 15%;
+		left: 50%;
+		max-width: 70%;
 		text-align: center;
 		color: white;
+		background: $color-fog;
+		padding: .5em 1em;
+		border-radius: .3em;
+		transition: $duration ease;
 
 		@include screen-md() {
-			padding: 0 10%;
+			max-width: 80%;
 		}
 	}
 
@@ -52,7 +56,7 @@ $name: banner;
 		top: 50%;
 		line-height: 1;
 		font-size: 3rem;
-		transform: translateY(-50%);
+		transform: translate(-50%, -50%);
 	}
 
 	&__desc {
@@ -63,7 +67,7 @@ $name: banner;
 
 		@include screen-sm() {
 			top: 50%;
-			transform: translateY(-30%);
+			transform: translate(50%, -30%);
 		}
 	}
 
@@ -73,34 +77,35 @@ $name: banner;
 }
 
 a.#{$name} {
-	border-bottom: none;
 
-	&:hover {
+	&__img {
+		border-bottom: none;
 
-		.#{$name} {
+		&_fog {
 
-			&__img {
+			&:hover {
 
-				&_fog {
+				.#{$name} {
 
-					&::before {
-						opacity: .5;
+					&__text,
+					&__desc {
+						background: $color-fog-light;
 					}
 				}
 			}
 		}
 	}
 
-	&__img {
-
-		&_fog {
-
-			&:hover {
-
-				&::before {
-					opacity: .5;
-				}
-			}
-		}
-	}
+	//&__img {
+	//
+	//	&_fog {
+	//
+	//		&:hover {
+	//
+	//			&::before {
+	//				opacity: .5;
+	//			}
+	//		}
+	//	}
+	//}
 }

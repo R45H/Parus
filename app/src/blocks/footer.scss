@@ -135,11 +135,13 @@ $name: footer;
 		width: calc(100% + 30px);
 		border-top: 1px solid $color-text-2;
 		margin: 0 -15px;
+		padding: 5px 0;
 
 		@include screen-sm() {
 			border: none;
 			width: 100%;
 			margin: 10px 0;
+			padding: 0;
 		}
 
 		@include screen-lg() {

@@ -47,17 +47,17 @@ $name: banner-lg;
 		&_fog {
 
 			&::before {
-				@extend %fog;
+				//@extend %fog;
 			}
 		}
 
 		&_fog-sm {
 
 			&::before {
-				@extend %fog;
+				//@extend %fog;
 
 				@include screen-sm() {
-					display: none;
+				//	display: none;
 				}
 			}
 		}
@@ -65,17 +65,21 @@ $name: banner-lg;
 
 	&__title {
 		position: absolute;
-		width: 100%;
 		top: 50%;
-		transform: translateY(-50%);
-		padding: 0 15%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 70%;
 		text-align: center;
 		color: white;
 		line-height: 1;
 		font-size: 3rem;
+		background: $color-fog;
+		padding: .5em 1em;
+		border-radius: .3em;
+		transition: $duration ease;
 
 		@include screen-md() {
-			padding: 0 10%;
+			max-width: 80%;
 		}
 	}
 
@@ -128,9 +132,16 @@ a.#{$name} {
 
 			&:hover {
 
-				&::before {
-					opacity: .5;
+				.#{$name} {
+
+					&__title {
+						background: $color-fog-light;
+					}
 				}
+
+				//&::before {
+				//	opacity: .5;
+				//}
 			}
 		}
 	}
