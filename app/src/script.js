@@ -20,6 +20,7 @@ $(function() {
 	(function() { @@include('blocks/input/input.js') }());
 	(function() { @@include('blocks/btn/btn.js') }());
 	(function() { @@include('blocks/icon/icon.js') }());
+	(function() { @@include('blocks/slider-logo/slider-logo.js') }());
 });
 
 @@include('global/functions.js')

@@ -1,0 +1,107 @@
+$name: slider-logo;
+
+.#{$name} {
+	padding: 0 5rem;
+
+	&__item {
+		outline: none;
+		padding: 0 15px;
+	}
+
+	&__img {
+		background: no-repeat center / contain;
+		padding-bottom: 25%;
+	}
+
+	&__prev,
+	&__next {
+		position: absolute;
+		z-index: 1;
+		width: 5rem;
+		height: 100%;
+		top: 0;
+		cursor: pointer;
+		font-size: 5rem;
+		color: $color-text-2;
+		transition: $duration ease opacity;
+
+		&::after {
+			font-family: $font-fa;
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&:hover {
+			color: $color-text;
+		}
+	}
+
+	&__prev {
+		left: 0;
+
+		&::after {
+			content: '\f104';
+		}
+	}
+
+	&__next {
+		right: 0;
+
+		&::after {
+			content: '\f105';
+		}
+	}
+
+	&__dots {
+		margin: 1rem 0 0;
+		padding: 0;
+		list-style-type: none;
+		text-align: center;
+		width: 100%;
+
+		li {
+			display: inline-block;
+			margin-bottom: -4px;
+			padding: .5em .7em;
+			cursor: pointer;
+
+			&:hover {
+
+				.#{$name} {
+					// =====
+
+					&__dot {
+						background: $color-text;
+					}
+				}
+			}
+
+			@include screen-md() {
+				padding-left: .5em;
+				padding-right: .5em;
+			}
+
+			&.slick-active {
+
+				.#{$name} {
+					// =====
+
+					&__dot {
+						background: $color-text;
+					}
+				}
+			}
+		}
+	}
+
+	&__dot {
+		width: .8em;
+		height: .8em;
+		border-radius: 50%;
+		background: $color-text-2;
+		display: block;
+	}
+}

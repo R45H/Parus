@@ -33,6 +33,9 @@
 @import url('blocks/news-sm.scss'); // Маленький список новостей
 @import url('blocks/blue-block.scss'); // Голубой блок
 @import url('blocks/coach.scss'); // Тренер
+@import url('blocks/coach-detail.scss'); // Детальная карточка тренера
+@import url('blocks/icon/icon.scss'); // Иконки тренеров
+@import url('blocks/slider-logo/slider-logo.scss'); // Слайдер с логотипами
 // =====
 
 // Внешние контейнеры
@@ -47,5 +50,3 @@
 	@import url('global/print.scss');
 }
 // =====
-@import url('blocks/coach-detail.scss');
-@import url('blocks/icon/icon.scss');

@@ -1,6 +1,7 @@
 include ../components/head-block
 include ../mixins/banner
 include ../mixins/comment
+include ../mixins/slider-logo
 
 .section.section_space_half
 	.container
@@ -11,6 +12,10 @@ include ../mixins/comment
 		lgData= banner_lg_salons
 		textData= head_block__last_salons
 	)
+
+.section
+	.container
+		+slider-logo(slider_logo)
 
 .section
 	.container.main__mobile_full.main__space_bot-half
