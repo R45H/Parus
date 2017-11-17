@@ -1,0 +1,21 @@
+$name: up;
+
+.#{$name} {
+	position: fixed;
+	display: none;
+	padding: 2rem;
+	right: 0;
+	bottom: 0;
+	font-size: 6rem;
+	color: $color-btn;
+	cursor: pointer;
+	z-index: 20;
+
+	&:hover {
+		color: lighten($color-btn, 5%);
+	}
+
+	&:active {
+		color: darken($color-btn, 5%);
+	}
+}
