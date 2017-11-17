@@ -49,4 +49,12 @@ $name: soc;
 			background-color: $color-yt;
 		}
 	}
+
+	&_heart {
+
+		&:hover,
+		&:focus {
+			background-color: $color-yt;
+		}
+	}
 }

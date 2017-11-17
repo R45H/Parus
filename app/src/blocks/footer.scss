@@ -41,7 +41,7 @@ $name: footer;
 		}
 
 		@include screen-lg() {
-			width: 23.33333%;
+			width: 20.33333%;
 		}
 	}
 
@@ -51,6 +51,15 @@ $name: footer;
 
 		@include screen-sm() {
 			margin: 5px;
+		}
+	}
+
+	&__heart {
+		margin: 0 5px 10px;
+		font-size: 14px;
+
+		@include screen-sm() {
+			margin: 5px 15px 5px 0;
 		}
 	}
 
@@ -76,7 +85,7 @@ $name: footer;
 		}
 
 		@include screen-lg() {
-			width: 10%;
+			width: 13%;
 		}
 	}
 

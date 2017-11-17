@@ -16,6 +16,9 @@ footer.footer
 				+soc(val)(class='footer__soc')
 
 		.footer__item.footer__company-wrap(class= aboutLink == page.link ? 'active' : '')
+			each val in soc_2
+				+soc(val)(class='footer__heart')
+
 			a.footer__company(href= aboutLink) О компании
 
 		.footer__item.footer__copy-wrap(class= copyLink == page.link ? 'active' : '')
