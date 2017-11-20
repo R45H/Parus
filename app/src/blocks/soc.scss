@@ -21,7 +21,8 @@ $name: soc;
 	&_vk {
 
 		&:hover,
-		&:focus {
+		&:focus,
+		&.active {
 			background-color: $color-vk;
 		}
 	}
@@ -29,7 +30,8 @@ $name: soc;
 	&_facebook {
 
 		&:hover,
-		&:focus {
+		&:focus,
+		&.active {
 			background-color: $color-fb;
 		}
 	}
@@ -37,7 +39,8 @@ $name: soc;
 	&_instagram {
 
 		&:hover,
-		&:focus {
+		&:focus,
+		&.active {
 			background-color: $color-insta;
 		}
 	}
@@ -45,7 +48,8 @@ $name: soc;
 	&_youtube {
 
 		&:hover,
-		&:focus {
+		&:focus,
+		&.active {
 			background-color: $color-yt;
 		}
 	}
@@ -53,8 +57,9 @@ $name: soc;
 	&_heart {
 
 		&:hover,
-		&:focus {
-			background-color: $color-yt;
+		&:focus,
+		&.active {
+			background-color: $color-main;
 		}
 	}
 }

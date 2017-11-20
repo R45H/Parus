@@ -94,6 +94,38 @@ $name: schedule;
 		}
 	}
 
+	&__print-btn-wrap {
+		margin-top: 1em;
+
+		@include screen-sm() {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.btn {
+			width: 100%;
+			margin-bottom: 1em;
+
+			@include screen-sm() {
+				width: auto;
+			}
+
+			&:first-child {
+
+				@include screen-sm() {
+					margin-right: .5em;
+				}
+			}
+
+			&:last-child {
+
+				@include screen-sm() {
+					margin-left: .5em;
+				}
+			}
+		}
+	}
+
 	&_style_children {
 
 		thead {

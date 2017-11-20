@@ -41,7 +41,7 @@ $name: footer;
 		}
 
 		@include screen-lg() {
-			width: 20.33333%;
+			width: 17.33333%;
 		}
 	}
 
@@ -85,7 +85,7 @@ $name: footer;
 		}
 
 		@include screen-lg() {
-			width: 13%;
+			width: 16%;
 		}
 	}
 
@@ -100,6 +100,11 @@ $name: footer;
 
 		@include screen-sm() {
 			line-height: 2;
+		}
+
+		&.active {
+			color: $color-main;
+			border-bottom-color: lighten($color-main, 30%);
 		}
 	}
 

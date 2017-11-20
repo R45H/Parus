@@ -64,12 +64,14 @@ function modal(action, id) {
 
 	if (action == 'open') {
 		$modal.addClass(classVisible);
+		$up.css('right', getScrollbarWidth());
 
 		toggleBodyScroll(true);
 		$body.append('<div class="' + classFog + '"></div>');
 		$('.' + classFog).fadeIn(delay * 2);
 
 		$(document).on('keydown', closeOnEsc);
+
 
 		setTimeout(function() {
 			$wrap.addClass(classWrapVisible);
@@ -90,6 +92,7 @@ function modal(action, id) {
 			$modal.removeClass(classVisible);
 			toggleBodyScroll(false);
 			$('.' + classFog).remove();
+			$up.css('right', '');
 		}, delay);
 	}
 }
