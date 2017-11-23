@@ -16,10 +16,10 @@ footer.footer
 				+soc(val)(class='footer__soc')
 
 		.footer__item.footer__company-wrap(class= aboutLink == page.link ? 'active' : '')
+			a.footer__company(href= aboutLink) О компании
+
 			each val in soc_2
 				+soc(val)(class='footer__heart')
-
-			a.footer__company(href= aboutLink) О компании
 
 		.footer__item.footer__copy-wrap(class= copyLink == page.link ? 'active' : '')
 			.footer__copy-text © 2017 ООО «Парус»
