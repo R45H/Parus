@@ -1,9 +1,16 @@
 include ../components/head-block
 include ../mixins/banner
+include ../mixins/bread
 
 .section.section_space_half
 	.container
 		h1.title Airfit
+
+.section.section_space_half
+	.container
+		+bread(menu)
+
+.section.section_space_half
 
 	+head-block(
 		smData= banner_sm_airfit
