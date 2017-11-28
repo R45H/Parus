@@ -1,0 +1,28 @@
+{
+	"club_cart": [
+		{
+			"img": "img/content/index/01.jpg",
+			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+		},
+		{
+			"img": "img/content/index/02.jpg",
+			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+		},
+		{
+			"img": "img/content/index/03.jpg",
+			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+		},
+		{
+			"img": "img/content/index/04.jpg",
+			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+		},
+		{
+			"img": "img/content/index/05.jpg",
+			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+		},
+		{
+			"img": "img/content/index/06.jpg",
+			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+		}
+	]
+}

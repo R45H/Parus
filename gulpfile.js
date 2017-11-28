@@ -430,18 +430,18 @@ gulp.task('block', function() {
 		);
 	}
 	function addDataJson(path) {
-		name = name.replace(new RegExp('-', 'g'), '_');
+		var fName = name.replace(new RegExp('-', 'g'), '_');
 
 		var str =
 			'{\n' +
-			'\t"' + name + '": [\n' +
+			'\t"' + fName + '": [\n' +
 			'\t\t{\n' +
 			'\t\t\t\n' +
 			'\t\t}\n' +
 			'\t]\n' +
 			'}';
 
-		fs.writeFileSync(path + 'data/' + name + '.json', str);
+		fs.writeFileSync(path + 'data/' + fName + '.json', str);
 	}
 	function moveJsToFolder() {
 

@@ -1,13 +1,31 @@
-include ../components/head-block
+include ../mixins/banner
+include ../mixins/club-cart
+
+.section
+	.container
+		h1.title Клубные карты
+
+	.container.main__mobile_full
+		+banner(banner_about)
 
 .section.section_space_half
 	.container
-		h1.title Преимущества членства
+		.row
 
-	+head-block(
-		smData= banner_sm_membership
-		lgData= banner_lg_membership
-		textData= head_block__last_membership
-	)
+			each val in club_cart
+				.col-sm-6.col-md-4.main__space_bot-cols
+					+club-cart(val)
 
-include ../components/address
+.section
+	.container
+		.main__desc
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at atque consectetur corporis culpa, cumque, cupiditate deserunt dicta excepturi, impedit iste maiores nam nisi quae quasi recusandae similique soluta voluptate.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at atque consectetur corporis culpa, cumque, cupiditate deserunt dicta excepturi, impedit iste maiores nam nisi quae quasi recusandae similique soluta voluptate.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at atque consectetur corporis culpa, cumque, cupiditate deserunt dicta excepturi, impedit iste maiores nam nisi quae quasi recusandae similique soluta voluptate.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab at atque consectetur corporis culpa, cumque, cupiditate deserunt dicta excepturi, impedit iste maiores nam nisi quae quasi recusandae similique soluta voluptate.
+			ul
+				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, quas!
+				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, laboriosam.
+				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, natus.
+				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, quo.
+				li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, id.

@@ -1,0 +1,18 @@
+$name: club-cart;
+
+.#{$name} {
+	width: 100%;
+
+	&__img-wrap {
+
+	}
+
+	&__img {
+		padding-bottom: 50%;
+		background: no-repeat center / cover;
+	}
+
+	&__text-wrap {
+		padding: 15px;
+	}
+}
