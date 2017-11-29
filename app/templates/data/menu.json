@@ -1,7 +1,7 @@
 {
 	"menu": [
 		{"link": "clubs.html", "text": "Клубы"},
-		{"link": "membership.html", "text": "Преимущества членства"},
+		{"link": "membership.html", "text": "Клубные карты"},
 		{"link": "airfit.html", "text": "AirFit"},
 		{"link": "happy-age.html", "text": "Возраст счастья"},
 		{"link": "children.html", "text": "Дети"},

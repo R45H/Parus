@@ -2,17 +2,23 @@ $name: club-cart;
 
 .#{$name} {
 	width: 100%;
+	border: 1px solid $color-btn;
+	transition: $duration ease box-shadow;
+
+	&:hover {
+		box-shadow: 0 0 15px 0 rgba($color-btn, .5);
+	}
 
 	&__img-wrap {
-
+		border-bottom: 1px solid $color-btn;
 	}
 
 	&__img {
-		padding-bottom: 50%;
+		padding-bottom: 56%;
 		background: no-repeat center / cover;
 	}
 
 	&__text-wrap {
-		padding: 15px;
+		padding: 0 15px;
 	}
 }

@@ -1,28 +1,24 @@
 {
 	"club_cart": [
 		{
-			"img": "img/content/index/01.jpg",
-			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+			"img": "img/club-cart/01.jpg",
+			"text": "<h3 class='title'>Взрослая клубная карта</h3>"
 		},
 		{
-			"img": "img/content/index/02.jpg",
-			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+			"img": "img/club-cart/02.jpg",
+			"text": "<h3 class='title'>Детская клубная карта</h3>"
 		},
 		{
-			"img": "img/content/index/03.jpg",
-			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+			"img": "img/club-cart/03.jpg",
+			"text": "<h3 class='title'>Сетевая клубная карта</h3>"
 		},
 		{
-			"img": "img/content/index/04.jpg",
-			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+			"img": "img/club-cart/04.jpg",
+			"text": "<h3 class='title'>Забота о родителях</h3>"
 		},
 		{
-			"img": "img/content/index/05.jpg",
-			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
-		},
-		{
-			"img": "img/content/index/06.jpg",
-			"text": "<h3 class='title'>Клубная карта</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, voluptas?</p>"
+			"img": "img/club-cart/05.jpg",
+			"text": "<h3 class='title'>Карта Регата</h3>"
 		}
 	]
 }
