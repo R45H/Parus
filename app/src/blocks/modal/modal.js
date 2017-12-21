@@ -72,7 +72,6 @@ function modal(action, id) {
 
 		$(document).on('keydown', closeOnEsc);
 
-
 		setTimeout(function() {
 			$wrap.addClass(classWrapVisible);
 		}, 0);

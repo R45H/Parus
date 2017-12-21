@@ -25,4 +25,8 @@ $name: section;
 			margin-bottom: 0;
 		}
 	}
+
+	&_space-top_half {
+		margin-top: $space / 2;
+	}
 }

@@ -17,6 +17,14 @@ if ($items.length > 1) {
 			return '<div class="' + classDot + '"></div>'
 		},
 		prevArrow: '<div class="' + classSlider + '__prev"></div>',
-		nextArrow: '<div class="' + classSlider + '__next"></div>'
+		nextArrow: '<div class="' + classSlider + '__next"></div>',
+		responsive: [
+			{
+				breakpoint: 576,
+				settings: {
+					dots: false
+				}
+			}
+		]
 	});
 }

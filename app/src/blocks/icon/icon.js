@@ -26,12 +26,26 @@ $icon.each(function() {
 $icon.on('click', function() {
 	var
 		$this = $(this),
-		$img = $this.find('.' + classIcon).attr('src'), // Путь к картинке в текущем блоке категории
-		imgPath = $img,
-		imgName = imgPath.slice(imgPath.lastIndexOf('/') + 1, imgPath.lastIndexOf('.')); // Имя картинки без расширения
+		imgName = getName($this);
 
-	$this.toggleClass(classActive);
-	obj[imgName] = $this.hasClass(classActive);
+	if ($this.hasClass(classActive)) {
+		$this.removeClass(classActive);
+		obj[imgName] = false;
+	} else {
+		$icon.each(function() {
+			var
+				$this = $(this),
+				imgName = getName($this);
+
+			if ($this.hasClass(classActive)) {
+				$this.removeClass(classActive);
+				obj[imgName] = false;
+			}
+		});
+
+		$this.addClass(classActive);
+		obj[imgName] = true;
+	}
 
 	state = 0;
 	$.each(obj, function(item, val) {
@@ -78,4 +92,13 @@ function refreshCoach() {
 			$this.parent().hide();
 		}
 	});
+}
+
+function getName(obj) {
+	var
+		$this = obj,
+		$img = $this.find('.' + classIcon).attr('src'), // Путь к картинке в текущем блоке категории
+		imgPath = $img; // Имя картинки без расширения
+
+	return imgPath.slice(imgPath.lastIndexOf('/') + 1, imgPath.lastIndexOf('.'));
 }

@@ -5,6 +5,10 @@ $name: coach;
 	display: block;
 	border-bottom: none;
 
+	@include screen-sm(max) {
+		text-align: center;
+	}
+
 	&:hover {
 
 		.#{$name} {
@@ -18,10 +22,16 @@ $name: coach;
 			}
 
 			&__icon {
-				display: none;
+
+				@include screen-sm() {
+					display: none;
+				}
 
 				&_hover {
-					display: block;
+
+					@include screen-sm() {
+						display: block;
+					}
 				}
 			}
 		}
@@ -45,6 +55,8 @@ $name: coach;
 
 		@include screen-sm(max) {
 			text-align: center;
+			border-bottom: 1px solid lighten($color-text, 50%);
+			display: inline-block;
 		}
 	}
 

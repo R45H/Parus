@@ -52,9 +52,12 @@ a {
 	border-bottom: 1px solid lighten($color-text, 50%);
 
 	&:hover {
-		color: $color-main;
-		text-decoration: none;
-		border-bottom-color: lighten($color-main, 30%);
+
+		@include screen-sm() {
+			color: $color-main;
+			text-decoration: none;
+			border-bottom-color: lighten($color-main, 30%);
+		}
 	}
 }
 
