@@ -1,6 +1,15 @@
 {
 	"menu": [
-		{"link": "clubs.html", "text": "Клубы"},
+		{"link": "clubs.html", "text": "Клубы", "sub": [
+			{
+				"link": "/",
+				"text": "Парадный"
+			},
+			{
+				"link": "/",
+				"text": "Воскресенская"
+			}
+		]},
 		{"link": "membership.html", "text": "Клубные карты"},
 		{"link": "airfit.html", "text": "AirFit"},
 		{"link": "happy-age.html", "text": "Возраст счастья"},
