@@ -188,10 +188,17 @@ $name: footer;
 	&__webc-img {
 		display: block;
 		width: 5rem;
-		fill: $color-webcenter-2;
+		fill: $color-text;
 
 		&:hover {
-			fill: $color-webcenter-1;
+
+			.cls-1 {
+				fill: $color-webcenter-2;
+			}
+
+			.cls-2 {
+				fill: $color-webcenter-1;
+			}
 		}
 	}
 }
